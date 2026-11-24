@@ -28,3 +28,5 @@ Facts to keep honest:
 - Natural domain phrasing that uses words absent from the documents can still be wrongly refused by the retrieval coverage gate. Example: a procurement warranty question phrased with "ship-spares" wording was refused at coverage 0.33, while "warranty period" wording is answered.
 - Refusal patterns now require all topic words, so they miss short paraphrases of an unsupported topic. Refusal then depends on the lexical coverage gate, not on any semantic safety check.
 - The held-out library result is v2c only; HR and procurement results are v3; see `runs_v3/README.md`.
+
+Repository contents note: `runs_v3a_example_copied/` (development evidence) is NOT in the GitHub repo; it is only in the source archive delivered separately. `runs_v3/hr` and `runs_v3/procurement` each contain their own `docs/`, so `python -m forgeai chat --agent runs_v3/hr/agent.json -q "..."` works from the repository contents with no extra `--docs` flag.
