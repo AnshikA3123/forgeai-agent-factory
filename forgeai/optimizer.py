@@ -17,6 +17,24 @@ RULES = {
 CATS = ("retrieval_miss", "prompt_defect", "hallucination", "wrong_refusal")
 
 
+def generic_rule_problem(rule, case):
+    """v3: a prompt rule must be a reusable instruction, not a description of one eval case. Returns a reason string or None."""
+    if rule.strip().lower().startswith("always state the exact number of days"):
+        return "copy of the v3a prompt example"
+    if re.search(r"\d", rule):
+        return "contains a digit (case-specific figure)"
+    if '"' in rule or "'" in rule:
+        return "contains a quoted phrase"
+    if re.search(r"\bshould have\b|\bthe assistant should\b|\bretrieval hit\b|\bthe answer should\b|\bfailed to\b|\bthe assistant (?:failed|did not)\b", rule, re.I):
+        return "describes a failure instead of instructing"
+    facts = {t for f in case.get("key_facts", []) for t in tokens(f) if len(t) >= 4}
+    q = {t for t in tokens(case.get("question", "")) if len(t) >= 5}
+    leak = [t for t in tokens(rule) if t in facts or t in q]
+    if leak:
+        return "mentions eval-case words: " + ", ".join(sorted(set(leak))[:4])
+    return None
+
+
 def diagnose(llm, case, res, rule_cat, result_row):
     """Model diagnoses one failure. Returns (category, rule_text, source). The deterministic judge verdict is shown as evidence;
     if the model output is invalid the rule-based category is used and labelled as such."""
@@ -26,6 +44,9 @@ def diagnose(llm, case, res, rule_cat, result_row):
         r = o.get("rule")
         if not isinstance(r, str) or not 15 <= len(r) <= 250:
             raise ValueError("rule must be 15-250 chars")
+        why = generic_rule_problem(r, case)
+        if why:
+            raise ValueError("rule is not reusable: " + why)
         return o
     o = ask_json(llm, "optimizer_diagnose", prompt("optimizer_diagnose.txt", question=case["question"], expected=", ".join(case["expected_docs"]) or "none (should refuse)",
                  facts="; ".join(case["key_facts"]) or "n/a", should_refuse=case["should_refuse"], retrieved=", ".join(result_row["retrieved"]) or "none",
