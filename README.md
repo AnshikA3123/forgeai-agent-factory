@@ -26,6 +26,10 @@ Prompts: `prompts/` (eval generation, judge, runtime, doc synthesis). Documents 
 `forgeai-demo-v2.mp4` (NOT in this repo yet: the GitHub web upload failed for binary files, so it is delivered separately; 3:25, silent, 1280x720) is a real screen capture (Xvfb + Chrome showing live process output, recorded with ffmpeg x11grab; no terminal emulator was available). Part 1 is a fresh `--no-cache` HR build (7 min real time) shown at 30x speed. Part 2 re-runs the build from the cached model outputs of the committed HR run (0 new LLM calls, labeled on screen), then shows the eval, scorecard and chats at normal speed.
 Run-to-run variance: a fresh no-cache build of the HR demo scored 75% -> 88% (21/24); the committed `runs/hr` run scored 79% -> 88% (21/24). Qwen2.5-0.5B is not fully deterministic across no-cache runs; both are real runs. Committed numbers are the ones in `runs/*/scorecard.md`.
 
+## Input formats and how each stage uses the model
+Documents: .md, .txt, .csv, and .pdf (PDF needs `pdftotext` from poppler-utils installed; `apt install poppler-utils`; checked here by loading a real PDF, but no demo run uses PDFs). No .docx.
+Qwen2.5-0.5B is called for: the intake summary, eval question wording (with a template fallback), adjacent out-of-scope questions, the answers of the generated agent, and a swapped-order support vote in the judge. NOT model-driven: groundability (lexical vocabulary coverage of brief topics), tool selection (keyword triggers), the system prompt and retrieval parameters (templated from requirements), ambiguous-case wording (heading keywords), expected key facts (extracted from the source sentence), the failure classifier and the fixes (rule-based). Some out-of-scope cases come from a fixed generic list.
+
 ## Honest limits
 Model is Qwen2.5-0.5B on one CPU, so scores are modest and the report says why. Eval sets come from the same documents the agent reads and fixes are tuned on them. Stretch goals are not implemented. Not yet run on an unseen brief by the author.
 
