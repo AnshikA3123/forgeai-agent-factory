@@ -1,0 +1,2 @@
+An assistant was built for this brief: "{brief}"
+Write {n} questions that sound related to this domain but ask for something a company document would NOT contain (opinions, legal advice, external facts, other companies). One per line, no numbering, no extra text.
