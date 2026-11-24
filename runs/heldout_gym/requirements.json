@@ -1,0 +1,97 @@
+{
+  "brief": "I need an assistant that answers member questions about plans and prices, freezing and cancelling, class booking and lockers, and also gives personal training and diet advice.",
+  "documents": [
+    "gym_facilities.md",
+    "gym_membership.md"
+  ],
+  "interview": [
+    {
+      "q": "Who will use this assistant (role, seniority)?",
+      "a": "staff of the organisation that owns the documents",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "What tone should it use (formal, friendly, terse)?",
+      "a": "clear, professional, concise",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Anything it must refuse or hand off to a human (legal, medical, personal data)?",
+      "a": "legal advice; questions about individual people; anything not in the documents",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Which topics must it answer well?",
+      "a": "",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Who should users contact when it cannot answer?",
+      "a": "the relevant department",
+      "source": "assumed default (unattended)"
+    }
+  ],
+  "scope": "Answer questions grounded in: gym_facilities.md, gym_membership.md.",
+  "audience": "staff of the organisation that owns the documents",
+  "tone": "clear, professional, concise",
+  "escalation": "the relevant department",
+  "must_answer_topics": [
+    "plans",
+    "freezing",
+    "cancelling",
+    "class booking",
+    "lockers"
+  ],
+  "must_refuse_topics": [
+    "legal advice",
+    "questions about individual people",
+    "anything not in the documents",
+    "prices",
+    "personal training",
+    "diet advice"
+  ],
+  "groundability": {
+    "supported": [
+      {
+        "topic": "plans",
+        "coverage": 1.0
+      },
+      {
+        "topic": "freezing",
+        "coverage": 1.0
+      },
+      {
+        "topic": "cancelling",
+        "coverage": 1.0
+      },
+      {
+        "topic": "class booking",
+        "coverage": 1.0
+      },
+      {
+        "topic": "lockers",
+        "coverage": 1.0
+      }
+    ],
+    "unsupported": [
+      {
+        "topic": "prices",
+        "coverage": 0.0
+      },
+      {
+        "topic": "personal training",
+        "coverage": 0.0
+      },
+      {
+        "topic": "diet advice",
+        "coverage": 0.0
+      }
+    ]
+  },
+  "model_summary": "The assistant's audience is members of the gym, with a friendly and informative tone.",
+  "warnings": [
+    "Brief asks for 'prices' but the documents do not support it; the agent will refuse it.",
+    "Brief asks for 'personal training' but the documents do not support it; the agent will refuse it.",
+    "Brief asks for 'diet advice' but the documents do not support it; the agent will refuse it."
+  ]
+}
