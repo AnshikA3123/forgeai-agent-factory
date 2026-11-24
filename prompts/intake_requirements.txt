@@ -1,0 +1,11 @@
+A requester wrote this brief for a document-grounded assistant:
+"{brief}"
+Documents available: {docs}
+Section headings found in the documents: {headings}
+
+Reply with one JSON object with these keys:
+"requested_topics": list of 2-8 short topics the brief asks the assistant to cover,
+"audience": one short phrase naming who will use the assistant,
+"tone": one short phrase,
+"must_refuse": list of 1-5 kinds of questions the assistant must refuse or hand to a human.
+Example: {{"requested_topics": ["parking rules", "visitor badges"], "audience": "office staff", "tone": "friendly and brief", "must_refuse": ["legal advice", "questions about individual people"]}}
