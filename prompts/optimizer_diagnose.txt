@@ -1,0 +1,14 @@
+A document-grounded assistant failed a test.
+Question: {question}
+Expected documents: {expected}
+Expected facts: {facts}
+Should it have refused: {should_refuse}
+Documents it retrieved: {retrieved}
+Its answer: {answer}
+Judge's automatic verdict: {verdict}
+
+Classify the failure and propose one rule for its system prompt.
+Reply with one JSON object:
+"category": one of "retrieval_miss" (wrong documents retrieved), "prompt_defect" (right documents, answer incomplete or wrong), "hallucination" (answer includes facts not in the documents, or it answered when it should refuse), "wrong_refusal" (it refused but should have answered),
+"rule": one sentence, an instruction to add to the assistant's system prompt that would prevent this failure.
+Example: {{"category": "prompt_defect", "rule": "Always state the exact number of days and the condition that applies."}}
