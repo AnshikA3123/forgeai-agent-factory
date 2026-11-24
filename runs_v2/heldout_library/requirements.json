@@ -1,0 +1,99 @@
+{
+  "brief": "I need an assistant for library members that answers questions about borrowing, renewals, fines, membership, opening hours and study rooms, and also gives book recommendations and recommends reading lists for children.",
+  "documents": [
+    "borrowing_rules.md",
+    "membership_and_spaces.md"
+  ],
+  "interview": [
+    {
+      "q": "Who will use this assistant (role, seniority)?",
+      "a": "library members",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "What tone should it use (formal, friendly, terse)?",
+      "a": "friendly and brief",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "Anything it must refuse or hand off to a human (legal, medical, personal data)?",
+      "a": "legal advice; questions about individual people; anything not in the documents",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "Which topics must it answer well?",
+      "a": "",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Who should users contact when it cannot answer?",
+      "a": "the relevant department",
+      "source": "assumed default (unattended)"
+    }
+  ],
+  "scope": "Answer questions grounded in: borrowing_rules.md, membership_and_spaces.md.",
+  "audience": "library members",
+  "tone": "friendly and brief",
+  "escalation": "the relevant department",
+  "must_answer_topics": [
+    "Library borrowing rules",
+    "Membership and spaces",
+    "Opening hours",
+    "Study rooms",
+    "Fines",
+    "Lost items",
+    "Renewals"
+  ],
+  "must_refuse_topics": [
+    "legal advice",
+    "questions about individual people",
+    "anything not in the documents",
+    "Reading lists for children"
+  ],
+  "groundability": {
+    "supported": [
+      {
+        "topic": "Library borrowing rules",
+        "coverage": 0.67
+      },
+      {
+        "topic": "Membership and spaces",
+        "coverage": 0.5
+      },
+      {
+        "topic": "Opening hours",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Study rooms",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Fines",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Lost items",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Renewals",
+        "coverage": 1.0
+      }
+    ],
+    "unsupported": [
+      {
+        "topic": "Reading lists for children",
+        "coverage": 0.33
+      }
+    ]
+  },
+  "model_summary": "The assistant's audience is library members, with a friendly and informative tone.",
+  "provenance": {
+    "requirements": "model",
+    "topics": "model"
+  },
+  "warnings": [
+    "Brief asks for 'Reading lists for children' but the documents do not support it; the agent will refuse it."
+  ]
+}
