@@ -1,0 +1,1051 @@
+[
+  {
+    "iteration": 0,
+    "score": 0.708,
+    "passed": 17,
+    "total": 24,
+    "by_type": {
+      "answerable": "6/12",
+      "edge_cross_doc": "3/3",
+      "edge_ambiguous": "2/3",
+      "out_of_scope": "6/6"
+    },
+    "changes": [],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "5 working days",
+        "retrieved": [
+          "it_helpdesk.md#1",
+          "it_helpdesk.md#2"
+        ],
+        "question": "How long does it typically take to review new software requests?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "2 hours",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#2"
+        ],
+        "question": "How long should a lost laptop or phone be reported to the IT helpdesk?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "0",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "When is the helpdesk open for support?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "14",
+        "retrieved": [
+          "it_security.md#0"
+        ],
+        "question": "How long should passwords be changed if they are to be at least 14 characters long?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "every 4 years",
+        "retrieved": [
+          "it_helpdesk.md#2",
+          "it_security.md#1"
+        ],
+        "question": "How often are laptops typically replaced in the hardware refresh process?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "it_security.md#2",
+          "it_security.md#0"
+        ],
+        "question": "How can I ensure that suspicious emails are properly flagged and removed from my system?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 0.73,
+        "llm_support": null,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "To report an urgent outage outside your usual support hours, contact the IT helpdesk within 2 hours. The helpdesk will remotely wipe the device within 1 hour of the report.",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "How can I report an urgent outage outside my usual support hours?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "1 hour",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#0"
+        ],
+        "question": "How long will it take for the helpdesk to remotely wipe the device?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "0",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "When is the helpdesk open for support?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "When accessories such as keyboards are issued on request.",
+        "retrieved": [
+          "it_helpdesk.md#2"
+        ],
+        "question": "When should a monitor be replaced according to the passage?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "2 hours",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#2"
+        ],
+        "question": "How long should a lost laptop or phone be reported to the IT helpdesk?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 0.73,
+        "llm_support": null,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "To report an urgent outage outside your usual support hours, contact the IT helpdesk within 2 hours. The helpdesk will remotely wipe the device within 1 hour of the report.",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "How can I report an urgent outage outside my usual support hours?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "2 hours; 5 working days",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#1"
+        ],
+        "question": "How long should a lost laptop or phone be reported to the IT helpdesk, and also: how long does it typically take to review new software requests?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.61,
+        "llm_support": null,
+        "facts_found": "4/4",
+        "pass": true,
+        "failure": null,
+        "answer": "The helpdesk is open from 8 AM to 6 PM on weekdays. To ensure that suspicious emails are properly flagged and removed from your system, you should forward them to phishing@example.test and then delete them.",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#2"
+        ],
+        "question": "When is the helpdesk open for support, and also: how can I ensure that suspicious emails are properly flagged and removed from my system?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.93,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "IT helpdesk is open Monday to Friday from 8 AM to 6 PM. Lost laptops or phones should be reported to the IT helpdesk within 2 hours.",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#0"
+        ],
+        "question": "When is the helpdesk open for support, and also: how long should a lost laptop or phone be reported to the IT helpdesk?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Password: 14 characters",
+        "retrieved": [
+          "it_security.md#0"
+        ],
+        "question": "passwords?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "8 AM to 6 PM",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "support hours?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.5,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "Lost devices",
+        "retrieved": [
+          "it_security.md#1"
+        ],
+        "question": "lost devices?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with legal advice on data breaches?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "it_security.md#1",
+          "it_security.md#0"
+        ],
+        "question": "What are the company's password policies and how do they handle lost devices?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "How does the company handle software requests and provide legal advice on data breaches?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "it_security.md#1",
+          "it_security.md#0"
+        ],
+        "question": "What are the company's lost device policies and how do they handle employee questions about password rules?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Who won the football world cup in 2018?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Give me a recipe for chocolate cake."
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant that answers employee questions about password rules, lost devices, helpdesk hours and software requests, and also gives legal advice on data breaches.",
+      "system_prompt": "You are an assistant for: I need an assistant that answers employee questions about password rules, lost devices, helpdesk hours and software requests, and also gives legal advice on data breaches.\nAudience: staff of the organisation that owns the documents. Tone: clear, professional, concise.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; legal advice on data breaches.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.",
+      "prompt_rules": [],
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 2,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "\\blegal"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 120,
+        "max_sentences": 1
+      }
+    }
+  },
+  {
+    "iteration": 1,
+    "score_before": 0.708,
+    "score": 0.708,
+    "passed": 17,
+    "total": 24,
+    "by_type": {
+      "answerable": "6/12",
+      "edge_cross_doc": "3/3",
+      "edge_ambiguous": "2/3",
+      "out_of_scope": "6/6"
+    },
+    "changes": [],
+    "attempts": [
+      {
+        "category": "hallucination",
+        "score_before": 0.708,
+        "score_after": 0.708,
+        "kept": false,
+        "changes": [
+          {
+            "category": "hallucination",
+            "fix": "added grounding rule to system prompt",
+            "addresses": [
+              "case-18"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "prompt_defect",
+        "score_before": 0.708,
+        "score_after": 0.667,
+        "kept": false,
+        "changes": [
+          {
+            "category": "prompt_defect",
+            "fix": "added answer-focus rule; max_sentences/max_tokens raised",
+            "addresses": [
+              "case-03",
+              "case-07",
+              "case-09",
+              "case-10",
+              "case-12"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "wrong_refusal",
+        "score_before": 0.708,
+        "score_after": 0.667,
+        "kept": false,
+        "changes": [
+          {
+            "category": "wrong_refusal",
+            "fix": "min_coverage -> 0.35, min_score -> 0.6",
+            "addresses": [
+              "case-06"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "5 working days",
+        "retrieved": [
+          "it_helpdesk.md#1",
+          "it_helpdesk.md#2"
+        ],
+        "question": "How long does it typically take to review new software requests?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "2 hours",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#2"
+        ],
+        "question": "How long should a lost laptop or phone be reported to the IT helpdesk?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "0",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "When is the helpdesk open for support?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "14",
+        "retrieved": [
+          "it_security.md#0"
+        ],
+        "question": "How long should passwords be changed if they are to be at least 14 characters long?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "every 4 years",
+        "retrieved": [
+          "it_helpdesk.md#2",
+          "it_security.md#1"
+        ],
+        "question": "How often are laptops typically replaced in the hardware refresh process?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "it_security.md#2",
+          "it_security.md#0"
+        ],
+        "question": "How can I ensure that suspicious emails are properly flagged and removed from my system?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 0.73,
+        "llm_support": null,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "To report an urgent outage outside your usual support hours, contact the IT helpdesk within 2 hours. The helpdesk will remotely wipe the device within 1 hour of the report.",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "How can I report an urgent outage outside my usual support hours?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "1 hour",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#0"
+        ],
+        "question": "How long will it take for the helpdesk to remotely wipe the device?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "0",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "When is the helpdesk open for support?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "When accessories such as keyboards are issued on request.",
+        "retrieved": [
+          "it_helpdesk.md#2"
+        ],
+        "question": "When should a monitor be replaced according to the passage?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "2 hours",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#2"
+        ],
+        "question": "How long should a lost laptop or phone be reported to the IT helpdesk?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 0.73,
+        "llm_support": null,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "To report an urgent outage outside your usual support hours, contact the IT helpdesk within 2 hours. The helpdesk will remotely wipe the device within 1 hour of the report.",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "How can I report an urgent outage outside my usual support hours?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "2 hours; 5 working days",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#1"
+        ],
+        "question": "How long should a lost laptop or phone be reported to the IT helpdesk, and also: how long does it typically take to review new software requests?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.61,
+        "llm_support": null,
+        "facts_found": "4/4",
+        "pass": true,
+        "failure": null,
+        "answer": "The helpdesk is open from 8 AM to 6 PM on weekdays. To ensure that suspicious emails are properly flagged and removed from your system, you should forward them to phishing@example.test and then delete them.",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#2"
+        ],
+        "question": "When is the helpdesk open for support, and also: how can I ensure that suspicious emails are properly flagged and removed from my system?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.93,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "IT helpdesk is open Monday to Friday from 8 AM to 6 PM. Lost laptops or phones should be reported to the IT helpdesk within 2 hours.",
+        "retrieved": [
+          "it_security.md#1",
+          "it_helpdesk.md#0"
+        ],
+        "question": "When is the helpdesk open for support, and also: how long should a lost laptop or phone be reported to the IT helpdesk?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Password: 14 characters",
+        "retrieved": [
+          "it_security.md#0"
+        ],
+        "question": "passwords?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "8 AM to 6 PM",
+        "retrieved": [
+          "it_helpdesk.md#0",
+          "it_security.md#1"
+        ],
+        "question": "support hours?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.5,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "Lost devices",
+        "retrieved": [
+          "it_security.md#1"
+        ],
+        "question": "lost devices?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with legal advice on data breaches?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "it_security.md#1",
+          "it_security.md#0"
+        ],
+        "question": "What are the company's password policies and how do they handle lost devices?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "How does the company handle software requests and provide legal advice on data breaches?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "it_security.md#1",
+          "it_security.md#0"
+        ],
+        "question": "What are the company's lost device policies and how do they handle employee questions about password rules?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Who won the football world cup in 2018?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Give me a recipe for chocolate cake."
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant that answers employee questions about password rules, lost devices, helpdesk hours and software requests, and also gives legal advice on data breaches.",
+      "system_prompt": "You are an assistant for: I need an assistant that answers employee questions about password rules, lost devices, helpdesk hours and software requests, and also gives legal advice on data breaches.\nAudience: staff of the organisation that owns the documents. Tone: clear, professional, concise.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; legal advice on data breaches.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.",
+      "prompt_rules": [],
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 2,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "\\blegal"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 120,
+        "max_sentences": 1
+      }
+    },
+    "failures_before": [
+      {
+        "id": "case-03",
+        "category": "prompt_defect"
+      },
+      {
+        "id": "case-06",
+        "category": "wrong_refusal"
+      },
+      {
+        "id": "case-07",
+        "category": "prompt_defect"
+      },
+      {
+        "id": "case-09",
+        "category": "prompt_defect"
+      },
+      {
+        "id": "case-10",
+        "category": "prompt_defect"
+      },
+      {
+        "id": "case-12",
+        "category": "prompt_defect"
+      },
+      {
+        "id": "case-18",
+        "category": "hallucination"
+      }
+    ],
+    "accepted": false
+  }
+        ]
