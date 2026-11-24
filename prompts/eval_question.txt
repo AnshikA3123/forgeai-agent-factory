@@ -1,0 +1,6 @@
+You write test questions for a document-grounded assistant.
+Read the passage and write ONE short question that a real user could ask, that is answered by the passage.
+Rules: do not copy the answer into the question; do not mention "the passage"; use everyday wording, not the passage's exact headings; output only the question.
+
+Passage (from {doc}, section "{heading}"):
+{text}
