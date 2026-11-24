@@ -46,7 +46,9 @@ def load_docs(folder):
                 rows = list(csv.DictReader(f))
             docs.append({"name": p.name, "kind": "csv", "rows": rows})
         elif p.suffix.lower() == ".pdf":
-            import subprocess
+            import shutil, subprocess
+            if not shutil.which("pdftotext"):
+                raise SystemExit(f"Cannot read {p.name}: PDF support needs 'pdftotext' (poppler-utils). Install it (apt install poppler-utils / brew install poppler) or convert the PDF to .txt/.md.")
             t = subprocess.run(["pdftotext", "-layout", str(p), "-"], capture_output=True, text=True).stdout
             docs.append({"name": p.name, "kind": "text", "text": t})
     return docs
