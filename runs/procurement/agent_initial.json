@@ -1,0 +1,34 @@
+{
+  "name": "forge-agent",
+  "generated_from": "I need an assistant for ship engineers that answers ship-spares procurement questions about part prices from the catalogue, supplier payment terms, warranty and approval limits, and can calculate order totals.",
+  "system_prompt": "You are an assistant for: I need an assistant for ship engineers that answers ship-spares procurement questions about part prices from the catalogue, supplier payment terms, warranty and approval limits, and can calculate order totals.\nAudience: staff of the organisation that owns the documents. Tone: clear, professional, concise.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.",
+  "prompt_rules": [],
+  "retrieval": {
+    "chunk_chars": 600,
+    "top_k": 2,
+    "k1": 1.5,
+    "b": 0.75,
+    "min_coverage": 0.5,
+    "min_score": 1.0,
+    "expansions": {}
+  },
+  "tools": [
+    "csv_lookup",
+    "calculator"
+  ],
+  "tool_rationale": {
+    "csv_lookup": "Exact lookup of a row in a CSV catalogue by part id / key.",
+    "calculator": "Safe arithmetic on numbers."
+  },
+  "tools_not_attached": [
+    "http_api",
+    "current_date"
+  ],
+  "refuse_patterns": [],
+  "output_contract": {
+    "format": "short answer with [source-id] citations",
+    "refusal_text": "I can't answer that from the provided documents.",
+    "max_tokens": 120,
+    "max_sentences": 1
+  }
+}
