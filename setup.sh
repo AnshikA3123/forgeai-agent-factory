@@ -3,6 +3,7 @@
 set -e
 python3 -m pip install --quiet llama-cpp-python pytest \
   --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+command -v pdftotext >/dev/null || echo 'NOTE: pdftotext (poppler-utils) not found. Needed only for .pdf documents: apt install poppler-utils (or brew install poppler). .md/.txt/.csv work without it.'
 mkdir -p models
 [ -f models/qwen.gguf ] || curl -L -o models/qwen.gguf \
   https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf
