@@ -62,8 +62,8 @@ def generate(req, docs, llm=None):
     refuse_patterns = []
     for t in req["groundability"]["unsupported"]:
         toks = [w for w in re.findall(r"[a-z]{4,}", t["topic"].lower())]
-        if toks:
-            refuse_patterns.append(r"\b" + toks[0][:5])
+        if toks:  # v3: ALL topic words must appear as whole words (v2 used a 5-letter prefix of the first word only)
+            refuse_patterns.append("".join(r"(?=.*\b" + re.escape(w) + r"\b)" for w in toks))
     return {
         "name": "forge-agent",
         "generated_from": req["brief"],
