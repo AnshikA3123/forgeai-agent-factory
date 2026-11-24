@@ -1,0 +1,21 @@
+part_id,description,unit_price_usd,lead_time_days,supplier,min_order_qty
+MP-1001,Fuel injector nozzle for main engine,184.50,14,NordMar Parts,2
+MP-1002,Piston ring set 380mm,612.00,21,NordMar Parts,1
+MP-1003,Turbocharger cartridge,4820.00,35,Helix Turbo,1
+MP-1004,Cylinder head gasket,96.25,10,NordMar Parts,4
+MP-1005,Lube oil filter element,38.40,7,Aquila Filters,10
+MP-1006,Fuel oil filter element,41.80,7,Aquila Filters,10
+MP-1007,Starting air valve,1275.00,28,Helix Turbo,1
+MP-1008,Exhaust valve spindle,2290.00,30,NordMar Parts,1
+MP-2001,Mooring winch brake band,730.00,18,Delta Deck Supply,2
+MP-2002,Steel wire rope 32mm per metre,14.90,12,Delta Deck Supply,100
+MP-2003,Anchor chain shackle 52mm,215.00,16,Delta Deck Supply,2
+MP-2004,Lifeboat release hook,3100.00,40,Aquila Safety,1
+MP-3001,Centrifugal pump seal kit,152.00,9,Aquila Filters,3
+MP-3002,Bilge pump impeller,89.90,9,Aquila Filters,2
+MP-3003,Sea water cooling pump motor,2640.00,32,Helix Turbo,1
+MP-3004,Heat exchanger plate set,1980.00,26,Helix Turbo,1
+MP-4001,Fire extinguisher CO2 5kg refill,64.00,5,Aquila Safety,5
+MP-4002,Life jacket SOLAS adult,58.50,8,Aquila Safety,10
+MP-4003,Emergency escape breathing device,410.00,20,Aquila Safety,2
+MP-4004,Immersion suit,325.00,22,Aquila Safety,2
