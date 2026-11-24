@@ -1,0 +1,7 @@
+{first_label}:
+{first}
+
+{second_label}:
+{second}
+
+Does the CONTEXT fully support every claim in the ANSWER? Reply with exactly one word: YES or NO.
