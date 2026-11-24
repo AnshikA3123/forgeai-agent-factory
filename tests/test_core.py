@@ -22,3 +22,37 @@ def test_retrieval():
     chunks = chunk_docs(load_docs("demo_inputs/hr/docs"))
     top = BM25(chunks).search(tokens("how many days of sick leave"), 1)[0][1]
     assert top["doc"] == "leave_policy.md"
+
+
+def test_domain_label_not_flagged_unsupported():  # v3 regression: procurement brief flagged its own domain
+    chunks = chunk_docs(load_docs("demo_inputs/procurement/docs"))
+    b = "I need an assistant for ship engineers that answers ship-spares procurement questions about part prices from the catalogue, supplier payment terms."
+    g = groundability(b, chunks, topics=["ship-spares procurement", "supplier payment terms"])
+    assert not any("ship" in x["topic"] for x in g["unsupported"])
+    chunks = chunk_docs(load_docs("demo_inputs/hr/docs"))
+    g = groundability("answers HR questions about leave, and also gives visa sponsorship guidance", chunks)
+    assert any("visa" in x["topic"] for x in g["unsupported"])
+
+
+def test_refuse_pattern_needs_all_topic_words():  # v3 regression: r"\\bship" refused warranty/supplier questions
+    import re
+    from forgeai.generator import generate
+    req = {"brief": "x", "audience": "a", "tone": "t", "must_refuse_topics": [], "escalation": "e", "must_answer_topics": [],
+           "groundability": {"unsupported": [{"topic": "ship-spares procurement"}]}}
+    d = generate(req, load_docs("demo_inputs/procurement/docs"), llm=None)
+    pat = d["refuse_patterns"][0]
+    assert not re.search(pat, "what warranty applies to supplier shipping delays?")
+    assert re.search(pat, "help with ship spares procurement please")
+
+
+def test_optimizer_rule_must_be_generic():  # v3 regression: HR prompt_rules held eval-specific descriptions
+    from forgeai.optimizer import generic_rule_problem
+    case = {"question": "How long is maternity leave?", "key_facts": ["16 weeks"]}
+    assert generic_rule_problem("The assistant should have answered 16 weeks, not 20 working days.", case)
+    assert generic_rule_problem('Mention "Annual leave" in answers.', case)
+    assert generic_rule_problem("State the exact figure and condition from the context.", case) is None
+
+
+def test_failure_description_rejected():
+    from forgeai.optimizer import generic_rule_problem
+    assert generic_rule_problem("The assistant failed to retrieve the correct documents and answer correctly.", {"question": "q", "key_facts": []})
