@@ -1,0 +1,12 @@
+You are configuring a document-grounded assistant.
+Brief: "{brief}"
+Audience: {audience}. Tone: {tone}.
+Topics it must answer: {topics}
+The documents do NOT cover, so it must refuse and never offer: {unsupported}
+Tools available: {tools}
+
+Reply with one JSON object with these keys:
+"domain_instructions": 2 or 3 sentences of style instructions for the assistant's system prompt (how to phrase answers, what to quote exactly). Do not repeat the brief and do not mention the uncovered topics,
+"top_k": how many document chunks to retrieve, an integer from 2 to 4,
+"tools": list of tool names from the available tools that this brief really needs (an empty list if none).
+Example: {{"domain_instructions": "Quote amounts and limits exactly. Name the policy section you used.", "top_k": 3, "tools": []}}
