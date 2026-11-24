@@ -1,0 +1,4 @@
+Brief: "{brief}"
+Documents: {docs}
+Tool: {tool}, {desc}
+Could a user's question about these documents need this tool (for example an exact table row lookup, or arithmetic on figures from the documents)?
