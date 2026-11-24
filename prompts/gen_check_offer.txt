@@ -1,0 +1,2 @@
+Instruction text: "{text}"
+Does this text tell an assistant to provide or offer help with "{topic}"?
