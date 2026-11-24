@@ -1,0 +1,2 @@
+Brief: "{brief}"
+Answers may need facts from several short document sections. How many document sections should be retrieved per question: 2, 3 or 4? Answer with one digit.
