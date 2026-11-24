@@ -1,0 +1,379 @@
+[
+  {
+    "type": "answerable",
+    "question": "How much does an Anchor chain shackle 52mm cost, and what is the lead time in days?",
+    "expected_docs": [
+      "parts_catalogue.csv"
+    ],
+    "key_facts": [
+      "2003",
+      "52mm",
+      "215.00"
+    ],
+    "source_chunk": "parts_catalogue.csv#r10",
+    "source_sentence": "part_id: MP-2003; description: Anchor chain shackle 52mm; unit_price_usd: 215.00; lead_time_days: 16; supplier: Delta Deck Supply; min_order_qty: 2",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-01",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Could you please specify the amount of the orders that require Superintendent approval?",
+    "expected_docs": [
+      "procurement_procedure.md"
+    ],
+    "key_facts": [
+      "2,001",
+      "15,000 USD"
+    ],
+    "source_chunk": "procurement_procedure.md#0",
+    "source_sentence": "Orders from 2,001 to 15,000 USD need Superintendent approval.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-02",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How does NordMar Parts offer a 2% discount for early payment?",
+    "expected_docs": [
+      "supplier_terms.md"
+    ],
+    "key_facts": [
+      "10 days",
+      "2 percent"
+    ],
+    "source_chunk": "supplier_terms.md#0",
+    "source_sentence": "Early payment within 10 days earns a 2 percent discount with NordMar Parts only.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-03",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How much does it cost to purchase a Lube oil filter element from Aquila Filters, and how long does it take to receive the order?",
+    "expected_docs": [
+      "parts_catalogue.csv"
+    ],
+    "key_facts": [
+      "1005",
+      "38.40",
+      "7"
+    ],
+    "source_chunk": "parts_catalogue.csv#r4",
+    "source_sentence": "part_id: MP-1005; description: Lube oil filter element; unit_price_usd: 38.40; lead_time_days: 7; supplier: Aquila Filters; min_order_qty: 10",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-04",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "What is the maximum time frame within which the Chief Engineer must report an emergency order to the Superintendent and file the paperwork?",
+    "expected_docs": [
+      "procurement_procedure.md"
+    ],
+    "key_facts": [
+      "24 hours",
+      "5 working days"
+    ],
+    "source_chunk": "procurement_procedure.md#2",
+    "source_sentence": "The Chief Engineer must report it to the Superintendent within 24 hours and file the paperwork within 5 working days.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-05",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Could you please specify the return period for unused parts within the original packaging?",
+    "expected_docs": [
+      "supplier_terms.md"
+    ],
+    "key_facts": [
+      "45 days"
+    ],
+    "source_chunk": "supplier_terms.md#2",
+    "source_sentence": "Unused parts may be returned within 45 days in original packaging.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-06",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How much does a Centrifugal pump seal kit cost, and what is the lead time in days?",
+    "expected_docs": [
+      "parts_catalogue.csv"
+    ],
+    "key_facts": [
+      "3001",
+      "152.00",
+      "9"
+    ],
+    "source_chunk": "parts_catalogue.csv#r12",
+    "source_sentence": "part_id: MP-3001; description: Centrifugal pump seal kit; unit_price_usd: 152.00; lead_time_days: 9; supplier: Aquila Filters; min_order_qty: 3",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-07",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Do you need at least 3 written quotes for orders above 5,000 USD?",
+    "expected_docs": [
+      "procurement_procedure.md"
+    ],
+    "key_facts": [
+      "5,000 USD",
+      "3"
+    ],
+    "source_chunk": "procurement_procedure.md#1",
+    "source_sentence": "Orders above 5,000 USD require at least 3 written quotes.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-08",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How does the \"Urgent delivery\" feature affect the lead time for catalogue parts in stock?",
+    "expected_docs": [
+      "supplier_terms.md"
+    ],
+    "key_facts": [
+      "3 working days",
+      "25 percent"
+    ],
+    "source_chunk": "supplier_terms.md#3",
+    "source_sentence": "Urgent delivery shortens lead time to 3 working days for catalogue parts in stock and adds a surcharge of 25 percent on the part value.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-09",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Could you please provide more details about the parts catalogue, such as the lead time, the supplier, and the minimum order quantity?",
+    "expected_docs": [
+      "parts_catalogue.csv"
+    ],
+    "key_facts": [
+      "1002",
+      "380mm",
+      "612.00"
+    ],
+    "source_chunk": "parts_catalogue.csv#r1",
+    "source_sentence": "part_id: MP-1002; description: Piston ring set 380mm; unit_price_usd: 612.00; lead_time_days: 21; supplier: NordMar Parts; min_order_qty: 1",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-10",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "When should goods be inspected within 48 hours of receipt?",
+    "expected_docs": [
+      "procurement_procedure.md"
+    ],
+    "key_facts": [
+      "48 hours"
+    ],
+    "source_chunk": "procurement_procedure.md#3",
+    "source_sentence": "Goods must be inspected within 48 hours of receipt.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-11",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long does the warranty period for engine parts start from installation and how long does it extend from delivery?",
+    "expected_docs": [
+      "supplier_terms.md"
+    ],
+    "key_facts": [
+      "12 month",
+      "24 months"
+    ],
+    "source_chunk": "supplier_terms.md#1",
+    "source_sentence": "Engine parts carry a 12 month warranty from installation, capped at 24 months from delivery.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-12",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "Could you please provide details about the product, including its description, unit price, lead time, supplier, and minimum order quantity, and also: could you please specify the amount of the orders that require Superintendent approval?",
+    "origin": "model questions joined by code",
+    "expected_docs": [
+      "parts_catalogue.csv",
+      "procurement_procedure.md"
+    ],
+    "key_facts": [
+      "1008",
+      "2290.00",
+      "30",
+      "2,001",
+      "15,000 USD"
+    ],
+    "source_chunk": [
+      "parts_catalogue.csv#r7",
+      "procurement_procedure.md#0"
+    ],
+    "source_sentence": [
+      "part_id: MP-1008; description: Exhaust valve spindle; unit_price_usd: 2290.00; lead_time_days: 30; supplier: NordMar Parts; min_order_qty: 1",
+      "Orders from 2,001 to 15,000 USD need Superintendent approval."
+    ],
+    "id": "case-13",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "Could you please specify the amount of the orders that require Superintendent approval, and also: how much does an Emergency escape breathing device cost, and how long does it take to order?",
+    "origin": "model questions joined by code",
+    "expected_docs": [
+      "procurement_procedure.md",
+      "parts_catalogue.csv"
+    ],
+    "key_facts": [
+      "2,001",
+      "15,000 USD",
+      "4003",
+      "410.00",
+      "20"
+    ],
+    "source_chunk": [
+      "procurement_procedure.md#0",
+      "parts_catalogue.csv#r18"
+    ],
+    "source_sentence": [
+      "Orders from 2,001 to 15,000 USD need Superintendent approval.",
+      "part_id: MP-4003; description: Emergency escape breathing device; unit_price_usd: 410.00; lead_time_days: 20; supplier: Aquila Safety; min_order_qty: 2"
+    ],
+    "id": "case-14",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "How does the \"Urgent delivery\" feature affect the lead time for catalogue parts in stock, and also: how much does it cost to purchase a Lube oil filter element from Aquila Filters, and how long does it take to receive the order?",
+    "origin": "model questions joined by code",
+    "expected_docs": [
+      "supplier_terms.md",
+      "parts_catalogue.csv"
+    ],
+    "key_facts": [
+      "3 working days",
+      "25 percent",
+      "1005",
+      "38.40",
+      "7"
+    ],
+    "source_chunk": [
+      "supplier_terms.md#3",
+      "parts_catalogue.csv#r4"
+    ],
+    "source_sentence": [
+      "Urgent delivery shortens lead time to 3 working days for catalogue parts in stock and adds a surcharge of 25 percent on the part value.",
+      "part_id: MP-1005; description: Lube oil filter element; unit_price_usd: 38.40; lead_time_days: 7; supplier: Aquila Filters; min_order_qty: 10"
+    ],
+    "id": "case-15",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "Why is early payment with NordMar Parts more advantageous?",
+    "origin": "model",
+    "expected_docs": [
+      "supplier_terms.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "supplier_terms.md#0",
+    "lenient": true,
+    "id": "case-16",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "Why is it important to inspect goods within 48 hours?",
+    "origin": "model",
+    "expected_docs": [
+      "procurement_procedure.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "procurement_procedure.md#3",
+    "lenient": true,
+    "id": "case-17",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "Why do you need additional quotes for orders above 5,000 USD?",
+    "origin": "model",
+    "expected_docs": [
+      "procurement_procedure.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "procurement_procedure.md#1",
+    "lenient": true,
+    "id": "case-18",
+    "should_refuse": false
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Can you help me with ship-spares procurement?",
+    "origin": "template (unsupported brief topic)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-19"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Can you recommend a good stock to invest in?",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-20"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Give me a recipe for chocolate cake.",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-21"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Who won the football world cup in 2018?",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-22"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Write me a Python script to sort a list.",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-23"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the weather forecast in Paris tomorrow?",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-24"
+  }
+]
