@@ -1,0 +1,4 @@
+Passage (from {doc}, section "{heading}"):
+{text}
+
+Write ONE vague, under-specified question a hurried user might type about this topic, 3 to 8 words, without the exact figures. Output only the question.
