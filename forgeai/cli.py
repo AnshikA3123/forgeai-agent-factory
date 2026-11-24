@@ -33,7 +33,7 @@ def build(a):
     (out / "requirements.json").write_text(json.dumps(req, indent=2))
     for w in req["warnings"]:
         print("[groundability] WARNING:", w)
-    defn = generate(req, docs)
+    defn = generate(req, docs, llm)
     (out / "agent_initial.json").write_text(json.dumps(defn, indent=2))
     print("[generator] tools attached:", defn["tools"] or "none", "| not attached:", defn["tools_not_attached"])
     cases = generate_evals(chunks, a.brief, llm, req)
@@ -45,7 +45,10 @@ def build(a):
     history, best = optimize(defn, docs_out, cases, req, llm, max_iter=3, on_iter=show)
     (out / "agent.json").write_text(json.dumps(best["definition"], indent=2))
     (out / "iterations.json").write_text(json.dumps(history, indent=2))
-    meta = {"model": llm.name, "seconds": round(time.time() - t0), "llm_calls": llm.calls, "cache_hits": llm.cache_hits}
+    from collections import Counter
+    ev = getattr(llm, "events", [])
+    cases_origin = Counter(("model" if x.get("origin", "").startswith("model") else "template/fallback") for x in cases)
+    meta = {"events": ev, "case_origin": dict(cases_origin), "model": llm.name, "seconds": round(time.time() - t0), "llm_calls": llm.calls, "cache_hits": llm.cache_hits}
     write_report(out, req, defn, cases, history, best, meta)
     print(f"[done] {meta}  -> {out}/report.md")
 
