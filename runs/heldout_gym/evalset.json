@@ -1,0 +1,343 @@
+[
+  {
+    "type": "answerable",
+    "question": "How do I know if my locker is available for use?",
+    "expected_docs": [
+      "gym_facilities.md"
+    ],
+    "key_facts": [
+      "10 USD"
+    ],
+    "source_chunk": "gym_facilities.md#1",
+    "source_sentence": "Monthly lockers cost 10 USD per month and are allocated on a first come basis.",
+    "question_from_llm": true,
+    "id": "case-01",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How can I freeze my membership for up to 3 months per year?",
+    "expected_docs": [
+      "gym_membership.md"
+    ],
+    "key_facts": [
+      "3 months",
+      "5 USD"
+    ],
+    "source_chunk": "gym_membership.md#1",
+    "source_sentence": "Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month.",
+    "question_from_llm": true,
+    "id": "case-02",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge?",
+    "expected_docs": [
+      "gym_facilities.md"
+    ],
+    "key_facts": [
+      "2 hours",
+      "5 USD"
+    ],
+    "source_chunk": "gym_facilities.md#0",
+    "source_sentence": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies.",
+    "question_from_llm": true,
+    "id": "case-03",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How much does the Basic plan cost per month?",
+    "expected_docs": [
+      "gym_membership.md"
+    ],
+    "key_facts": [
+      "30 USD",
+      "6",
+      "10"
+    ],
+    "source_chunk": "gym_membership.md#0",
+    "source_sentence": "The Basic plan costs 30 USD per month and includes gym floor access from 6 AM to 10 PM.",
+    "question_from_llm": true,
+    "id": "case-04",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Are showers available for all members until 30 minutes after closing?",
+    "expected_docs": [
+      "gym_facilities.md"
+    ],
+    "key_facts": [
+      "30 m"
+    ],
+    "source_chunk": "gym_facilities.md#2",
+    "source_sentence": "Showers are open to all members until 30 minutes after closing.",
+    "question_from_llm": true,
+    "id": "case-05",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How much is the one-time joining fee for joining the gym?",
+    "expected_docs": [
+      "gym_membership.md"
+    ],
+    "key_facts": [
+      "40 USD"
+    ],
+    "source_chunk": "gym_membership.md#2",
+    "source_sentence": "A one-time joining fee of 40 USD applies to new members.",
+    "question_from_llm": true,
+    "id": "case-06",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Can I book group classes up to 7 days in advance through the app?",
+    "expected_docs": [
+      "gym_facilities.md"
+    ],
+    "key_facts": [
+      "7 days"
+    ],
+    "source_chunk": "gym_facilities.md#0",
+    "source_sentence": "Group classes can be booked up to 7 days ahead through the app.",
+    "question_from_llm": true,
+    "id": "case-07",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long is the cancellation notice required before the effect of the cancellation takes effect?",
+    "expected_docs": [
+      "gym_membership.md"
+    ],
+    "key_facts": [
+      "30 days"
+    ],
+    "source_chunk": "gym_membership.md#1",
+    "source_sentence": "Cancellation needs 30 days written notice and takes effect at the end of the billing cycle.",
+    "question_from_llm": true,
+    "id": "case-08",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How many people can be accommodated in a class at a gym?",
+    "expected_docs": [
+      "gym_facilities.md"
+    ],
+    "key_facts": [
+      "20"
+    ],
+    "source_chunk": "gym_facilities.md#0",
+    "source_sentence": "Classes hold a maximum of 20 people.",
+    "question_from_llm": true,
+    "id": "case-09",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Are there any specific amenities or facilities available at the Premium front desk?",
+    "expected_docs": [
+      "gym_facilities.md"
+    ],
+    "key_facts": [
+      "premium",
+      "provid"
+    ],
+    "source_chunk": "gym_facilities.md#2",
+    "source_sentence": "Towels are provided at the Premium front desk only.",
+    "question_from_llm": true,
+    "id": "case-10",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Is there a refund policy for unused days in the gym membership?",
+    "expected_docs": [
+      "gym_membership.md"
+    ],
+    "key_facts": [
+      "refund",
+      "there"
+    ],
+    "source_chunk": "gym_membership.md#1",
+    "source_sentence": "There is no refund for unused days.",
+    "question_from_llm": true,
+    "id": "case-11",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge?",
+    "expected_docs": [
+      "gym_facilities.md"
+    ],
+    "key_facts": [
+      "2 hours",
+      "5 USD"
+    ],
+    "source_chunk": "gym_facilities.md#0",
+    "source_sentence": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies.",
+    "question_from_llm": true,
+    "id": "case-12",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "How can I freeze my membership for up to 3 months per year, and also: how do I know if my locker is available for use?",
+    "expected_docs": [
+      "gym_membership.md",
+      "gym_facilities.md"
+    ],
+    "key_facts": [
+      "3 months",
+      "5 USD",
+      "10 USD"
+    ],
+    "source_chunk": [
+      "gym_membership.md#1",
+      "gym_facilities.md#1"
+    ],
+    "source_sentence": [
+      "Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month.",
+      "Monthly lockers cost 10 USD per month and are allocated on a first come basis."
+    ],
+    "id": "case-13",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge, and also: how much is the one-time joining fee for joining the gym?",
+    "expected_docs": [
+      "gym_facilities.md",
+      "gym_membership.md"
+    ],
+    "key_facts": [
+      "2 hours",
+      "5 USD",
+      "40 USD"
+    ],
+    "source_chunk": [
+      "gym_facilities.md#0",
+      "gym_membership.md#2"
+    ],
+    "source_sentence": [
+      "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies.",
+      "A one-time joining fee of 40 USD applies to new members."
+    ],
+    "id": "case-14",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge, and also: how can I freeze my membership for up to 3 months per year?",
+    "expected_docs": [
+      "gym_facilities.md",
+      "gym_membership.md"
+    ],
+    "key_facts": [
+      "2 hours",
+      "5 USD",
+      "3 months",
+      "5 USD"
+    ],
+    "source_chunk": [
+      "gym_facilities.md#0",
+      "gym_membership.md#1"
+    ],
+    "source_sentence": [
+      "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies.",
+      "Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month."
+    ],
+    "id": "case-15",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "membership plans?",
+    "expected_docs": [
+      "gym_membership.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "gym_membership.md#0",
+    "lenient": true,
+    "id": "case-16",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "class booking?",
+    "expected_docs": [
+      "gym_facilities.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "gym_facilities.md#0",
+    "lenient": true,
+    "id": "case-17",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "freezing and cancelling?",
+    "expected_docs": [
+      "gym_membership.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "gym_membership.md#1",
+    "lenient": true,
+    "id": "case-18",
+    "should_refuse": false
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Can you help me with prices?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-19"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Can you help me with personal training?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-20"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Can you help me with diet advice?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-21"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What are the key features of the assistant that allow it to handle all these tasks?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-22"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "How does the assistant ensure that all member questions are answered accurately and efficiently?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-23"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What are the legal implications of the assistant's ability to freeze and cancel plans and classes?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-24"
+  }
+]
