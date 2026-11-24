@@ -1,0 +1,3 @@
+Brief: "{brief}"
+Documents available: {docs}
+In one sentence, state who the assistant's audience is and what tone suits them. Output only that sentence.
