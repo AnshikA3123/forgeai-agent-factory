@@ -3,6 +3,7 @@ import copy
 import re
 
 from .generator import build_system_prompt
+from .llm import prompt, ask_json
 from .judge import run_evals
 from .agent import Agent
 from .text import tokens, chunk_docs, BM25
@@ -11,6 +12,27 @@ RULES = {
     "hallucination": "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
     "prompt_defect": "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
 }
+
+
+CATS = ("retrieval_miss", "prompt_defect", "hallucination", "wrong_refusal")
+
+
+def diagnose(llm, case, res, rule_cat, result_row):
+    """Model diagnoses one failure. Returns (category, rule_text, source). The deterministic judge verdict is shown as evidence;
+    if the model output is invalid the rule-based category is used and labelled as such."""
+    def val(o):
+        if o.get("category") not in CATS:
+            raise ValueError("category not in menu")
+        r = o.get("rule")
+        if not isinstance(r, str) or not 15 <= len(r) <= 250:
+            raise ValueError("rule must be 15-250 chars")
+        return o
+    o = ask_json(llm, "optimizer_diagnose", prompt("optimizer_diagnose.txt", question=case["question"], expected=", ".join(case["expected_docs"]) or "none (should refuse)",
+                 facts="; ".join(case["key_facts"]) or "n/a", should_refuse=case["should_refuse"], retrieved=", ".join(result_row["retrieved"]) or "none",
+                 answer=result_row["answer"][:200], verdict=f"refused_ok={result_row.get('refused_ok')}, retrieval_hit={result_row.get('retrieval_hit')}, grounded={result_row.get('grounded')}, correct={result_row.get('correct')}"), val, 140)
+    if o:
+        return o["category"], o["rule"], "model"
+    return rule_cat, None, "rule-fallback (model diagnosis invalid)"
 
 
 def apply_fixes(defn, failures, agent, req, cases_by_id):
@@ -54,16 +76,18 @@ def apply_fixes(defn, failures, agent, req, cases_by_id):
             r["min_score"] = round(r["min_score"] + 0.5, 2)
             log.append({"category": "hallucination", "fix": f"stricter refusal gate: min_coverage -> {r['min_coverage']}, min_score -> {r['min_score']}",
                         "addresses": [f["id"] for f in oos]})
-        if ung and RULES["hallucination"] not in d["prompt_rules"]:
-            d["prompt_rules"].append(RULES["hallucination"])
+        hr = next((f.get("model_rule") for f in ung if f.get("model_rule")), None)
+        if ung and (hr or RULES["hallucination"]) not in d["prompt_rules"]:
+            d["prompt_rules"].append(hr or RULES["hallucination"])
             d["output_contract"]["extractive_fallback"] = True
-            log.append({"category": "hallucination", "fix": "added grounding rule to system prompt + extractive fallback when the answer drifts from context", "addresses": [f["id"] for f in ung]})
-    if "prompt_defect" in cats and RULES["prompt_defect"] not in d["prompt_rules"]:
-        d["prompt_rules"].append(RULES["prompt_defect"])
+            log.append({"category": "hallucination", "fix": "added grounding rule to system prompt (%s) + extractive fallback when the answer drifts from context" % ("model-written" if hr else "fixed template"), "addresses": [f["id"] for f in ung]})
+    pr = next((f.get("model_rule") for f in cats.get("prompt_defect", []) if f.get("model_rule")), None)
+    if "prompt_defect" in cats and (pr or RULES["prompt_defect"]) not in d["prompt_rules"]:
+        d["prompt_rules"].append(pr or RULES["prompt_defect"])
         d["output_contract"]["max_sentences"] = d["output_contract"]["max_sentences"] + 1
         d["output_contract"]["max_tokens"] += 60
         d["output_contract"]["extractive_fallback"] = True
-        log.append({"category": "prompt_defect", "fix": "added answer-focus rule; max_sentences/max_tokens raised",
+        log.append({"category": "prompt_defect", "fix": "added answer-focus rule (%s); max_sentences/max_tokens raised" % ("model-written" if pr else "fixed template"),
                     "addresses": [f["id"] for f in cats["prompt_defect"]]})
     d["system_prompt"] = build_system_prompt(req, d["prompt_rules"])
     return d, log
@@ -80,14 +104,19 @@ def optimize(defn, docs_dir, cases, req, llm, max_iter=3, on_iter=None):
         on_iter(history[-1])
     best = history[0]
     for it in range(1, max_iter + 1):
-        failures = [x for x in best["results"] if not x["pass"]]
+        failures = [dict(x) for x in best["results"] if not x["pass"]]
         if not failures:
             break
+        for f in failures:  # model diagnosis replaces the rule category; the rule category is kept for cross-checking
+            case = cases_by_id[f["id"]]
+            f["rule_category"] = f["failure"]
+            cat, rule, src = diagnose(llm, case, None, f["failure"], f)
+            f["failure"], f["model_rule"], f["diagnosis_source"] = cat, rule, src
         cats = sorted({f["failure"] for f in failures})
         start = best
         attempts, accepted_changes, log_all = [], [], []
         for cat in cats:
-            cur_fail = [x for x in best["results"] if not x["pass"] and x["failure"] == cat]
+            cur_fail = [f for f in failures if f["failure"] == cat and any(x["id"] == f["id"] and not x["pass"] for x in best["results"])]
             if not cur_fail:
                 continue
             new_def, log = apply_fixes(best["definition"], cur_fail, Agent(best["definition"], docs_dir, llm), req, cases_by_id)
@@ -103,7 +132,7 @@ def optimize(defn, docs_dir, cases, req, llm, max_iter=3, on_iter=None):
         rec = {"iteration": it, "score_before": start["score"], "score": best["score"], "passed": best["passed"],
                "total": best["total"], "by_type": best["by_type"], "changes": accepted_changes, "attempts": attempts,
                "results": best["results"], "definition": best["definition"],
-               "failures_before": [{"id": f["id"], "category": f["failure"]} for f in failures],
+               "failures_before": [{"id": f["id"], "category": f["failure"], "rule_category": f["rule_category"], "diagnosis_source": f["diagnosis_source"], "model_rule": f["model_rule"]} for f in failures],
                "accepted": bool(accepted_changes)}
         history.append(rec)
         if on_iter:
