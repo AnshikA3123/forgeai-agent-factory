@@ -1,0 +1,1216 @@
+[
+  {
+    "iteration": 0,
+    "score": 0.708,
+    "passed": 17,
+    "total": 24,
+    "by_type": {
+      "answerable": "9/12",
+      "edge_cross_doc": "1/3",
+      "edge_ambiguous": "2/3",
+      "out_of_scope": "5/6"
+    },
+    "changes": [],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.9,
+        "llm_support": false,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "The cost of an Anchor chain shackle 52mm is $215.00, and the lead time is 16 days.",
+        "retrieved": [
+          "parts_catalogue.csv#r10",
+          "supplier_terms.md#3",
+          "parts_catalogue.csv#r19",
+          "parts_catalogue.csv#r2"
+        ],
+        "question": "How much does an Anchor chain shackle 52mm cost, and what is the lead time in days?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.0,
+        "llm_support": null,
+        "facts_found": "1/2",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "[2,001,000 USD]",
+        "retrieved": [
+          "procurement_procedure.md#0",
+          "procurement_procedure.md#2",
+          "procurement_procedure.md#1",
+          "parts_catalogue.csv#r19"
+        ],
+        "question": "Could you please specify the amount of the orders that require Superintendent approval?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.71,
+        "llm_support": true,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "NordMar Parts offers a 2% discount for early payment.",
+        "retrieved": [
+          "supplier_terms.md#0",
+          "parts_catalogue.csv#r7",
+          "parts_catalogue.csv#r3",
+          "parts_catalogue.csv#r1"
+        ],
+        "question": "How does NordMar Parts offer a 2% discount for early payment?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.71,
+        "llm_support": null,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "The cost to purchase a Lube oil filter element from Aquila Filters is 38.40 USD, and it takes 7 days to receive the order.",
+        "retrieved": [
+          "parts_catalogue.csv#r4",
+          "parts_catalogue.csv#r5",
+          "parts_catalogue.csv#r13",
+          "parts_catalogue.csv#r12"
+        ],
+        "question": "How much does it cost to purchase a Lube oil filter element from Aquila Filters, and how long does it take to receive the order?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "24 hours",
+        "retrieved": [
+          "procurement_procedure.md#2",
+          "procurement_procedure.md#0",
+          "procurement_procedure.md#3",
+          "supplier_terms.md#1"
+        ],
+        "question": "What is the maximum time frame within which the Chief Engineer must report an emergency order to the Superintendent and file the paperwork?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "45 days",
+        "retrieved": [
+          "supplier_terms.md#2",
+          "procurement_procedure.md#3",
+          "procurement_procedure.md#2",
+          "supplier_terms.md#1"
+        ],
+        "question": "Could you please specify the return period for unused parts within the original packaging?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/3",
+        "pass": true,
+        "failure": null,
+        "answer": "152.00",
+        "retrieved": [
+          "parts_catalogue.csv#r12",
+          "parts_catalogue.csv#r13",
+          "parts_catalogue.csv#r14",
+          "supplier_terms.md#3"
+        ],
+        "question": "How much does a Centrifugal pump seal kit cost, and what is the lead time in days?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "procurement_procedure.md#1",
+          "procurement_procedure.md#0",
+          "supplier_terms.md#3",
+          "parts_catalogue.csv#r16"
+        ],
+        "question": "Do you need at least 3 written quotes for orders above 5,000 USD?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Urgent delivery shortens lead time to 3 working days for catalogue parts in stock.",
+        "retrieved": [
+          "supplier_terms.md#3",
+          "procurement_procedure.md#1",
+          "procurement_procedure.md#3",
+          "supplier_terms.md#1"
+        ],
+        "question": "How does the \"Urgent delivery\" feature affect the lead time for catalogue parts in stock?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "0/3",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "[parts_catalogue.csv#r7] part_id: MP-1008; description: Exhaust valve spindle; unit_price_usd: 2290.00; lead_time_days: 30; supplier: NordMar Parts; min_order_qty: 1\n[parts_catalogue.csv#r3] part_id: MP-1004; description: Cylinder head gasket; unit_price_usd: 96.25; lead_time_days: 10; supplier: NordMar Parts; min_order_qty: 4",
+        "retrieved": [
+          "supplier_terms.md#3",
+          "procurement_procedure.md#1",
+          "parts_catalogue.csv#r7",
+          "parts_catalogue.csv#r3"
+        ],
+        "question": "Could you please provide more details about the parts catalogue, such as the lead time, the supplier, and the minimum order quantity?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Goods must be inspected within 48 hours of receipt.",
+        "retrieved": [
+          "procurement_procedure.md#3",
+          "procurement_procedure.md#2",
+          "supplier_terms.md#2",
+          "supplier_terms.md#1"
+        ],
+        "question": "When should goods be inspected within 48 hours of receipt?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "12 months from installation, 24 months from delivery.",
+        "retrieved": [
+          "supplier_terms.md#1",
+          "supplier_terms.md#3",
+          "parts_catalogue.csv#r6",
+          "parts_catalogue.csv#r0"
+        ],
+        "question": "How long does the warranty period for engine parts start from installation and how long does it extend from delivery?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 0.0,
+        "llm_support": null,
+        "facts_found": "0/5",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "[procurement_procedure.md#0] \n[procurement_procedure.md#2]\n[parts_catalogue.csv#r19] \n[parts_catalogue.csv#r2]",
+        "retrieved": [
+          "procurement_procedure.md#0",
+          "procurement_procedure.md#2",
+          "parts_catalogue.csv#r19",
+          "parts_catalogue.csv#r2"
+        ],
+        "question": "Could you please provide details about the product, including its description, unit price, lead time, supplier, and minimum order quantity, and also: could you please specify the amount of the orders that require Superintendent approval?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.86,
+        "llm_support": null,
+        "facts_found": "3/5",
+        "pass": true,
+        "failure": null,
+        "answer": "**Order Quantity:** 2,001 to 15,000 USD\n\n**Superintendent Approval Required:** Yes\n\n**Emergency Escape Breathing Device Cost:** 410.00 USD\n\n**Order Time:** 24 hours to 5 working days",
+        "retrieved": [
+          "parts_catalogue.csv#r18",
+          "procurement_procedure.md#0",
+          "procurement_procedure.md#2"
+        ],
+        "question": "Could you please specify the amount of the orders that require Superintendent approval, and also: how much does an Emergency escape breathing device cost, and how long does it take to order?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.83,
+        "llm_support": false,
+        "facts_found": "3/5",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "Urgent delivery shortens lead time to 3 working days for catalogue parts in stock. The lead time for Lube oil filter element is 7 days, and the lead time for Fuel oil filter element is also 7 days. The cost to purchase a Lube oil filter element from Aquila Filters is $38.40, and it takes 7 days to receive the order.",
+        "retrieved": [
+          "supplier_terms.md#3",
+          "parts_catalogue.csv#r4",
+          "parts_catalogue.csv#r5",
+          "procurement_procedure.md#1"
+        ],
+        "question": "How does the \"Urgent delivery\" feature affect the lead time for catalogue parts in stock, and also: how much does it cost to purchase a Lube oil filter element from Aquila Filters, and how long does it take to receive the order?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Early payment within 10 days earns a 2 percent discount with NordMar Parts only.",
+        "retrieved": [
+          "supplier_terms.md#0",
+          "parts_catalogue.csv#r7",
+          "parts_catalogue.csv#r3",
+          "parts_catalogue.csv#r1"
+        ],
+        "question": "Why is early payment with NordMar Parts more advantageous?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.29,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "Goods must be inspected within 48 hours of receipt to ensure they meet the necessary quality standards and are ready for delivery. This timely inspection helps in identifying any discrepancies or issues that may arise during transit, allowing for prompt resolution and minimizing delays in the delivery process.",
+        "retrieved": [
+          "procurement_procedure.md#3",
+          "procurement_procedure.md#2",
+          "supplier_terms.md#2",
+          "supplier_terms.md#1"
+        ],
+        "question": "Why is it important to inspect goods within 48 hours?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Orders above 5,000 USD require at least 3 written quotes.",
+        "retrieved": [
+          "procurement_procedure.md#1",
+          "procurement_procedure.md#0",
+          "parts_catalogue.csv#r16",
+          "parts_catalogue.csv#r5"
+        ],
+        "question": "Why do you need additional quotes for orders above 5,000 USD?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with ship-spares procurement?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "[procurement_procedure.md#3] Goods must be inspected within 48 hours of receipt. Discrepancies are reported to the supplier within 7 days, otherwise the delivery is treated as accepted.",
+        "retrieved": [
+          "procurement_procedure.md#3",
+          "supplier_terms.md#3"
+        ],
+        "question": "Can you recommend a good stock to invest in?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Give me a recipe for chocolate cake."
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Who won the football world cup in 2018?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Write me a Python script to sort a list."
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What is the weather forecast in Paris tomorrow?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant for ship engineers that answers ship-spares procurement questions about part prices from the catalogue, supplier payment terms, warranty and approval limits, and can calculate order totals.",
+      "system_prompt": "You are an assistant for: I need an assistant for ship engineers that answers ship-spares procurement questions about part prices from the catalogue, supplier payment terms, warranty and approval limits, and can calculate order totals.\nAudience: ship engineers. Tone: informative and professional.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; ship-spares procurement.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"part prices from the catalogue\" and \"supplier payment terms\" as your main query.\n2. Include \"warranty and approval limits\" in your response.",
+      "prompt_rules": [
+        "1. Use \"part prices from the catalogue\" and \"supplier payment terms\" as your main query.\n2. Include \"warranty and approval limits\" in your response."
+      ],
+      "provenance": {
+        "domain_instructions": "model",
+        "offer_check_advisory": {
+          "ship-spares procurement": true
+        },
+        "top_k": "model",
+        "tools": "rule candidates ['csv_lookup', 'calculator']; model verdicts {'csv_lookup': True, 'calculator': True}; attached ['csv_lookup', 'calculator'] (invalid verdict keeps the tool)"
+      },
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 4,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [
+        "csv_lookup",
+        "calculator"
+      ],
+      "tool_rationale": {
+        "csv_lookup": "Exact lookup of a row in a CSV catalogue by part id / key.",
+        "calculator": "Safe arithmetic on numbers."
+      },
+      "tools_not_attached": [
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "\\bship"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 120,
+        "max_sentences": 1
+      }
+    }
+  },
+  {
+    "iteration": 1,
+    "score_before": 0.708,
+    "score": 0.708,
+    "passed": 17,
+    "total": 24,
+    "by_type": {
+      "answerable": "9/12",
+      "edge_cross_doc": "1/3",
+      "edge_ambiguous": "2/3",
+      "out_of_scope": "5/6"
+    },
+    "changes": [],
+    "attempts": [
+      {
+        "category": "hallucination",
+        "score_before": 0.708,
+        "score_after": 0.708,
+        "kept": false,
+        "changes": [
+          {
+            "category": "hallucination",
+            "fix": "stricter refusal gate: min_coverage -> 0.6, min_score -> 1.5",
+            "addresses": [
+              "case-20"
+            ]
+          },
+          {
+            "category": "hallucination",
+            "fix": "added grounding rule to system prompt (model-written) + extractive fallback when the answer drifts from context",
+            "addresses": [
+              "case-10",
+              "case-15"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "retrieval_miss",
+        "score_before": 0.708,
+        "score_after": 0.667,
+        "kept": false,
+        "changes": [
+          {
+            "category": "retrieval_miss",
+            "fix": "added 11 query expansions (question words absent from the expected chunk -> its heading words)",
+            "detail": {
+              "please": [
+                "approval",
+                "limit"
+              ],
+              "specify": [
+                "approval",
+                "limit"
+              ],
+              "amount": [
+                "approval",
+                "limit"
+              ],
+              "require": [
+                "approval",
+                "limit"
+              ],
+              "provide": [
+                "row",
+                "7",
+                "approval"
+              ],
+              "detail": [
+                "row",
+                "7",
+                "approval"
+              ],
+              "product": [
+                "row",
+                "7",
+                "approval"
+              ],
+              "includ": [
+                "row",
+                "7",
+                "approval"
+              ],
+              "minimum": [
+                "row",
+                "7",
+                "approval"
+              ],
+              "quantity": [
+                "row",
+                "7",
+                "approval"
+              ],
+              "important": [
+                "receiv",
+                "good"
+              ]
+            },
+            "addresses": [
+              "case-02",
+              "case-08",
+              "case-13",
+              "case-17"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.9,
+        "llm_support": false,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "The cost of an Anchor chain shackle 52mm is $215.00, and the lead time is 16 days.",
+        "retrieved": [
+          "parts_catalogue.csv#r10",
+          "supplier_terms.md#3",
+          "parts_catalogue.csv#r19",
+          "parts_catalogue.csv#r2"
+        ],
+        "question": "How much does an Anchor chain shackle 52mm cost, and what is the lead time in days?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.0,
+        "llm_support": null,
+        "facts_found": "1/2",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "[2,001,000 USD]",
+        "retrieved": [
+          "procurement_procedure.md#0",
+          "procurement_procedure.md#2",
+          "procurement_procedure.md#1",
+          "parts_catalogue.csv#r19"
+        ],
+        "question": "Could you please specify the amount of the orders that require Superintendent approval?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.71,
+        "llm_support": true,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "NordMar Parts offers a 2% discount for early payment.",
+        "retrieved": [
+          "supplier_terms.md#0",
+          "parts_catalogue.csv#r7",
+          "parts_catalogue.csv#r3",
+          "parts_catalogue.csv#r1"
+        ],
+        "question": "How does NordMar Parts offer a 2% discount for early payment?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.71,
+        "llm_support": null,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "The cost to purchase a Lube oil filter element from Aquila Filters is 38.40 USD, and it takes 7 days to receive the order.",
+        "retrieved": [
+          "parts_catalogue.csv#r4",
+          "parts_catalogue.csv#r5",
+          "parts_catalogue.csv#r13",
+          "parts_catalogue.csv#r12"
+        ],
+        "question": "How much does it cost to purchase a Lube oil filter element from Aquila Filters, and how long does it take to receive the order?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "24 hours",
+        "retrieved": [
+          "procurement_procedure.md#2",
+          "procurement_procedure.md#0",
+          "procurement_procedure.md#3",
+          "supplier_terms.md#1"
+        ],
+        "question": "What is the maximum time frame within which the Chief Engineer must report an emergency order to the Superintendent and file the paperwork?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "45 days",
+        "retrieved": [
+          "supplier_terms.md#2",
+          "procurement_procedure.md#3",
+          "procurement_procedure.md#2",
+          "supplier_terms.md#1"
+        ],
+        "question": "Could you please specify the return period for unused parts within the original packaging?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/3",
+        "pass": true,
+        "failure": null,
+        "answer": "152.00",
+        "retrieved": [
+          "parts_catalogue.csv#r12",
+          "parts_catalogue.csv#r13",
+          "parts_catalogue.csv#r14",
+          "supplier_terms.md#3"
+        ],
+        "question": "How much does a Centrifugal pump seal kit cost, and what is the lead time in days?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "procurement_procedure.md#1",
+          "procurement_procedure.md#0",
+          "supplier_terms.md#3",
+          "parts_catalogue.csv#r16"
+        ],
+        "question": "Do you need at least 3 written quotes for orders above 5,000 USD?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Urgent delivery shortens lead time to 3 working days for catalogue parts in stock.",
+        "retrieved": [
+          "supplier_terms.md#3",
+          "procurement_procedure.md#1",
+          "procurement_procedure.md#3",
+          "supplier_terms.md#1"
+        ],
+        "question": "How does the \"Urgent delivery\" feature affect the lead time for catalogue parts in stock?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "0/3",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "[parts_catalogue.csv#r7] part_id: MP-1008; description: Exhaust valve spindle; unit_price_usd: 2290.00; lead_time_days: 30; supplier: NordMar Parts; min_order_qty: 1\n[parts_catalogue.csv#r3] part_id: MP-1004; description: Cylinder head gasket; unit_price_usd: 96.25; lead_time_days: 10; supplier: NordMar Parts; min_order_qty: 4",
+        "retrieved": [
+          "supplier_terms.md#3",
+          "procurement_procedure.md#1",
+          "parts_catalogue.csv#r7",
+          "parts_catalogue.csv#r3"
+        ],
+        "question": "Could you please provide more details about the parts catalogue, such as the lead time, the supplier, and the minimum order quantity?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Goods must be inspected within 48 hours of receipt.",
+        "retrieved": [
+          "procurement_procedure.md#3",
+          "procurement_procedure.md#2",
+          "supplier_terms.md#2",
+          "supplier_terms.md#1"
+        ],
+        "question": "When should goods be inspected within 48 hours of receipt?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "12 months from installation, 24 months from delivery.",
+        "retrieved": [
+          "supplier_terms.md#1",
+          "supplier_terms.md#3",
+          "parts_catalogue.csv#r6",
+          "parts_catalogue.csv#r0"
+        ],
+        "question": "How long does the warranty period for engine parts start from installation and how long does it extend from delivery?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 0.0,
+        "llm_support": null,
+        "facts_found": "0/5",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "[procurement_procedure.md#0] \n[procurement_procedure.md#2]\n[parts_catalogue.csv#r19] \n[parts_catalogue.csv#r2]",
+        "retrieved": [
+          "procurement_procedure.md#0",
+          "procurement_procedure.md#2",
+          "parts_catalogue.csv#r19",
+          "parts_catalogue.csv#r2"
+        ],
+        "question": "Could you please provide details about the product, including its description, unit price, lead time, supplier, and minimum order quantity, and also: could you please specify the amount of the orders that require Superintendent approval?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.86,
+        "llm_support": null,
+        "facts_found": "3/5",
+        "pass": true,
+        "failure": null,
+        "answer": "**Order Quantity:** 2,001 to 15,000 USD\n\n**Superintendent Approval Required:** Yes\n\n**Emergency Escape Breathing Device Cost:** 410.00 USD\n\n**Order Time:** 24 hours to 5 working days",
+        "retrieved": [
+          "parts_catalogue.csv#r18",
+          "procurement_procedure.md#0",
+          "procurement_procedure.md#2"
+        ],
+        "question": "Could you please specify the amount of the orders that require Superintendent approval, and also: how much does an Emergency escape breathing device cost, and how long does it take to order?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.83,
+        "llm_support": false,
+        "facts_found": "3/5",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "Urgent delivery shortens lead time to 3 working days for catalogue parts in stock. The lead time for Lube oil filter element is 7 days, and the lead time for Fuel oil filter element is also 7 days. The cost to purchase a Lube oil filter element from Aquila Filters is $38.40, and it takes 7 days to receive the order.",
+        "retrieved": [
+          "supplier_terms.md#3",
+          "parts_catalogue.csv#r4",
+          "parts_catalogue.csv#r5",
+          "procurement_procedure.md#1"
+        ],
+        "question": "How does the \"Urgent delivery\" feature affect the lead time for catalogue parts in stock, and also: how much does it cost to purchase a Lube oil filter element from Aquila Filters, and how long does it take to receive the order?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Early payment within 10 days earns a 2 percent discount with NordMar Parts only.",
+        "retrieved": [
+          "supplier_terms.md#0",
+          "parts_catalogue.csv#r7",
+          "parts_catalogue.csv#r3",
+          "parts_catalogue.csv#r1"
+        ],
+        "question": "Why is early payment with NordMar Parts more advantageous?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.29,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "Goods must be inspected within 48 hours of receipt to ensure they meet the necessary quality standards and are ready for delivery. This timely inspection helps in identifying any discrepancies or issues that may arise during transit, allowing for prompt resolution and minimizing delays in the delivery process.",
+        "retrieved": [
+          "procurement_procedure.md#3",
+          "procurement_procedure.md#2",
+          "supplier_terms.md#2",
+          "supplier_terms.md#1"
+        ],
+        "question": "Why is it important to inspect goods within 48 hours?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Orders above 5,000 USD require at least 3 written quotes.",
+        "retrieved": [
+          "procurement_procedure.md#1",
+          "procurement_procedure.md#0",
+          "parts_catalogue.csv#r16",
+          "parts_catalogue.csv#r5"
+        ],
+        "question": "Why do you need additional quotes for orders above 5,000 USD?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with ship-spares procurement?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "[procurement_procedure.md#3] Goods must be inspected within 48 hours of receipt. Discrepancies are reported to the supplier within 7 days, otherwise the delivery is treated as accepted.",
+        "retrieved": [
+          "procurement_procedure.md#3",
+          "supplier_terms.md#3"
+        ],
+        "question": "Can you recommend a good stock to invest in?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Give me a recipe for chocolate cake."
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Who won the football world cup in 2018?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Write me a Python script to sort a list."
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What is the weather forecast in Paris tomorrow?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant for ship engineers that answers ship-spares procurement questions about part prices from the catalogue, supplier payment terms, warranty and approval limits, and can calculate order totals.",
+      "system_prompt": "You are an assistant for: I need an assistant for ship engineers that answers ship-spares procurement questions about part prices from the catalogue, supplier payment terms, warranty and approval limits, and can calculate order totals.\nAudience: ship engineers. Tone: informative and professional.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; ship-spares procurement.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"part prices from the catalogue\" and \"supplier payment terms\" as your main query.\n2. Include \"warranty and approval limits\" in your response.",
+      "prompt_rules": [
+        "1. Use \"part prices from the catalogue\" and \"supplier payment terms\" as your main query.\n2. Include \"warranty and approval limits\" in your response."
+      ],
+      "provenance": {
+        "domain_instructions": "model",
+        "offer_check_advisory": {
+          "ship-spares procurement": true
+        },
+        "top_k": "model",
+        "tools": "rule candidates ['csv_lookup', 'calculator']; model verdicts {'csv_lookup': True, 'calculator': True}; attached ['csv_lookup', 'calculator'] (invalid verdict keeps the tool)"
+      },
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 4,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [
+        "csv_lookup",
+        "calculator"
+      ],
+      "tool_rationale": {
+        "csv_lookup": "Exact lookup of a row in a CSV catalogue by part id / key.",
+        "calculator": "Safe arithmetic on numbers."
+      },
+      "tools_not_attached": [
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "\\bship"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 120,
+        "max_sentences": 1
+      }
+    },
+    "failures_before": [
+      {
+        "id": "case-02",
+        "category": "retrieval_miss",
+        "rule_category": "hallucination",
+        "diagnosis_source": "model",
+        "model_rule": "The assistant should have retrieved the correct documents and the amount of orders that require Superintendent approval."
+      },
+      {
+        "id": "case-08",
+        "category": "retrieval_miss",
+        "rule_category": "wrong_refusal",
+        "diagnosis_source": "model",
+        "model_rule": "The assistant should have retrieved the correct documents to answer the question about the number of written quotes required for orders above 5,000 USD."
+      },
+      {
+        "id": "case-10",
+        "category": "hallucination",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "model",
+        "model_rule": "The assistant should have retrieved the correct documents and answered the question correctly."
+      },
+      {
+        "id": "case-13",
+        "category": "retrieval_miss",
+        "rule_category": "hallucination",
+        "diagnosis_source": "model",
+        "model_rule": "The assistant should have retrieved the correct documents and information from the provided documents and procedures."
+      },
+      {
+        "id": "case-15",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "model",
+        "model_rule": "The assistant should have answered correctly based on the documents it retrieved and the information provided."
+      },
+      {
+        "id": "case-17",
+        "category": "retrieval_miss",
+        "rule_category": "hallucination",
+        "diagnosis_source": "model",
+        "model_rule": "The assistant should have retrieved the correct documents and the correct facts to answer the question about the importance of inspecting goods within 48 hours."
+      },
+      {
+        "id": "case-20",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "model",
+        "model_rule": "The assistant should have answered when it should refuse, not retrieve the document or suggest a rule to prevent this failure."
+      }
+    ],
+    "accepted": false
+  }
+]
