@@ -73,7 +73,8 @@ def generate_evals(chunks, brief, llm, req, n_answerable=12, n_cross=3, n_amb=3,
         s = ss[k % len(ss)]
         q, from_llm = gen_question(llm, c, s)
         cases.append({"type": "answerable", "question": q, "expected_docs": [c["doc"]], "key_facts": key_facts(s),
-                      "source_chunk": c["id"], "source_sentence": s, "question_from_llm": from_llm})
+                      "source_chunk": c["id"], "source_sentence": s, "question_from_llm": from_llm,
+                      "origin": "model" if from_llm else "template-fallback (heading question)"})
     # cross-document: join two questions from different docs
     pool = [c for c in textual if c["doc"] in docs]
     for _ in range(n_cross):
@@ -85,27 +86,36 @@ def generate_evals(chunks, brief, llm, req, n_answerable=12, n_cross=3, n_amb=3,
         qa, _ = gen_question(llm, a, sa)
         qb, _ = gen_question(llm, b, sb)
         cases.append({"type": "edge_cross_doc", "question": qa[:-1] + ", and also: " + qb[0].lower() + qb[1:],
-                      "expected_docs": [a["doc"], b["doc"]], "key_facts": key_facts(sa) + key_facts(sb),
+                      "origin": "model questions joined by code", "expected_docs": [a["doc"], b["doc"]], "key_facts": key_facts(sa) + key_facts(sb),
                       "source_chunk": [a["id"], b["id"]], "source_sentence": [sa, sb]})
-    # ambiguous: keyword-only phrasing of the heading, lenient check
+    # ambiguous: model writes a vague, under-specified question per chunk; heading keywords only if the model output is unusable
     heads = [c for c in textual if not c["heading"].startswith("row ")]
     for c in rnd.sample(heads, min(n_amb, len(heads))):
-        cases.append({"type": "edge_ambiguous", "question": c["heading"].lower() + "?", "expected_docs": [c["doc"]],
-                      "key_facts": [], "source_chunk": c["id"], "lenient": True})
+        q = clean_q(llm.complete(prompt("eval_ambiguous.txt", doc=c["doc"], heading=c["heading"], text=c["text"][:400]), max_tokens=24) or "")
+        ok = bool(q) and 2 <= len(q.split()) <= 12
+        cases.append({"type": "edge_ambiguous", "question": q if ok else c["heading"].lower() + "?", "origin": "model" if ok else "template-fallback (heading keywords)",
+                      "expected_docs": [c["doc"]], "key_facts": [], "source_chunk": c["id"], "lenient": True})
     # out of scope: unsupported brief topics + adjacent (LLM) + generic
     oos = [f"Can you help me with {t['topic']}?" for t in req["groundability"]["unsupported"]]
-    adj = llm.complete(prompt("eval_adjacent.txt", brief=brief, n=3), max_tokens=120) or ""
+    adj = llm.complete(prompt("eval_adjacent.txt", brief=brief, n=n_oos), max_tokens=60 * n_oos) or ""
     idx = BM25(chunks)
-    for x in adj.split("\n")[:3]:
+    model_oos = []
+    sup_words = {w for t in req["groundability"]["supported"] for w in re.findall(r"[a-z]{5,}", t["topic"].lower())}
+    sup_words |= {w for t in req.get("must_answer_topics", []) for w in re.findall(r"[a-z]{5,}", t.lower())}
+    for x in adj.split("\n")[:n_oos + 2]:
         x = clean_q(re.sub(r"^\s*\d+[.)]\s*", "", x))
         if x:
             qt = tokens(x)
-            if qt and sum(t in idx.vocab for t in qt) / len(qt) < 0.8:  # drop ones the documents could plausibly answer
-                oos.append(x)
-    rnd.shuffle(GENERIC := list(GENERIC_OOS))
-    oos += GENERIC
-    for q in oos[:n_oos]:
-        cases.append({"type": "out_of_scope", "question": q, "expected_docs": [], "key_facts": [], "should_refuse": True})
+            if qt and sum(t in idx.vocab for t in qt) / len(qt) < 0.8 and not (sup_words & set(re.findall(r"[a-z]{5,}", x.lower()))):  # drop ones the documents could plausibly answer
+                model_oos.append(x)
+    unsupported = [f"Can you help me with {t['topic']}?" for t in req["groundability"]["unsupported"]]
+    oos = [(q, "template (unsupported brief topic)") for q in unsupported] + [(q, "model") for q in model_oos]
+    need = n_oos - len(oos)
+    gen = list(GENERIC_OOS)
+    rnd.shuffle(gen)
+    oos += [(q, "template-fallback (fixed generic list)") for q in gen[:max(0, need)]]
+    for q, origin in oos[:n_oos]:
+        cases.append({"type": "out_of_scope", "question": q, "origin": origin, "expected_docs": [], "key_facts": [], "should_refuse": True})
     for n, c in enumerate(cases):
         c["id"] = f"case-{n+1:02d}"
         c.setdefault("should_refuse", False)
