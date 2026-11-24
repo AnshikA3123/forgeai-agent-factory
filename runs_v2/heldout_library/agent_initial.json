@@ -1,0 +1,42 @@
+{
+  "name": "forge-agent",
+  "generated_from": "I need an assistant for library members that answers questions about borrowing, renewals, fines, membership, opening hours and study rooms, and also gives book recommendations and recommends reading lists for children.",
+  "system_prompt": "You are an assistant for: I need an assistant for library members that answers questions about borrowing, renewals, fines, membership, opening hours and study rooms, and also gives book recommendations and recommends reading lists for children.\nAudience: library members. Tone: friendly and brief.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; Reading lists for children.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\nUse \"Library borrowing rules\", \"Membership and spaces\", \"Opening hours\", \"Study rooms\", \"Fines\", and \"Lost items\" as keywords.",
+  "prompt_rules": [
+    "Use \"Library borrowing rules\", \"Membership and spaces\", \"Opening hours\", \"Study rooms\", \"Fines\", and \"Lost items\" as keywords."
+  ],
+  "provenance": {
+    "domain_instructions": "model",
+    "offer_check_advisory": {
+      "Reading lists for children": false
+    },
+    "top_k": "model",
+    "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+  },
+  "retrieval": {
+    "chunk_chars": 600,
+    "top_k": 4,
+    "k1": 1.5,
+    "b": 0.75,
+    "min_coverage": 0.5,
+    "min_score": 1.0,
+    "expansions": {}
+  },
+  "tools": [],
+  "tool_rationale": {},
+  "tools_not_attached": [
+    "csv_lookup",
+    "calculator",
+    "http_api",
+    "current_date"
+  ],
+  "refuse_patterns": [
+    "\\breadi"
+  ],
+  "output_contract": {
+    "format": "short answer with [source-id] citations",
+    "refusal_text": "I can't answer that from the provided documents.",
+    "max_tokens": 120,
+    "max_sentences": 1
+  }
+}
