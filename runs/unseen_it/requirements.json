@@ -1,0 +1,80 @@
+{
+  "brief": "I need an assistant that answers employee questions about password rules, lost devices, helpdesk hours and software requests, and also gives legal advice on data breaches.",
+  "documents": [
+    "it_helpdesk.md",
+    "it_security.md"
+  ],
+  "interview": [
+    {
+      "q": "Who will use this assistant (role, seniority)?",
+      "a": "staff of the organisation that owns the documents",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "What tone should it use (formal, friendly, terse)?",
+      "a": "clear, professional, concise",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Anything it must refuse or hand off to a human (legal, medical, personal data)?",
+      "a": "legal advice; questions about individual people; anything not in the documents",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Which topics must it answer well?",
+      "a": "",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Who should users contact when it cannot answer?",
+      "a": "the relevant department",
+      "source": "assumed default (unattended)"
+    }
+  ],
+  "scope": "Answer questions grounded in: it_helpdesk.md, it_security.md.",
+  "audience": "staff of the organisation that owns the documents",
+  "tone": "clear, professional, concise",
+  "escalation": "the relevant department",
+  "must_answer_topics": [
+    "password rules",
+    "lost devices",
+    "helpdesk hours",
+    "software requests"
+  ],
+  "must_refuse_topics": [
+    "legal advice",
+    "questions about individual people",
+    "anything not in the documents",
+    "legal advice on data breaches"
+  ],
+  "groundability": {
+    "supported": [
+      {
+        "topic": "password rules",
+        "coverage": 0.5
+      },
+      {
+        "topic": "lost devices",
+        "coverage": 1.0
+      },
+      {
+        "topic": "helpdesk hours",
+        "coverage": 1.0
+      },
+      {
+        "topic": "software requests",
+        "coverage": 1.0
+      }
+    ],
+    "unsupported": [
+      {
+        "topic": "legal advice on data breaches",
+        "coverage": 0.0
+      }
+    ]
+  },
+  "model_summary": "The assistant's audience is employees, with a professional tone suitable for a technical support role.",
+  "warnings": [
+    "Brief asks for 'legal advice on data breaches' but the documents do not support it; the agent will refuse it."
+  ]
+}
