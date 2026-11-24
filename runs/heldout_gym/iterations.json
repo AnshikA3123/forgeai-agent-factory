@@ -1,0 +1,1582 @@
+[
+  {
+    "iteration": 0,
+    "score": 0.75,
+    "passed": 18,
+    "total": 24,
+    "by_type": {
+      "answerable": "8/12",
+      "edge_cross_doc": "2/3",
+      "edge_ambiguous": "2/3",
+      "out_of_scope": "6/6"
+    },
+    "changes": [],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_facilities.md#1"
+        ],
+        "question": "How do I know if my locker is available for use?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[gym_membership.md#1] Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month.",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_membership.md#0"
+        ],
+        "question": "How can I freeze my membership for up to 3 months per year?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "[gym_facilities.md#0] 7 days",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/3",
+        "pass": true,
+        "failure": null,
+        "answer": "30 USD per month",
+        "retrieved": [
+          "gym_membership.md#0",
+          "gym_facilities.md#1"
+        ],
+        "question": "How much does the Basic plan cost per month?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Yes, showers are open for all members until 30 minutes after closing.",
+        "retrieved": [
+          "gym_facilities.md#2",
+          "gym_membership.md#1"
+        ],
+        "question": "Are showers available for all members until 30 minutes after closing?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "40 USD",
+        "retrieved": [
+          "gym_membership.md#2",
+          "gym_membership.md#0"
+        ],
+        "question": "How much is the one-time joining fee for joining the gym?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.89,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Yes, you can book group classes up to 7 days in advance through the app.",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "Can I book group classes up to 7 days in advance through the app?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "30 days",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_facilities.md#0"
+        ],
+        "question": "How long is the cancellation notice required before the effect of the cancellation takes effect?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "20",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#0"
+        ],
+        "question": "How many people can be accommodated in a class at a gym?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.75,
+        "llm_support": true,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Yes, the context states that \"Towels are provided at the Premium front desk only.\"",
+        "retrieved": [
+          "gym_facilities.md#2",
+          "gym_membership.md#1"
+        ],
+        "question": "Are there any specific amenities or facilities available at the Premium front desk?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_membership.md#0"
+        ],
+        "question": "Is there a refund policy for unused days in the gym membership?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "[gym_facilities.md#0] 7 days",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.88,
+        "llm_support": false,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "[gym_membership.md#1] Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month. Cancellation needs 30 days written notice and takes effect at the end of the billing cycle. There is no refund for unused days.\n\n[gym_facilities.md#1] Day lockers are free but must be emptied by closing time. Monthly lockers cost 10 USD per month and are allocated on a first come basis.\n\nTo know if your locker is available for use, check the lockers on the day you are scheduled to use",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_facilities.md#1"
+        ],
+        "question": "How can I freeze my membership for up to 3 months per year, and also: how do I know if my locker is available for use?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": false,
+        "numbers_in_context": false,
+        "overlap": 0.83,
+        "llm_support": true,
+        "facts_found": "1/3",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "1 hour before the class\n40 USD",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#2"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge, and also: how much is the one-time joining fee for joining the gym?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.89,
+        "llm_support": null,
+        "facts_found": "2/4",
+        "pass": true,
+        "failure": null,
+        "answer": "1. Before booking a class, make a booking 2 hours before the class.\n2. To freeze your membership for up to 3 months per year, make a 30-day written notice and freeze the membership at the end of the billing cycle.",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge, and also: how can I freeze my membership for up to 3 months per year?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Basic plan, Premium plan",
+        "retrieved": [
+          "gym_membership.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "membership plans?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.89,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Class booking is possible up to 7 days ahead through the app.",
+        "retrieved": [
+          "gym_facilities.md#0"
+        ],
+        "question": "class booking?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_facilities.md#0"
+        ],
+        "question": "freezing and cancelling?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with prices?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with personal training?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with diet advice?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What are the key features of the assistant that allow it to handle all these tasks?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_membership.md#2",
+          "gym_facilities.md#2"
+        ],
+        "question": "How does the assistant ensure that all member questions are answered accurately and efficiently?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_membership.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "What are the legal implications of the assistant's ability to freeze and cancel plans and classes?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant that answers member questions about plans and prices, freezing and cancelling, class booking and lockers, and also gives personal training and diet advice.",
+      "system_prompt": "You are an assistant for: I need an assistant that answers member questions about plans and prices, freezing and cancelling, class booking and lockers, and also gives personal training and diet advice.\nAudience: staff of the organisation that owns the documents. Tone: clear, professional, concise.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; prices; personal training; diet advice.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.",
+      "prompt_rules": [],
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 2,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "\\bprice",
+        "\\bperso",
+        "\\bdiet"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 120,
+        "max_sentences": 1
+      }
+    }
+  },
+  {
+    "iteration": 1,
+    "score_before": 0.75,
+    "score": 0.917,
+    "passed": 22,
+    "total": 24,
+    "by_type": {
+      "answerable": "10/12",
+      "edge_cross_doc": "3/3",
+      "edge_ambiguous": "3/3",
+      "out_of_scope": "6/6"
+    },
+    "changes": [
+      {
+        "category": "hallucination",
+        "fix": "added grounding rule to system prompt + extractive fallback when the answer drifts from context",
+        "addresses": [
+          "case-14"
+        ]
+      },
+      {
+        "category": "prompt_defect",
+        "fix": "added answer-focus rule; max_sentences/max_tokens raised",
+        "addresses": [
+          "case-09"
+        ]
+      }
+    ],
+    "attempts": [
+      {
+        "category": "hallucination",
+        "score_before": 0.75,
+        "score_after": 0.875,
+        "kept": true,
+        "changes": [
+          {
+            "category": "hallucination",
+            "fix": "added grounding rule to system prompt + extractive fallback when the answer drifts from context",
+            "addresses": [
+              "case-14"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "prompt_defect",
+        "score_before": 0.875,
+        "score_after": 0.917,
+        "kept": true,
+        "changes": [
+          {
+            "category": "prompt_defect",
+            "fix": "added answer-focus rule; max_sentences/max_tokens raised",
+            "addresses": [
+              "case-09"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "wrong_refusal",
+        "score_before": 0.917,
+        "score_after": 0.917,
+        "kept": false,
+        "changes": [
+          {
+            "category": "wrong_refusal",
+            "fix": "min_coverage -> 0.35, min_score -> 0.6",
+            "addresses": [
+              "case-01"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_facilities.md#1"
+        ],
+        "question": "How do I know if my locker is available for use?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[gym_membership.md#1] Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month.",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_membership.md#0"
+        ],
+        "question": "How can I freeze my membership for up to 3 months per year?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "The Basic plan costs 30 USD per month and includes gym floor access from 6 AM to 10 PM. [gym_membership.md#0]",
+        "retrieved": [
+          "gym_membership.md#0",
+          "gym_facilities.md#1"
+        ],
+        "question": "How much does the Basic plan cost per month?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.8,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "[Yes] The context states that showers are open to all members until 30 minutes after closing.",
+        "retrieved": [
+          "gym_facilities.md#2",
+          "gym_membership.md#1"
+        ],
+        "question": "Are showers available for all members until 30 minutes after closing?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "A one-time joining fee of 40 USD applies to new members. [gym_membership.md#2]",
+        "retrieved": [
+          "gym_membership.md#2",
+          "gym_membership.md#0"
+        ],
+        "question": "How much is the one-time joining fee for joining the gym?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.89,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Yes, you can book group classes up to 7 days in advance through the app.",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "Can I book group classes up to 7 days in advance through the app?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Cancellation needs 30 days written notice and takes effect at the end of the billing cycle. [gym_membership.md#1]",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_facilities.md#0"
+        ],
+        "question": "How long is the cancellation notice required before the effect of the cancellation takes effect?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/1",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#0"
+        ],
+        "question": "How many people can be accommodated in a class at a gym?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[Towels] are provided at the Premium front desk.",
+        "retrieved": [
+          "gym_facilities.md#2",
+          "gym_membership.md#1"
+        ],
+        "question": "Are there any specific amenities or facilities available at the Premium front desk?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "There is no refund for unused days. [gym_membership.md#1]",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_membership.md#0"
+        ],
+        "question": "Is there a refund policy for unused days in the gym membership?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "[gym_membership.md#1] Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month. [source-id: gym_membership.md#1]",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_facilities.md#1"
+        ],
+        "question": "How can I freeze my membership for up to 3 months per year, and also: how do I know if my locker is available for use?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#2"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge, and also: how much is the one-time joining fee for joining the gym?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "3/4",
+        "pass": true,
+        "failure": null,
+        "answer": "Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge, and also: how can I freeze my membership for up to 3 months per year?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Basic plan: 30 USD per month\nPremium plan: 55 USD per month",
+        "retrieved": [
+          "gym_membership.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "membership plans?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.89,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Class booking can be done up to 7 days ahead through the app.",
+        "retrieved": [
+          "gym_facilities.md#0"
+        ],
+        "question": "class booking?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_membership.md#1]",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_facilities.md#0"
+        ],
+        "question": "freezing and cancelling?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with prices?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with personal training?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with diet advice?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What are the key features of the assistant that allow it to handle all these tasks?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_membership.md#2",
+          "gym_facilities.md#2"
+        ],
+        "question": "How does the assistant ensure that all member questions are answered accurately and efficiently?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_membership.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "What are the legal implications of the assistant's ability to freeze and cancel plans and classes?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant that answers member questions about plans and prices, freezing and cancelling, class booking and lockers, and also gives personal training and diet advice.",
+      "system_prompt": "You are an assistant for: I need an assistant that answers member questions about plans and prices, freezing and cancelling, class booking and lockers, and also gives personal training and diet advice.\nAudience: staff of the organisation that owns the documents. Tone: clear, professional, concise.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; prices; personal training; diet advice.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\nState only facts that appear verbatim in the context; copy figures exactly and add nothing else.\nAnswer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
+      "prompt_rules": [
+        "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
+        "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part."
+      ],
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 2,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "\\bprice",
+        "\\bperso",
+        "\\bdiet"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 180,
+        "max_sentences": 2,
+        "extractive_fallback": true
+      }
+    },
+    "failures_before": [
+      {
+        "id": "case-01",
+        "category": "wrong_refusal"
+      },
+      {
+        "id": "case-03",
+        "category": "prompt_defect"
+      },
+      {
+        "id": "case-11",
+        "category": "wrong_refusal"
+      },
+      {
+        "id": "case-12",
+        "category": "prompt_defect"
+      },
+      {
+        "id": "case-14",
+        "category": "hallucination"
+      },
+      {
+        "id": "case-18",
+        "category": "wrong_refusal"
+      }
+    ],
+    "accepted": true
+  },
+  {
+    "iteration": 2,
+    "score_before": 0.917,
+    "score": 0.917,
+    "passed": 22,
+    "total": 24,
+    "by_type": {
+      "answerable": "10/12",
+      "edge_cross_doc": "3/3",
+      "edge_ambiguous": "3/3",
+      "out_of_scope": "6/6"
+    },
+    "changes": [],
+    "attempts": [
+      {
+        "category": "wrong_refusal",
+        "score_before": 0.917,
+        "score_after": 0.917,
+        "kept": false,
+        "changes": [
+          {
+            "category": "wrong_refusal",
+            "fix": "min_coverage -> 0.35, min_score -> 0.6",
+            "addresses": [
+              "case-01"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_facilities.md#1"
+        ],
+        "question": "How do I know if my locker is available for use?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[gym_membership.md#1] Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month.",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_membership.md#0"
+        ],
+        "question": "How can I freeze my membership for up to 3 months per year?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "The Basic plan costs 30 USD per month and includes gym floor access from 6 AM to 10 PM. [gym_membership.md#0]",
+        "retrieved": [
+          "gym_membership.md#0",
+          "gym_facilities.md#1"
+        ],
+        "question": "How much does the Basic plan cost per month?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.8,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "[Yes] The context states that showers are open to all members until 30 minutes after closing.",
+        "retrieved": [
+          "gym_facilities.md#2",
+          "gym_membership.md#1"
+        ],
+        "question": "Are showers available for all members until 30 minutes after closing?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "A one-time joining fee of 40 USD applies to new members. [gym_membership.md#2]",
+        "retrieved": [
+          "gym_membership.md#2",
+          "gym_membership.md#0"
+        ],
+        "question": "How much is the one-time joining fee for joining the gym?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.89,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Yes, you can book group classes up to 7 days in advance through the app.",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "Can I book group classes up to 7 days in advance through the app?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Cancellation needs 30 days written notice and takes effect at the end of the billing cycle. [gym_membership.md#1]",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_facilities.md#0"
+        ],
+        "question": "How long is the cancellation notice required before the effect of the cancellation takes effect?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/1",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#0"
+        ],
+        "question": "How many people can be accommodated in a class at a gym?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[Towels] are provided at the Premium front desk.",
+        "retrieved": [
+          "gym_facilities.md#2",
+          "gym_membership.md#1"
+        ],
+        "question": "Are there any specific amenities or facilities available at the Premium front desk?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "There is no refund for unused days. [gym_membership.md#1]",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_membership.md#0"
+        ],
+        "question": "Is there a refund policy for unused days in the gym membership?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "[gym_membership.md#1] Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month. [source-id: gym_membership.md#1]",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_facilities.md#1"
+        ],
+        "question": "How can I freeze my membership for up to 3 months per year, and also: how do I know if my locker is available for use?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#2"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge, and also: how much is the one-time joining fee for joining the gym?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "3/4",
+        "pass": true,
+        "failure": null,
+        "answer": "Members may freeze a membership for up to 3 months per year for a fee of 5 USD per month. [gym_facilities.md#0]",
+        "retrieved": [
+          "gym_facilities.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "How long before a class should a booking be made to avoid a 5 USD no-show charge, and also: how can I freeze my membership for up to 3 months per year?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Basic plan: 30 USD per month\nPremium plan: 55 USD per month",
+        "retrieved": [
+          "gym_membership.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "membership plans?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.89,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Class booking can be done up to 7 days ahead through the app.",
+        "retrieved": [
+          "gym_facilities.md#0"
+        ],
+        "question": "class booking?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "A booking must be cancelled at least 2 hours before the class, otherwise a 5 USD no-show charge applies. [gym_membership.md#1]",
+        "retrieved": [
+          "gym_membership.md#1",
+          "gym_facilities.md#0"
+        ],
+        "question": "freezing and cancelling?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with prices?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with personal training?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with diet advice?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What are the key features of the assistant that allow it to handle all these tasks?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_membership.md#2",
+          "gym_facilities.md#2"
+        ],
+        "question": "How does the assistant ensure that all member questions are answered accurately and efficiently?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "gym_membership.md#0",
+          "gym_membership.md#1"
+        ],
+        "question": "What are the legal implications of the assistant's ability to freeze and cancel plans and classes?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant that answers member questions about plans and prices, freezing and cancelling, class booking and lockers, and also gives personal training and diet advice.",
+      "system_prompt": "You are an assistant for: I need an assistant that answers member questions about plans and prices, freezing and cancelling, class booking and lockers, and also gives personal training and diet advice.\nAudience: staff of the organisation that owns the documents. Tone: clear, professional, concise.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; prices; personal training; diet advice.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\nState only facts that appear verbatim in the context; copy figures exactly and add nothing else.\nAnswer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
+      "prompt_rules": [
+        "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
+        "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part."
+      ],
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 2,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "\\bprice",
+        "\\bperso",
+        "\\bdiet"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 180,
+        "max_sentences": 2,
+        "extractive_fallback": true
+      }
+    },
+    "failures_before": [
+      {
+        "id": "case-01",
+        "category": "wrong_refusal"
+      },
+      {
+        "id": "case-09",
+        "category": "prompt_defect"
+      }
+    ],
+    "accepted": false
+  }
+]
