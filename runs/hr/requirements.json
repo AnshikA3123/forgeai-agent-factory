@@ -1,0 +1,87 @@
+{
+  "brief": "I need an assistant that answers HR policy questions about annual leave, sick leave, remote work and expense claims for shore staff, and also gives payroll tax advice and visa sponsorship guidance.",
+  "documents": [
+    "expense_policy.md",
+    "leave_policy.md",
+    "remote_work_policy.md"
+  ],
+  "interview": [
+    {
+      "q": "Who will use this assistant (role, seniority)?",
+      "a": "staff of the organisation that owns the documents",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "What tone should it use (formal, friendly, terse)?",
+      "a": "clear, professional, concise",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Anything it must refuse or hand off to a human (legal, medical, personal data)?",
+      "a": "legal advice; questions about individual people; anything not in the documents",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Which topics must it answer well?",
+      "a": "",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Who should users contact when it cannot answer?",
+      "a": "the relevant department",
+      "source": "assumed default (unattended)"
+    }
+  ],
+  "scope": "Answer questions grounded in: expense_policy.md, leave_policy.md, remote_work_policy.md.",
+  "audience": "staff of the organisation that owns the documents",
+  "tone": "clear, professional, concise",
+  "escalation": "the relevant department",
+  "must_answer_topics": [
+    "annual leave",
+    "sick leave",
+    "remote work",
+    "expense claims for shore staff"
+  ],
+  "must_refuse_topics": [
+    "legal advice",
+    "questions about individual people",
+    "anything not in the documents",
+    "payroll tax advice",
+    "visa sponsorship guidance"
+  ],
+  "groundability": {
+    "supported": [
+      {
+        "topic": "annual leave",
+        "coverage": 1.0
+      },
+      {
+        "topic": "sick leave",
+        "coverage": 1.0
+      },
+      {
+        "topic": "remote work",
+        "coverage": 1.0
+      },
+      {
+        "topic": "expense claims for shore staff",
+        "coverage": 1.0
+      }
+    ],
+    "unsupported": [
+      {
+        "topic": "payroll tax advice",
+        "coverage": 0.33
+      },
+      {
+        "topic": "visa sponsorship guidance",
+        "coverage": 0.0
+      }
+    ]
+  },
+  "model_summary": "The assistant's audience is HR professionals and those seeking guidance on annual leave, sick leave, remote work, expense claims, shore staff payroll tax advice, and visa sponsorship. The tone suits them as they need detailed information on these topics.",
+  "warnings": [
+    "Brief asks for 'payroll tax advice' but the documents do not support it; the agent will refuse it.",
+    "Brief asks for 'visa sponsorship guidance' but the documents do not support it; the agent will refuse it."
+  ]
+}
