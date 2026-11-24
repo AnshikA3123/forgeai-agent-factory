@@ -26,8 +26,7 @@ Each folder has requirements.json, agent_initial.json, agent.json (best), evalse
 Prompts: `prompts/` (eval generation, judge, runtime, doc synthesis). Documents are fictional and AI-written.
 
 ## Demo video
-`forgeai-demo-v2.mp4` (NOT in this repo yet: the GitHub web upload failed for binary files, so it is delivered separately; 3:25, silent, 1280x720) is a real screen capture (Xvfb + Chrome showing live process output, recorded with ffmpeg x11grab; no terminal emulator was available). Part 1 is a fresh `--no-cache` HR build (7 min real time) shown at 30x speed. Part 2 re-runs the build from the cached model outputs of the committed HR run (0 new LLM calls, labeled on screen), then shows the eval, scorecard and chats at normal speed.
-Run-to-run variance: a fresh no-cache build of the HR demo scored 75% -> 88% (21/24); the committed `runs/hr` run scored 79% -> 88% (21/24). Qwen2.5-0.5B is not fully deterministic across no-cache runs; both are real runs. Committed numbers are the ones in `runs/*/scorecard.md`.
+`forgeai-demo-v3.mp4` (NOT in this repo: the GitHub web upload failed for binary files, so it is delivered separately; silent, 1280x720) is a real screen capture of live command output with on-screen captions (Xvfb + Chrome, ffmpeg x11grab). It shows pytest, the HR brief, a rebuild from CACHED model outputs (0 new model calls, labelled on screen; a fresh no-cache build takes about 15 minutes and is not shown), requirements and provenance, eval case origins, scorecards (HR v3 79% -> 92%, procurement v3 71% -> 71%, held-out library v2c 75% -> 75%), chats, and the limits. Older videos (`forgeai-demo-v2.mp4`) show earlier pipeline versions and are superseded.
 
 ## Input formats and how each stage uses the model
 Documents: .md, .txt, .csv, and .pdf (PDF needs `pdftotext` from poppler-utils installed; `apt install poppler-utils`; checked here by loading a real PDF, but no demo run uses PDFs). No .docx.
@@ -40,4 +39,8 @@ See `EXPLANATION.md` for a plain-language walkthrough and `runs/README.md` for s
 
 v2 changes: the model now writes intake requirements, generator style instructions, top_k, tool-need verdicts, ambiguous and out-of-scope eval questions, and optimizer diagnoses plus rules. Still rule-based in v2: groundability coverage check (lexical, with the model supplying the topic list), the judge's deterministic checks, tool preconditions (a veto), and bounded fix application. Every model stage logs invalid outputs and fallbacks into the run report.
 
-**Update (v2 video):** the current video is `forgeai-demo-v2-pipeline.mp4` (silent, ~3:00, delivered separately, not in the repo). It shows the v2 model-driven pipeline: tests, the HR brief, a rebuild from cached model outputs (0 new model calls; a fresh no-cache v2 build takes about 15 minutes and is not shown), requirements and agent provenance, eval case origins (model vs template fallback), scorecards, chats, and the limits. The v1 text above describes the older video `forgeai-demo-v2.mp4`, which shows v1 and is superseded. The library held-out result (75% -> 75%) belongs to pipeline v2c only.
+
+## Residual limits (found in review of v3)
+- Natural domain phrasing that uses words absent from the documents can still be wrongly refused by the retrieval coverage gate. Example: a procurement warranty question phrased with "ship-spares" wording was refused at coverage 0.33, while "warranty period" wording is answered.
+- Refusal patterns now require all topic words, so they miss short paraphrases of an unsupported topic. Refusal then depends on the lexical coverage gate, not on any semantic safety check.
+- The held-out library result is v2c only; HR and procurement results are v3; see `runs_v3/README.md`.
