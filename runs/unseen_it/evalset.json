@@ -1,0 +1,342 @@
+[
+  {
+    "type": "answerable",
+    "question": "How long does it typically take to review new software requests?",
+    "expected_docs": [
+      "it_helpdesk.md"
+    ],
+    "key_facts": [
+      "5 working days"
+    ],
+    "source_chunk": "it_helpdesk.md#1",
+    "source_sentence": "New software requests are reviewed within 5 working days.",
+    "question_from_llm": true,
+    "id": "case-01",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long should a lost laptop or phone be reported to the IT helpdesk?",
+    "expected_docs": [
+      "it_security.md"
+    ],
+    "key_facts": [
+      "2 hours"
+    ],
+    "source_chunk": "it_security.md#1",
+    "source_sentence": "A lost laptop or phone must be reported to the IT helpdesk within 2 hours.",
+    "question_from_llm": true,
+    "id": "case-02",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "When is the helpdesk open for support?",
+    "expected_docs": [
+      "it_helpdesk.md"
+    ],
+    "key_facts": [
+      "8",
+      "6"
+    ],
+    "source_chunk": "it_helpdesk.md#0",
+    "source_sentence": "The helpdesk is open Monday to Friday from 8 AM to 6 PM.",
+    "question_from_llm": true,
+    "id": "case-03",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long should passwords be changed if they are to be at least 14 characters long?",
+    "expected_docs": [
+      "it_security.md"
+    ],
+    "key_facts": [
+      "14",
+      "90 days"
+    ],
+    "source_chunk": "it_security.md#0",
+    "source_sentence": "Passwords must be at least 14 characters and changed every 90 days.",
+    "question_from_llm": true,
+    "id": "case-04",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How often are laptops typically replaced in the hardware refresh process?",
+    "expected_docs": [
+      "it_helpdesk.md"
+    ],
+    "key_facts": [
+      "4"
+    ],
+    "source_chunk": "it_helpdesk.md#2",
+    "source_sentence": "Laptops are replaced every 4 years.",
+    "question_from_llm": true,
+    "id": "case-05",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How can I ensure that suspicious emails are properly flagged and removed from my system?",
+    "expected_docs": [
+      "it_security.md"
+    ],
+    "key_facts": [
+      "example.test",
+      "suspiciou"
+    ],
+    "source_chunk": "it_security.md#2",
+    "source_sentence": "Suspicious emails should be forwarded to phishing@example.test and then deleted.",
+    "question_from_llm": true,
+    "id": "case-06",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How can I report an urgent outage outside my usual support hours?",
+    "expected_docs": [
+      "it_helpdesk.md"
+    ],
+    "key_facts": [
+      "emergency",
+      "engineer"
+    ],
+    "source_chunk": "it_helpdesk.md#0",
+    "source_sentence": "Urgent outages outside these hours are handled by the on-call engineer through the emergency line.",
+    "question_from_llm": true,
+    "id": "case-07",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long will it take for the helpdesk to remotely wipe the device?",
+    "expected_docs": [
+      "it_security.md"
+    ],
+    "key_facts": [
+      "1 hour"
+    ],
+    "source_chunk": "it_security.md#1",
+    "source_sentence": "The helpdesk will remotely wipe the device within 1 hour of the report.",
+    "question_from_llm": true,
+    "id": "case-08",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "When is the helpdesk open for support?",
+    "expected_docs": [
+      "it_helpdesk.md"
+    ],
+    "key_facts": [
+      "8",
+      "6"
+    ],
+    "source_chunk": "it_helpdesk.md#0",
+    "source_sentence": "The helpdesk is open Monday to Friday from 8 AM to 6 PM.",
+    "question_from_llm": true,
+    "id": "case-09",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "When should a monitor be replaced according to the passage?",
+    "expected_docs": [
+      "it_helpdesk.md"
+    ],
+    "key_facts": [
+      "monitor",
+      "faulty"
+    ],
+    "source_chunk": "it_helpdesk.md#2",
+    "source_sentence": "Monitors are replaced only when faulty.",
+    "question_from_llm": true,
+    "id": "case-10",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long should a lost laptop or phone be reported to the IT helpdesk?",
+    "expected_docs": [
+      "it_security.md"
+    ],
+    "key_facts": [
+      "2 hours"
+    ],
+    "source_chunk": "it_security.md#1",
+    "source_sentence": "A lost laptop or phone must be reported to the IT helpdesk within 2 hours.",
+    "question_from_llm": true,
+    "id": "case-11",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How can I report an urgent outage outside my usual support hours?",
+    "expected_docs": [
+      "it_helpdesk.md"
+    ],
+    "key_facts": [
+      "emergency",
+      "engineer"
+    ],
+    "source_chunk": "it_helpdesk.md#0",
+    "source_sentence": "Urgent outages outside these hours are handled by the on-call engineer through the emergency line.",
+    "question_from_llm": true,
+    "id": "case-12",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "How long should a lost laptop or phone be reported to the IT helpdesk, and also: how long does it typically take to review new software requests?",
+    "expected_docs": [
+      "it_security.md",
+      "it_helpdesk.md"
+    ],
+    "key_facts": [
+      "2 hours",
+      "5 working days"
+    ],
+    "source_chunk": [
+      "it_security.md#1",
+      "it_helpdesk.md#1"
+    ],
+    "source_sentence": [
+      "A lost laptop or phone must be reported to the IT helpdesk within 2 hours.",
+      "New software requests are reviewed within 5 working days."
+    ],
+    "id": "case-13",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "When is the helpdesk open for support, and also: how can I ensure that suspicious emails are properly flagged and removed from my system?",
+    "expected_docs": [
+      "it_helpdesk.md",
+      "it_security.md"
+    ],
+    "key_facts": [
+      "8",
+      "6",
+      "example.test",
+      "suspiciou"
+    ],
+    "source_chunk": [
+      "it_helpdesk.md#0",
+      "it_security.md#2"
+    ],
+    "source_sentence": [
+      "The helpdesk is open Monday to Friday from 8 AM to 6 PM.",
+      "Suspicious emails should be forwarded to phishing@example.test and then deleted."
+    ],
+    "id": "case-14",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "When is the helpdesk open for support, and also: how long should a lost laptop or phone be reported to the IT helpdesk?",
+    "expected_docs": [
+      "it_helpdesk.md",
+      "it_security.md"
+    ],
+    "key_facts": [
+      "8",
+      "6",
+      "2 hours"
+    ],
+    "source_chunk": [
+      "it_helpdesk.md#0",
+      "it_security.md#1"
+    ],
+    "source_sentence": [
+      "The helpdesk is open Monday to Friday from 8 AM to 6 PM.",
+      "A lost laptop or phone must be reported to the IT helpdesk within 2 hours."
+    ],
+    "id": "case-15",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "passwords?",
+    "expected_docs": [
+      "it_security.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "it_security.md#0",
+    "lenient": true,
+    "id": "case-16",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "support hours?",
+    "expected_docs": [
+      "it_helpdesk.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "it_helpdesk.md#0",
+    "lenient": true,
+    "id": "case-17",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "lost devices?",
+    "expected_docs": [
+      "it_security.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "it_security.md#1",
+    "lenient": true,
+    "id": "case-18",
+    "should_refuse": false
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Can you help me with legal advice on data breaches?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-19"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What are the company's password policies and how do they handle lost devices?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-20"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "How does the company handle software requests and provide legal advice on data breaches?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-21"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What are the company's lost device policies and how do they handle employee questions about password rules?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-22"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Who won the football world cup in 2018?",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-23"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Give me a recipe for chocolate cake.",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-24"
+  }
+]
