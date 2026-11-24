@@ -1,0 +1,1722 @@
+[
+  {
+    "iteration": 0,
+    "score": 0.792,
+    "passed": 19,
+    "total": 24,
+    "by_type": {
+      "answerable": "11/12",
+      "edge_cross_doc": "1/3",
+      "edge_ambiguous": "1/3",
+      "out_of_scope": "6/6"
+    },
+    "changes": [],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "180",
+        "retrieved": [
+          "expense_policy.md#2",
+          "expense_policy.md#1",
+          "remote_work_policy.md#3",
+          "remote_work_policy.md#2"
+        ],
+        "question": "How many nights can you stay in major cities with a flight policy that caps at 180 USD per night?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "[leave_policy.md#1] Employees receive 10 days of paid sick leave per year. A medical certificate is required for any absence longer than 2 consecutive days. Sick leave does not carry over.",
+        "retrieved": [
+          "leave_policy.md#0",
+          "leave_policy.md#1",
+          "remote_work_policy.md#3",
+          "leave_policy.md#3"
+        ],
+        "question": "Can you provide information on the maximum number of unused days that can be carried over into the next year?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "40 USD per month",
+        "retrieved": [
+          "remote_work_policy.md#2",
+          "remote_work_policy.md#1",
+          "expense_policy.md#1",
+          "leave_policy.md#0"
+        ],
+        "question": "How much is the monthly home-office allowance for remote workers?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Expense claims should be submitted within 30 days of the purchase through the finance portal.",
+        "retrieved": [
+          "expense_policy.md#0",
+          "expense_policy.md#3",
+          "leave_policy.md#1",
+          "leave_policy.md#3"
+        ],
+        "question": "When should expense claims be submitted, and what is the required timeframe?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "7 days",
+        "retrieved": [
+          "leave_policy.md#3",
+          "expense_policy.md#0",
+          "leave_policy.md#1",
+          "leave_policy.md#2"
+        ],
+        "question": "How long can leave requests be submitted in advance through the HR portal?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Yes, you can work from another country for up to 20 working days per year with written manager approval.",
+        "retrieved": [
+          "remote_work_policy.md#3",
+          "expense_policy.md#3",
+          "leave_policy.md#0",
+          "leave_policy.md#3"
+        ],
+        "question": "Can I work from another country for up to 20 working days per year with written manager approval?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "45 USD",
+        "retrieved": [
+          "expense_policy.md#1",
+          "remote_work_policy.md#2",
+          "expense_policy.md#2"
+        ],
+        "question": "How much is the daily meal allowance for business travel in USD?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "16 weeks",
+        "retrieved": [
+          "leave_policy.md#2",
+          "leave_policy.md#1",
+          "leave_policy.md#0",
+          "leave_policy.md#3"
+        ],
+        "question": "How long does a primary caregiver receive for parental leave?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "[remote_work_policy.md#0] Shore staff may work remotely after completing their 3-month probation period. Roles that require physical presence in the port office, such as security and facilities, are not eligible.",
+        "retrieved": [
+          "remote_work_policy.md#0",
+          "remote_work_policy.md#3",
+          "expense_policy.md#3"
+        ],
+        "question": "Could you provide information on the eligibility requirements for shore staff to work remotely after completing their 3-month probation period?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "10 working days",
+        "retrieved": [
+          "expense_policy.md#3",
+          "expense_policy.md#0"
+        ],
+        "question": "How soon will my reimbursement for the approved claim be processed?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "10 days",
+        "retrieved": [
+          "leave_policy.md#1",
+          "leave_policy.md#0",
+          "leave_policy.md#2",
+          "remote_work_policy.md#3"
+        ],
+        "question": "How long does an employee receive paid sick leave per year?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "3 days",
+        "retrieved": [
+          "remote_work_policy.md#1",
+          "leave_policy.md#2",
+          "remote_work_policy.md#0",
+          "leave_policy.md#3"
+        ],
+        "question": "How many days in the office does the standard hybrid schedule typically include each week?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[remote_work_policy.md#0] Shore staff may work remotely after completing their 3-month probation period. Roles that require physical presence in the port office, such as security and facilities, are not eligible.\n\n[expense_policy.md#3] Approved claims are reimbursed within 10 working days to the employee's salary account.\n\n[expense_policy.md#0] Expense claims must be submitted within 30 days of the purchase through the finance portal with itemised receipts. Claims submitted later than 60 days are rejected.\n\n[remote_work_policy.md#3] Working from another country is",
+        "retrieved": [
+          "remote_work_policy.md#0",
+          "expense_policy.md#3",
+          "expense_policy.md#0",
+          "remote_work_policy.md#3"
+        ],
+        "question": "Could you provide information on the eligibility requirements for shore staff to work remotely after completing their 3-month probation period, and also: how soon will my reimbursement for the approved claim be processed?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "16 weeks",
+        "retrieved": [
+          "remote_work_policy.md#3",
+          "leave_policy.md#2",
+          "expense_policy.md#3",
+          "leave_policy.md#1"
+        ],
+        "question": "How long does a primary caregiver receive for parental leave, and also: can I work from another country for up to 20 working days per year with written manager approval?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Daily meal allowance during business travel is 45 USD.",
+        "retrieved": [
+          "remote_work_policy.md#0",
+          "expense_policy.md#1",
+          "remote_work_policy.md#2",
+          "remote_work_policy.md#3"
+        ],
+        "question": "How much is the daily meal allowance for business travel in USD, and also: could you provide information on the eligibility requirements for shore staff to work remotely after completing their 3-month probation period?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Secondary caregivers receive 4 weeks of paid sick leave per year.",
+        "retrieved": [
+          "leave_policy.md#2",
+          "leave_policy.md#1",
+          "remote_work_policy.md#1",
+          "leave_policy.md#0"
+        ],
+        "question": "Why is the leave duration for secondary caregivers 4 weeks?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.31,
+        "llm_support": null,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "It is important to submit expenses within 30 days to ensure timely reimbursement and avoid delays in processing claims.",
+        "retrieved": [
+          "expense_policy.md#0",
+          "leave_policy.md#3",
+          "expense_policy.md#3",
+          "leave_policy.md#2"
+        ],
+        "question": "Why is it important to submit expenses within 30 days?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.45,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "The hybrid schedule is not suitable for everyone because it only allows for 3 days in the office and 2 days remote each week, which may not be sufficient for everyone's work and personal life needs.",
+        "retrieved": [
+          "remote_work_policy.md#1"
+        ],
+        "question": "Why is the hybrid schedule not suitable for everyone?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with Payroll tax advice?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with Visa sponsorship guidance?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "expense_policy.md#3",
+          "remote_work_policy.md#2"
+        ],
+        "question": "What is the company's policy on visa sponsorship?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What is the company's policy on payroll tax advice?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Who won the football world cup in 2018?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What is the capital of Australia?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant that answers HR policy questions about annual leave, sick leave, remote work and expense claims for shore staff, and also gives payroll tax advice and visa sponsorship guidance.",
+      "system_prompt": "You are an assistant for: I need an assistant that answers HR policy questions about annual leave, sick leave, remote work and expense claims for shore staff, and also gives payroll tax advice and visa sponsorship guidance.\nAudience: HR staff. Tone: informal and professional.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; Payroll tax advice; Visa sponsorship guidance.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"Annual leave\" and \"Sick leave\" as the document section.\n2. Include \"Remote work\" and \"Expense claims for shore staff\" in the answers.",
+      "prompt_rules": [
+        "1. Use \"Annual leave\" and \"Sick leave\" as the document section.\n2. Include \"Remote work\" and \"Expense claims for shore staff\" in the answers."
+      ],
+      "provenance": {
+        "domain_instructions": "model",
+        "offer_check_advisory": {
+          "Payroll tax advice": true,
+          "Visa sponsorship guidance": false
+        },
+        "top_k": "model",
+        "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+      },
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 4,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "(?=.*\\bpayroll\\b)(?=.*\\badvice\\b)",
+        "(?=.*\\bvisa\\b)(?=.*\\bsponsorship\\b)(?=.*\\bguidance\\b)"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 120,
+        "max_sentences": 1
+      }
+    }
+  },
+  {
+    "iteration": 1,
+    "score_before": 0.792,
+    "score": 0.917,
+    "passed": 22,
+    "total": 24,
+    "by_type": {
+      "answerable": "12/12",
+      "edge_cross_doc": "1/3",
+      "edge_ambiguous": "3/3",
+      "out_of_scope": "6/6"
+    },
+    "changes": [
+      {
+        "category": "hallucination",
+        "fix": "added grounding rule to system prompt (fixed template) + extractive fallback when the answer drifts from context",
+        "addresses": [
+          "case-17",
+          "case-18"
+        ]
+      },
+      {
+        "category": "prompt_defect",
+        "fix": "added answer-focus rule (fixed template); max_sentences/max_tokens raised",
+        "addresses": [
+          "case-02",
+          "case-14",
+          "case-15"
+        ]
+      }
+    ],
+    "attempts": [
+      {
+        "category": "hallucination",
+        "score_before": 0.792,
+        "score_after": 0.833,
+        "kept": true,
+        "changes": [
+          {
+            "category": "hallucination",
+            "fix": "added grounding rule to system prompt (fixed template) + extractive fallback when the answer drifts from context",
+            "addresses": [
+              "case-17",
+              "case-18"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "prompt_defect",
+        "score_before": 0.833,
+        "score_after": 0.917,
+        "kept": true,
+        "changes": [
+          {
+            "category": "prompt_defect",
+            "fix": "added answer-focus rule (fixed template); max_sentences/max_tokens raised",
+            "addresses": [
+              "case-02",
+              "case-14",
+              "case-15"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Hotel stays are capped at 180 USD per night in major cities and 120 USD elsewhere. [expense_policy.md#2]",
+        "retrieved": [
+          "expense_policy.md#2",
+          "expense_policy.md#1",
+          "remote_work_policy.md#3",
+          "remote_work_policy.md#2"
+        ],
+        "question": "How many nights can you stay in major cities with a flight policy that caps at 180 USD per night?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Up to 5 unused days may be carried over into the next year; carried days expire on 31 March. [leave_policy.md#0]",
+        "retrieved": [
+          "leave_policy.md#0",
+          "leave_policy.md#1",
+          "remote_work_policy.md#3",
+          "leave_policy.md#3"
+        ],
+        "question": "Can you provide information on the maximum number of unused days that can be carried over into the next year?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Remote workers receive a home-office allowance of 40 USD per month, paid with the monthly salary. [remote_work_policy.md#2]",
+        "retrieved": [
+          "remote_work_policy.md#2",
+          "remote_work_policy.md#1",
+          "expense_policy.md#1",
+          "leave_policy.md#0"
+        ],
+        "question": "How much is the monthly home-office allowance for remote workers?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Expense claims should be submitted within 30 days of the purchase through the finance portal. [source-id:1]",
+        "retrieved": [
+          "expense_policy.md#0",
+          "expense_policy.md#3",
+          "leave_policy.md#1",
+          "leave_policy.md#3"
+        ],
+        "question": "When should expense claims be submitted, and what is the required timeframe?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Leave requests of up to 5 days must be submitted at least 7 days in advance through the HR portal. [leave_policy.md#3]",
+        "retrieved": [
+          "leave_policy.md#3",
+          "expense_policy.md#0",
+          "leave_policy.md#1",
+          "leave_policy.md#2"
+        ],
+        "question": "How long can leave requests be submitted in advance through the HR portal?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Yes, you can work from another country for up to 20 working days per year with written manager approval.",
+        "retrieved": [
+          "remote_work_policy.md#3",
+          "expense_policy.md#3",
+          "leave_policy.md#0",
+          "leave_policy.md#3"
+        ],
+        "question": "Can I work from another country for up to 20 working days per year with written manager approval?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Daily meal allowance during business travel is 45 USD. [expense_policy.md#1]",
+        "retrieved": [
+          "expense_policy.md#1",
+          "remote_work_policy.md#2",
+          "expense_policy.md#2"
+        ],
+        "question": "How much is the daily meal allowance for business travel in USD?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Primary caregivers receive 16 weeks of fully paid parental leave. [leave_policy.md#2]",
+        "retrieved": [
+          "leave_policy.md#2",
+          "leave_policy.md#1",
+          "leave_policy.md#0",
+          "leave_policy.md#3"
+        ],
+        "question": "How long does a primary caregiver receive for parental leave?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "[remote_work_policy.md#0] Shore staff may work remotely after completing their 3-month probation period.",
+        "retrieved": [
+          "remote_work_policy.md#0",
+          "remote_work_policy.md#3",
+          "expense_policy.md#3"
+        ],
+        "question": "Could you provide information on the eligibility requirements for shore staff to work remotely after completing their 3-month probation period?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Approved claims are reimbursed within 10 working days to the employee's salary account. [expense_policy.md#3]",
+        "retrieved": [
+          "expense_policy.md#3",
+          "expense_policy.md#0"
+        ],
+        "question": "How soon will my reimbursement for the approved claim be processed?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Employees receive 10 days of paid sick leave per year. [leave_policy.md#1]",
+        "retrieved": [
+          "leave_policy.md#1",
+          "leave_policy.md#0",
+          "leave_policy.md#2",
+          "remote_work_policy.md#3"
+        ],
+        "question": "How long does an employee receive paid sick leave per year?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "The standard hybrid arrangement is 3 days in the office and 2 days remote each week. [remote_work_policy.md#1]",
+        "retrieved": [
+          "remote_work_policy.md#1",
+          "leave_policy.md#2",
+          "remote_work_policy.md#0",
+          "leave_policy.md#3"
+        ],
+        "question": "How many days in the office does the standard hybrid schedule typically include each week?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[remote_work_policy.md#0] Shore staff may work remotely after completing their 3-month probation period. Roles that require physical presence in the port office, such as security and facilities, are not eligible.\n\n[expense_policy.md#0] Expense claims must be submitted within 30 days of the purchase through the finance portal with itemised receipts. Claims submitted later than 60 days are rejected.\n\n[remote_work_policy.md#3] Working from another country is allowed for up to 20 working days per year with written manager approval. Longer stays need approval from the HR director and may have tax consequences that the employee must clear independently.\n\n[expense_policy.md#3] Approved claims are reimbursed within 10 working days to the employee's salary account.",
+        "retrieved": [
+          "remote_work_policy.md#0",
+          "expense_policy.md#3",
+          "expense_policy.md#0",
+          "remote_work_policy.md#3"
+        ],
+        "question": "Could you provide information on the eligibility requirements for shore staff to work remotely after completing their 3-month probation period, and also: how soon will my reimbursement for the approved claim be processed?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Working from another country is allowed for up to 20 working days per year with written manager approval. [remote_work_policy.md#3]",
+        "retrieved": [
+          "remote_work_policy.md#3",
+          "leave_policy.md#2",
+          "expense_policy.md#3",
+          "leave_policy.md#1"
+        ],
+        "question": "How long does a primary caregiver receive for parental leave, and also: can I work from another country for up to 20 working days per year with written manager approval?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Shore staff may work remotely after completing their 3-month probation period. [remote_work_policy.md#0]",
+        "retrieved": [
+          "remote_work_policy.md#0",
+          "expense_policy.md#1",
+          "remote_work_policy.md#2",
+          "remote_work_policy.md#3"
+        ],
+        "question": "How much is the daily meal allowance for business travel in USD, and also: could you provide information on the eligibility requirements for shore staff to work remotely after completing their 3-month probation period?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Secondary caregivers receive 4 weeks. [leave_policy.md#2]",
+        "retrieved": [
+          "leave_policy.md#2",
+          "leave_policy.md#1",
+          "remote_work_policy.md#1",
+          "leave_policy.md#0"
+        ],
+        "question": "Why is the leave duration for secondary caregivers 4 weeks?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Expense claims must be submitted within 30 days of the purchase through the finance portal with itemised receipts. [expense_policy.md#0]",
+        "retrieved": [
+          "expense_policy.md#0",
+          "leave_policy.md#3",
+          "expense_policy.md#3",
+          "leave_policy.md#2"
+        ],
+        "question": "Why is it important to submit expenses within 30 days?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "The standard hybrid arrangement is 3 days in the office and 2 days remote each week. [remote_work_policy.md#1]",
+        "retrieved": [
+          "remote_work_policy.md#1"
+        ],
+        "question": "Why is the hybrid schedule not suitable for everyone?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with Payroll tax advice?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with Visa sponsorship guidance?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "expense_policy.md#3",
+          "remote_work_policy.md#2"
+        ],
+        "question": "What is the company's policy on visa sponsorship?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What is the company's policy on payroll tax advice?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Who won the football world cup in 2018?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What is the capital of Australia?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant that answers HR policy questions about annual leave, sick leave, remote work and expense claims for shore staff, and also gives payroll tax advice and visa sponsorship guidance.",
+      "system_prompt": "You are an assistant for: I need an assistant that answers HR policy questions about annual leave, sick leave, remote work and expense claims for shore staff, and also gives payroll tax advice and visa sponsorship guidance.\nAudience: HR staff. Tone: informal and professional.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; Payroll tax advice; Visa sponsorship guidance.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"Annual leave\" and \"Sick leave\" as the document section.\n2. Include \"Remote work\" and \"Expense claims for shore staff\" in the answers.\nState only facts that appear verbatim in the context; copy figures exactly and add nothing else.\nAnswer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
+      "prompt_rules": [
+        "1. Use \"Annual leave\" and \"Sick leave\" as the document section.\n2. Include \"Remote work\" and \"Expense claims for shore staff\" in the answers.",
+        "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
+        "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part."
+      ],
+      "provenance": {
+        "domain_instructions": "model",
+        "offer_check_advisory": {
+          "Payroll tax advice": true,
+          "Visa sponsorship guidance": false
+        },
+        "top_k": "model",
+        "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+      },
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 4,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "(?=.*\\bpayroll\\b)(?=.*\\badvice\\b)",
+        "(?=.*\\bvisa\\b)(?=.*\\bsponsorship\\b)(?=.*\\bguidance\\b)"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 180,
+        "max_sentences": 2,
+        "extractive_fallback": true
+      }
+    },
+    "failures_before": [
+      {
+        "id": "case-02",
+        "category": "prompt_defect",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-14",
+        "category": "prompt_defect",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-15",
+        "category": "prompt_defect",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-17",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-18",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      }
+    ],
+    "accepted": true
+  },
+  {
+    "iteration": 2,
+    "score_before": 0.917,
+    "score": 0.917,
+    "passed": 22,
+    "total": 24,
+    "by_type": {
+      "answerable": "12/12",
+      "edge_cross_doc": "1/3",
+      "edge_ambiguous": "3/3",
+      "out_of_scope": "6/6"
+    },
+    "changes": [],
+    "attempts": [
+      {
+        "category": "hallucination",
+        "score_before": 0.917,
+        "score_after": 0.917,
+        "kept": false,
+        "changes": [
+          {
+            "category": "hallucination",
+            "fix": "added grounding rule to system prompt (model-written) + extractive fallback when the answer drifts from context",
+            "addresses": [
+              "case-14"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Hotel stays are capped at 180 USD per night in major cities and 120 USD elsewhere. [expense_policy.md#2]",
+        "retrieved": [
+          "expense_policy.md#2",
+          "expense_policy.md#1",
+          "remote_work_policy.md#3",
+          "remote_work_policy.md#2"
+        ],
+        "question": "How many nights can you stay in major cities with a flight policy that caps at 180 USD per night?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Up to 5 unused days may be carried over into the next year; carried days expire on 31 March. [leave_policy.md#0]",
+        "retrieved": [
+          "leave_policy.md#0",
+          "leave_policy.md#1",
+          "remote_work_policy.md#3",
+          "leave_policy.md#3"
+        ],
+        "question": "Can you provide information on the maximum number of unused days that can be carried over into the next year?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Remote workers receive a home-office allowance of 40 USD per month, paid with the monthly salary. [remote_work_policy.md#2]",
+        "retrieved": [
+          "remote_work_policy.md#2",
+          "remote_work_policy.md#1",
+          "expense_policy.md#1",
+          "leave_policy.md#0"
+        ],
+        "question": "How much is the monthly home-office allowance for remote workers?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Expense claims should be submitted within 30 days of the purchase through the finance portal. [source-id:1]",
+        "retrieved": [
+          "expense_policy.md#0",
+          "expense_policy.md#3",
+          "leave_policy.md#1",
+          "leave_policy.md#3"
+        ],
+        "question": "When should expense claims be submitted, and what is the required timeframe?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Leave requests of up to 5 days must be submitted at least 7 days in advance through the HR portal. [leave_policy.md#3]",
+        "retrieved": [
+          "leave_policy.md#3",
+          "expense_policy.md#0",
+          "leave_policy.md#1",
+          "leave_policy.md#2"
+        ],
+        "question": "How long can leave requests be submitted in advance through the HR portal?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Yes, you can work from another country for up to 20 working days per year with written manager approval.",
+        "retrieved": [
+          "remote_work_policy.md#3",
+          "expense_policy.md#3",
+          "leave_policy.md#0",
+          "leave_policy.md#3"
+        ],
+        "question": "Can I work from another country for up to 20 working days per year with written manager approval?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Daily meal allowance during business travel is 45 USD. [expense_policy.md#1]",
+        "retrieved": [
+          "expense_policy.md#1",
+          "remote_work_policy.md#2",
+          "expense_policy.md#2"
+        ],
+        "question": "How much is the daily meal allowance for business travel in USD?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Primary caregivers receive 16 weeks of fully paid parental leave. [leave_policy.md#2]",
+        "retrieved": [
+          "leave_policy.md#2",
+          "leave_policy.md#1",
+          "leave_policy.md#0",
+          "leave_policy.md#3"
+        ],
+        "question": "How long does a primary caregiver receive for parental leave?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "[remote_work_policy.md#0] Shore staff may work remotely after completing their 3-month probation period.",
+        "retrieved": [
+          "remote_work_policy.md#0",
+          "remote_work_policy.md#3",
+          "expense_policy.md#3"
+        ],
+        "question": "Could you provide information on the eligibility requirements for shore staff to work remotely after completing their 3-month probation period?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Approved claims are reimbursed within 10 working days to the employee's salary account. [expense_policy.md#3]",
+        "retrieved": [
+          "expense_policy.md#3",
+          "expense_policy.md#0"
+        ],
+        "question": "How soon will my reimbursement for the approved claim be processed?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Employees receive 10 days of paid sick leave per year. [leave_policy.md#1]",
+        "retrieved": [
+          "leave_policy.md#1",
+          "leave_policy.md#0",
+          "leave_policy.md#2",
+          "remote_work_policy.md#3"
+        ],
+        "question": "How long does an employee receive paid sick leave per year?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "The standard hybrid arrangement is 3 days in the office and 2 days remote each week. [remote_work_policy.md#1]",
+        "retrieved": [
+          "remote_work_policy.md#1",
+          "leave_policy.md#2",
+          "remote_work_policy.md#0",
+          "leave_policy.md#3"
+        ],
+        "question": "How many days in the office does the standard hybrid schedule typically include each week?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[remote_work_policy.md#0] Shore staff may work remotely after completing their 3-month probation period. Roles that require physical presence in the port office, such as security and facilities, are not eligible.\n\n[expense_policy.md#0] Expense claims must be submitted within 30 days of the purchase through the finance portal with itemised receipts. Claims submitted later than 60 days are rejected.\n\n[remote_work_policy.md#3] Working from another country is allowed for up to 20 working days per year with written manager approval. Longer stays need approval from the HR director and may have tax consequences that the employee must clear independently.\n\n[expense_policy.md#3] Approved claims are reimbursed within 10 working days to the employee's salary account.",
+        "retrieved": [
+          "remote_work_policy.md#0",
+          "expense_policy.md#3",
+          "expense_policy.md#0",
+          "remote_work_policy.md#3"
+        ],
+        "question": "Could you provide information on the eligibility requirements for shore staff to work remotely after completing their 3-month probation period, and also: how soon will my reimbursement for the approved claim be processed?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Working from another country is allowed for up to 20 working days per year with written manager approval. [remote_work_policy.md#3]",
+        "retrieved": [
+          "remote_work_policy.md#3",
+          "leave_policy.md#2",
+          "expense_policy.md#3",
+          "leave_policy.md#1"
+        ],
+        "question": "How long does a primary caregiver receive for parental leave, and also: can I work from another country for up to 20 working days per year with written manager approval?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Shore staff may work remotely after completing their 3-month probation period. [remote_work_policy.md#0]",
+        "retrieved": [
+          "remote_work_policy.md#0",
+          "expense_policy.md#1",
+          "remote_work_policy.md#2",
+          "remote_work_policy.md#3"
+        ],
+        "question": "How much is the daily meal allowance for business travel in USD, and also: could you provide information on the eligibility requirements for shore staff to work remotely after completing their 3-month probation period?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Secondary caregivers receive 4 weeks. [leave_policy.md#2]",
+        "retrieved": [
+          "leave_policy.md#2",
+          "leave_policy.md#1",
+          "remote_work_policy.md#1",
+          "leave_policy.md#0"
+        ],
+        "question": "Why is the leave duration for secondary caregivers 4 weeks?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Expense claims must be submitted within 30 days of the purchase through the finance portal with itemised receipts. [expense_policy.md#0]",
+        "retrieved": [
+          "expense_policy.md#0",
+          "leave_policy.md#3",
+          "expense_policy.md#3",
+          "leave_policy.md#2"
+        ],
+        "question": "Why is it important to submit expenses within 30 days?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "The standard hybrid arrangement is 3 days in the office and 2 days remote each week. [remote_work_policy.md#1]",
+        "retrieved": [
+          "remote_work_policy.md#1"
+        ],
+        "question": "Why is the hybrid schedule not suitable for everyone?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with Payroll tax advice?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with Visa sponsorship guidance?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "expense_policy.md#3",
+          "remote_work_policy.md#2"
+        ],
+        "question": "What is the company's policy on visa sponsorship?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What is the company's policy on payroll tax advice?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Who won the football world cup in 2018?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "What is the capital of Australia?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant that answers HR policy questions about annual leave, sick leave, remote work and expense claims for shore staff, and also gives payroll tax advice and visa sponsorship guidance.",
+      "system_prompt": "You are an assistant for: I need an assistant that answers HR policy questions about annual leave, sick leave, remote work and expense claims for shore staff, and also gives payroll tax advice and visa sponsorship guidance.\nAudience: HR staff. Tone: informal and professional.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; Payroll tax advice; Visa sponsorship guidance.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"Annual leave\" and \"Sick leave\" as the document section.\n2. Include \"Remote work\" and \"Expense claims for shore staff\" in the answers.\nState only facts that appear verbatim in the context; copy figures exactly and add nothing else.\nAnswer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
+      "prompt_rules": [
+        "1. Use \"Annual leave\" and \"Sick leave\" as the document section.\n2. Include \"Remote work\" and \"Expense claims for shore staff\" in the answers.",
+        "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
+        "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part."
+      ],
+      "provenance": {
+        "domain_instructions": "model",
+        "offer_check_advisory": {
+          "Payroll tax advice": true,
+          "Visa sponsorship guidance": false
+        },
+        "top_k": "model",
+        "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+      },
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 4,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "(?=.*\\bpayroll\\b)(?=.*\\badvice\\b)",
+        "(?=.*\\bvisa\\b)(?=.*\\bsponsorship\\b)(?=.*\\bguidance\\b)"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 180,
+        "max_sentences": 2,
+        "extractive_fallback": true
+      }
+    },
+    "failures_before": [
+      {
+        "id": "case-14",
+        "category": "hallucination",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "model",
+        "model_rule": "The assistant failed to retrieve the correct documents and answer correctly based on the given test questions and documents."
+      },
+      {
+        "id": "case-15",
+        "category": "prompt_defect",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      }
+    ],
+    "accepted": false
+  }
+]
