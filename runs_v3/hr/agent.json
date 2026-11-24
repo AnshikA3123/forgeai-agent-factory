@@ -1,0 +1,47 @@
+{
+  "name": "forge-agent",
+  "generated_from": "I need an assistant that answers HR policy questions about annual leave, sick leave, remote work and expense claims for shore staff, and also gives payroll tax advice and visa sponsorship guidance.",
+  "system_prompt": "You are an assistant for: I need an assistant that answers HR policy questions about annual leave, sick leave, remote work and expense claims for shore staff, and also gives payroll tax advice and visa sponsorship guidance.\nAudience: HR staff. Tone: informal and professional.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; Payroll tax advice; Visa sponsorship guidance.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"Annual leave\" and \"Sick leave\" as the document section.\n2. Include \"Remote work\" and \"Expense claims for shore staff\" in the answers.\nState only facts that appear verbatim in the context; copy figures exactly and add nothing else.\nAnswer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
+  "prompt_rules": [
+    "1. Use \"Annual leave\" and \"Sick leave\" as the document section.\n2. Include \"Remote work\" and \"Expense claims for shore staff\" in the answers.",
+    "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
+    "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part."
+  ],
+  "provenance": {
+    "domain_instructions": "model",
+    "offer_check_advisory": {
+      "Payroll tax advice": true,
+      "Visa sponsorship guidance": false
+    },
+    "top_k": "model",
+    "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+  },
+  "retrieval": {
+    "chunk_chars": 600,
+    "top_k": 4,
+    "k1": 1.5,
+    "b": 0.75,
+    "min_coverage": 0.5,
+    "min_score": 1.0,
+    "expansions": {}
+  },
+  "tools": [],
+  "tool_rationale": {},
+  "tools_not_attached": [
+    "csv_lookup",
+    "calculator",
+    "http_api",
+    "current_date"
+  ],
+  "refuse_patterns": [
+    "(?=.*\\bpayroll\\b)(?=.*\\badvice\\b)",
+    "(?=.*\\bvisa\\b)(?=.*\\bsponsorship\\b)(?=.*\\bguidance\\b)"
+  ],
+  "output_contract": {
+    "format": "short answer with [source-id] citations",
+    "refusal_text": "I can't answer that from the provided documents.",
+    "max_tokens": 180,
+    "max_sentences": 2,
+    "extractive_fallback": true
+  }
+}
