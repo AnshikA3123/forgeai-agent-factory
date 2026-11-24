@@ -1,0 +1,6 @@
+Context:
+{context}
+
+Question: {question}
+
+Answer using only the context above. Cite the source id in square brackets. If the context does not contain the answer, reply exactly: {refusal}
