@@ -32,6 +32,9 @@ def brief_topics(brief):
 def groundability(brief, chunks, min_cov=0.5, topics=None):
     idx = BM25(chunks)
     flagged, ok = [], []
+    # v3: words in the brief's framing clause (before "about/covering/including/regarding/on") name the DOMAIN of the assistant
+    # (e.g. "ship-spares procurement questions"), not a capability the documents must separately support.
+    framing = set(tokens(re.split(r"\b(?:about|covering|including|regarding|on)\b", brief, maxsplit=1, flags=re.I)[0])) if re.search(r"\b(?:about|covering|including|regarding|on)\b", brief, re.I) else set()
     for t in (topics or brief_topics(brief)):
         toks = tokens(t)
         if not toks:
@@ -39,6 +42,8 @@ def groundability(brief, chunks, min_cov=0.5, topics=None):
         if any(re.search(pat, t.lower()) for r in REGISTRY.values() if not r['needs_csv'] for pat in r['triggers']):
             continue  # a capability a tool provides (e.g. calculate totals), not a document topic
         cov = sum(1 for x in toks if x in idx.vocab) / len(toks)
+        if cov < min_cov and framing and set(toks) <= framing:
+            continue  # domain label from the framing clause, not a requested capability
         (ok if cov >= min_cov else flagged).append({"topic": t, "coverage": round(cov, 2)})
     return {"supported": ok, "unsupported": flagged}
 
