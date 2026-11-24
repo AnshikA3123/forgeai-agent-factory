@@ -1,0 +1,368 @@
+[
+  {
+    "type": "answerable",
+    "question": "How much will you pay for an overdue book if it is 15 days late?",
+    "expected_docs": [
+      "borrowing_rules.md"
+    ],
+    "key_facts": [
+      "0.25",
+      "10"
+    ],
+    "source_chunk": "borrowing_rules.md#2",
+    "source_sentence": "Overdue books cost 0.25 EUR per day, capped at 10 EUR per item.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-01",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How much does it cost to be a non-resident in the country?",
+    "expected_docs": [
+      "membership_and_spaces.md"
+    ],
+    "key_facts": [
+      "30"
+    ],
+    "source_chunk": "membership_and_spaces.md#0",
+    "source_sentence": "Non-residents pay 30 EUR per year.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-02",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long can I borrow a book from the library?",
+    "expected_docs": [
+      "borrowing_rules.md"
+    ],
+    "key_facts": [
+      "21 days"
+    ],
+    "source_chunk": "borrowing_rules.md#0",
+    "source_sentence": "Books may be borrowed for 21 days.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-03",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How much does it cost to print a black and white page versus a colour page?",
+    "expected_docs": [
+      "membership_and_spaces.md"
+    ],
+    "key_facts": [
+      "0.10",
+      "0.50"
+    ],
+    "source_chunk": "membership_and_spaces.md#3",
+    "source_sentence": "Printing costs 0.10 EUR per black and white page and 0.50 EUR per colour page.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-04",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Can you provide information on how to make a renewal online, by phone, or at the front desk?",
+    "expected_docs": [
+      "borrowing_rules.md"
+    ],
+    "key_facts": [
+      "555",
+      "0142"
+    ],
+    "source_chunk": "borrowing_rules.md#1",
+    "source_sentence": "Renewals can be made online, by phone on 555-0142, or at the front desk.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-05",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How many people can be accommodated in a study room according to the passage?",
+    "expected_docs": [
+      "membership_and_spaces.md"
+    ],
+    "key_facts": [
+      "4",
+      "6"
+    ],
+    "source_chunk": "membership_and_spaces.md#2",
+    "source_sentence": "Study rooms seat 4 to 6 people.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-06",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "What is the replacement price for a lost book?",
+    "expected_docs": [
+      "borrowing_rules.md"
+    ],
+    "key_facts": [
+      "5"
+    ],
+    "source_chunk": "borrowing_rules.md#3",
+    "source_sentence": "A lost book is charged at its replacement price plus a 5 EUR handling fee.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-07",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "When is the library open on weekdays?",
+    "expected_docs": [
+      "membership_and_spaces.md"
+    ],
+    "key_facts": [
+      "9",
+      "00",
+      "20"
+    ],
+    "source_chunk": "membership_and_spaces.md#1",
+    "source_sentence": "The library opens Monday to Friday from 9:00 to 20:00, Saturday from 10:00 to 17:00, and is closed on Sunday.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-08",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Is there a specific day on which the membership and spaces office is open?",
+    "expected_docs": [
+      "membership_and_spaces.md"
+    ],
+    "key_facts": [
+      "holiday",
+      "public"
+    ],
+    "source_chunk": "membership_and_spaces.md#1",
+    "source_sentence": "On public holidays it is closed.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-09",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long can DVDs and audiobooks be borrowed?",
+    "expected_docs": [
+      "borrowing_rules.md"
+    ],
+    "key_facts": [
+      "7 days"
+    ],
+    "source_chunk": "borrowing_rules.md#0",
+    "source_sentence": "DVDs and audiobooks may be borrowed for 7 days.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-10",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Is it possible to return an item within 60 days of its purchase?",
+    "expected_docs": [
+      "borrowing_rules.md"
+    ],
+    "key_facts": [
+      "60 days"
+    ],
+    "source_chunk": "borrowing_rules.md#3",
+    "source_sentence": "The handling fee is waived if the item is returned within 60 days.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-11",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Can you confirm if the passage states that reference works and newspapers cannot leave the building?",
+    "expected_docs": [
+      "borrowing_rules.md"
+    ],
+    "key_facts": [
+      "newspaper",
+      "reference"
+    ],
+    "source_chunk": "borrowing_rules.md#0",
+    "source_sentence": "Reference works and newspapers cannot leave the building.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-12",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "How many people can be accommodated in a study room according to the passage, and also: how long can I borrow a book from the library?",
+    "origin": "model questions joined by code",
+    "expected_docs": [
+      "membership_and_spaces.md",
+      "borrowing_rules.md"
+    ],
+    "key_facts": [
+      "4",
+      "6",
+      "21 days"
+    ],
+    "source_chunk": [
+      "membership_and_spaces.md#2",
+      "borrowing_rules.md#0"
+    ],
+    "source_sentence": [
+      "Study rooms seat 4 to 6 people.",
+      "Books may be borrowed for 21 days."
+    ],
+    "id": "case-13",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "How many people can be accommodated in a study room according to the passage, and also: how long can I borrow a book from the library?",
+    "origin": "model questions joined by code",
+    "expected_docs": [
+      "membership_and_spaces.md",
+      "borrowing_rules.md"
+    ],
+    "key_facts": [
+      "4",
+      "6",
+      "21 days"
+    ],
+    "source_chunk": [
+      "membership_and_spaces.md#2",
+      "borrowing_rules.md#0"
+    ],
+    "source_sentence": [
+      "Study rooms seat 4 to 6 people.",
+      "Books may be borrowed for 21 days."
+    ],
+    "id": "case-14",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "Can you provide information on how to make a renewal online, by phone, or at the front desk, and also: how much does it cost to print a black and white page versus a colour page?",
+    "origin": "model questions joined by code",
+    "expected_docs": [
+      "borrowing_rules.md",
+      "membership_and_spaces.md"
+    ],
+    "key_facts": [
+      "555",
+      "0142",
+      "0.10",
+      "0.50"
+    ],
+    "source_chunk": [
+      "borrowing_rules.md#1",
+      "membership_and_spaces.md#3"
+    ],
+    "source_sentence": [
+      "Renewals can be made online, by phone on 555-0142, or at the front desk.",
+      "Printing costs 0.10 EUR per black and white page and 0.50 EUR per colour page."
+    ],
+    "id": "case-15",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "Why can't I borrow a DVD or audiobook?",
+    "origin": "model",
+    "expected_docs": [
+      "borrowing_rules.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "borrowing_rules.md#0",
+    "lenient": true,
+    "id": "case-16",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "Why do residents need a parent or guardian to sign the form?",
+    "origin": "model",
+    "expected_docs": [
+      "membership_and_spaces.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "membership_and_spaces.md#0",
+    "lenient": true,
+    "id": "case-17",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "Why is it difficult to find a study room?",
+    "origin": "model",
+    "expected_docs": [
+      "membership_and_spaces.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "membership_and_spaces.md#2",
+    "lenient": true,
+    "id": "case-18",
+    "should_refuse": false
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Can you help me with Reading lists for children?",
+    "origin": "template (unsupported brief topic)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-19"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Give me a recipe for chocolate cake.",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-20"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Write me a Python script to sort a list.",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-21"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the capital of Australia?",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-22"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Can you recommend a good stock to invest in?",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-23"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the weather forecast in Paris tomorrow?",
+    "origin": "template-fallback (fixed generic list)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-24"
+  }
+]
