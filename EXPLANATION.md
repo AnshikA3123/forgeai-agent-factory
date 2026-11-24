@@ -25,3 +25,7 @@
 
 ## Demo video and run variance
 The demo video (`forgeai-demo-v2.mp4`, silent, 3:25, delivered separately, not in the repo) is a screen capture of real commands. Part 1 is a fresh no-cache build shown at 30x speed. Part 2 re-runs the build from cached model outputs of the committed HR run, which is labeled on screen. If asked about scores: the committed HR run is 79% -> 88%, while a fresh no-cache build I recorded got 75% -> 88%. The 0.5B model varies between runs, so say "about 75-79% before, 88% after" and do not claim exact repeatability.
+
+
+## v2 (model-driven) summary for the review
+The first version used the model only for question wording and answers; the generator and optimizer were rule-based. v2 lets the 0.5B model write requirements, style instructions, tool verdicts, eval questions and failure diagnoses, with validation and visible fallbacks. Honest results: HR 79% -> 92%, procurement 71% -> 71%, a fresh held-out library brief 75% -> 75%. Be ready to say: the small model writes weak instructions, says YES too often, and the lexical groundability check missed "book recommendations" on the held-out brief. The video shows v1 build runs; a v2 recording is pending.
