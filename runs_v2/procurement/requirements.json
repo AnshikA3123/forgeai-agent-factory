@@ -1,0 +1,80 @@
+{
+  "brief": "I need an assistant for ship engineers that answers ship-spares procurement questions about part prices from the catalogue, supplier payment terms, warranty and approval limits, and can calculate order totals.",
+  "documents": [
+    "parts_catalogue.csv",
+    "procurement_procedure.md",
+    "supplier_terms.md"
+  ],
+  "interview": [
+    {
+      "q": "Who will use this assistant (role, seniority)?",
+      "a": "ship engineers",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "What tone should it use (formal, friendly, terse)?",
+      "a": "informative and professional",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "Anything it must refuse or hand off to a human (legal, medical, personal data)?",
+      "a": "legal advice; questions about individual people; anything not in the documents",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "Which topics must it answer well?",
+      "a": "",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Who should users contact when it cannot answer?",
+      "a": "the relevant department",
+      "source": "assumed default (unattended)"
+    }
+  ],
+  "scope": "Answer questions grounded in: parts_catalogue.csv, procurement_procedure.md, supplier_terms.md.",
+  "audience": "ship engineers",
+  "tone": "informative and professional",
+  "escalation": "the relevant department",
+  "must_answer_topics": [
+    "part prices from the catalogue",
+    "supplier payment terms",
+    "warranty and approval limits"
+  ],
+  "must_refuse_topics": [
+    "legal advice",
+    "questions about individual people",
+    "anything not in the documents",
+    "ship-spares procurement"
+  ],
+  "groundability": {
+    "supported": [
+      {
+        "topic": "part prices from the catalogue",
+        "coverage": 0.67
+      },
+      {
+        "topic": "supplier payment terms",
+        "coverage": 1.0
+      },
+      {
+        "topic": "warranty and approval limits",
+        "coverage": 1.0
+      }
+    ],
+    "unsupported": [
+      {
+        "topic": "ship-spares procurement",
+        "coverage": 0.0
+      }
+    ]
+  },
+  "model_summary": "The assistant's audience is ship engineers, seeking detailed information on part prices, supplier payment terms, warranty, and approval limits, along with order totals. The tone suits them as it is professional and informative.",
+  "provenance": {
+    "requirements": "model",
+    "topics": "model"
+  },
+  "warnings": [
+    "Brief asks for 'ship-spares procurement' but the documents do not support it; the agent will refuse it."
+  ]
+}
