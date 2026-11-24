@@ -24,4 +24,4 @@
 
 
 ## Demo video and run variance
-The demo video (`forgeai-demo-v2.mp4`, silent, 3:25) is a screen capture of real commands. Part 1 is a fresh no-cache build shown at 30x speed. Part 2 re-runs the build from cached model outputs of the committed HR run, which is labeled on screen. If asked about scores: the committed HR run is 79% -> 88%, while a fresh no-cache build I recorded got 75% -> 88%. The 0.5B model varies between runs, so say "about 75-79% before, 88% after" and do not claim exact repeatability.
+The demo video (`forgeai-demo-v2.mp4`, silent, 3:25, delivered separately, not in the repo) is a screen capture of real commands. Part 1 is a fresh no-cache build shown at 30x speed. Part 2 re-runs the build from cached model outputs of the committed HR run, which is labeled on screen. If asked about scores: the committed HR run is 79% -> 88%, while a fresh no-cache build I recorded got 75% -> 88%. The 0.5B model varies between runs, so say "about 75-79% before, 88% after" and do not claim exact repeatability.
