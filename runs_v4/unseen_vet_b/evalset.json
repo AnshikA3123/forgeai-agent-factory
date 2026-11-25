@@ -1,0 +1,373 @@
+[
+  {
+    "type": "answerable",
+    "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together?",
+    "expected_docs": [
+      "boarding_rules.md"
+    ],
+    "key_facts": [
+      "$40",
+      "$28"
+    ],
+    "source_chunk": "boarding_rules.md#1",
+    "source_sentence": "Boarding costs $40 per night for a dog and $28 per night for a cat.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-01",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How long does a standard consultation typically last?",
+    "expected_docs": [
+      "clinic_hours_and_booking.md"
+    ],
+    "key_facts": [
+      "20 m",
+      "$55"
+    ],
+    "source_chunk": "clinic_hours_and_booking.md#1",
+    "source_sentence": "A standard consultation lasts 20 minutes and costs $55.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-02",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "When should puppies receive their first core vaccination?",
+    "expected_docs": [
+      "vaccinations_and_invoices.pdf"
+    ],
+    "key_facts": [
+      "8 weeks",
+      "12 weeks"
+    ],
+    "source_chunk": "vaccinations_and_invoices.pdf#0",
+    "source_sentence": "Puppies receive their first core vaccination at 8 weeks and a second at 12 weeks.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-03",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules?",
+    "expected_docs": [
+      "boarding_rules.md"
+    ],
+    "key_facts": [
+      "12 weeks"
+    ],
+    "source_chunk": "boarding_rules.md#0",
+    "source_sentence": "Every boarding pet must be at least 12 weeks old.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-04",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "When is Harbour Vet Clinic open for appointments?",
+    "expected_docs": [
+      "clinic_hours_and_booking.md"
+    ],
+    "key_facts": [
+      "8",
+      "00",
+      "18"
+    ],
+    "source_chunk": "clinic_hours_and_booking.md#0",
+    "source_sentence": "Harbour Vet Clinic is open Monday to Friday from 8:00 to 18:00 and on Saturday from 9:00 to 13:00.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-05",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "How does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?",
+    "expected_docs": [
+      "vaccinations_and_invoices.pdf"
+    ],
+    "key_facts": [
+      "$500 m",
+      "3 month"
+    ],
+    "source_chunk": "vaccinations_and_invoices.pdf#1",
+    "source_sentence": "for treatments above $500 may be paid in 3 monthly instalments if the client agrees a payment plan before treatment.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-06",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Is there a specific time during check-in that is required for boarding?",
+    "expected_docs": [
+      "boarding_rules.md"
+    ],
+    "key_facts": [
+      "8",
+      "00",
+      "10"
+    ],
+    "source_chunk": "boarding_rules.md#2",
+    "source_sentence": "Check-in is between 8:00 and 10:00.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-07",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "What is the emergency number that clients should call when they need urgent medical attention?",
+    "expected_docs": [
+      "clinic_hours_and_booking.md"
+    ],
+    "key_facts": [
+      "555",
+      "0142"
+    ],
+    "source_chunk": "clinic_hours_and_booking.md#2",
+    "source_sentence": "Outside opening hours, clients must call the emergency line 555-0142, which is answered by the partner hospital Bayside Animal Emergency.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-08",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "What is the minimum amount required for a deposit upon booking and what happens if the booking is cancelled less than 7 days before check-in?",
+    "expected_docs": [
+      "boarding_rules.md"
+    ],
+    "key_facts": [
+      "30 percent",
+      "7 days"
+    ],
+    "source_chunk": "boarding_rules.md#1",
+    "source_sentence": "A deposit of 30 percent is required at booking and is not refunded if the booking is cancelled less than 7 days before check-in.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-09",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "What is the fee for an out-of-hours emergency call-out in the clinic?",
+    "expected_docs": [
+      "clinic_hours_and_booking.md"
+    ],
+    "key_facts": [
+      "$150"
+    ],
+    "source_chunk": "clinic_hours_and_booking.md#2",
+    "source_sentence": "An out-of-hours emergency call-out fee of $150 applies.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-10",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "Can I check in for boarding if my dog has not had a kennel cough vaccination for 10 days?",
+    "expected_docs": [
+      "boarding_rules.md"
+    ],
+    "key_facts": [
+      "10 days"
+    ],
+    "source_chunk": "boarding_rules.md#0",
+    "source_sentence": "Dogs must have a valid kennel cough vaccination given at least 10 days before check-in.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-11",
+    "should_refuse": false
+  },
+  {
+    "type": "answerable",
+    "question": "When is the clinic typically closed on weekdays?",
+    "expected_docs": [
+      "clinic_hours_and_booking.md"
+    ],
+    "key_facts": [
+      "holiday",
+      "public"
+    ],
+    "source_chunk": "clinic_hours_and_booking.md#0",
+    "source_sentence": "The clinic is closed on Sunday and on public holidays.",
+    "question_from_llm": true,
+    "origin": "model",
+    "id": "case-12",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?",
+    "origin": "model questions joined by code",
+    "expected_docs": [
+      "boarding_rules.md",
+      "vaccinations_and_invoices.pdf"
+    ],
+    "key_facts": [
+      "12 weeks",
+      "$500 m",
+      "3 month"
+    ],
+    "source_chunk": [
+      "boarding_rules.md#0",
+      "vaccinations_and_invoices.pdf#1"
+    ],
+    "source_sentence": [
+      "Every boarding pet must be at least 12 weeks old.",
+      "for treatments above $500 may be paid in 3 monthly instalments if the client agrees a payment plan before treatment."
+    ],
+    "id": "case-13",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "When should puppies receive their first core vaccination, and also: when is Harbour Vet Clinic open for appointments?",
+    "origin": "model questions joined by code",
+    "expected_docs": [
+      "vaccinations_and_invoices.pdf",
+      "clinic_hours_and_booking.md"
+    ],
+    "key_facts": [
+      "8 weeks",
+      "12 weeks",
+      "8",
+      "00",
+      "18"
+    ],
+    "source_chunk": [
+      "vaccinations_and_invoices.pdf#0",
+      "clinic_hours_and_booking.md#0"
+    ],
+    "source_sentence": [
+      "Puppies receive their first core vaccination at 8 weeks and a second at 12 weeks.",
+      "Harbour Vet Clinic is open Monday to Friday from 8:00 to 18:00 and on Saturday from 9:00 to 13:00."
+    ],
+    "id": "case-14",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_cross_doc",
+    "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?",
+    "origin": "model questions joined by code",
+    "expected_docs": [
+      "boarding_rules.md",
+      "vaccinations_and_invoices.pdf"
+    ],
+    "key_facts": [
+      "$40",
+      "$28",
+      "$500 m",
+      "3 month"
+    ],
+    "source_chunk": [
+      "boarding_rules.md#1",
+      "vaccinations_and_invoices.pdf#1"
+    ],
+    "source_sentence": [
+      "Boarding costs $40 per night for a dog and $28 per night for a cat.",
+      "for treatments above $500 may be paid in 3 monthly instalments if the client agrees a payment plan before treatment."
+    ],
+    "id": "case-15",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "Why is there a 15% discount for a second pet?",
+    "origin": "model",
+    "expected_docs": [
+      "boarding_rules.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "boarding_rules.md#1",
+    "lenient": true,
+    "id": "case-16",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "Why is a late cancellation or missed appointment charged a $25 fee?",
+    "origin": "model",
+    "expected_docs": [
+      "clinic_hours_and_booking.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "clinic_hours_and_booking.md#1",
+    "lenient": true,
+    "id": "case-17",
+    "should_refuse": false
+  },
+  {
+    "type": "edge_ambiguous",
+    "question": "Why is Harbour Vet Clinic closed on public holidays?",
+    "origin": "model",
+    "expected_docs": [
+      "clinic_hours_and_booking.md"
+    ],
+    "key_facts": [],
+    "source_chunk": "clinic_hours_and_booking.md#0",
+    "lenient": true,
+    "id": "case-18",
+    "should_refuse": false
+  },
+  {
+    "type": "out_of_scope",
+    "question": "Can you help me with dosage advice for prescription medicines?",
+    "origin": "template (unsupported brief topic)",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-19"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the name of the assistant's role at Harbour Vet Clinic?",
+    "origin": "model",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-20"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the address of the assistant's office?",
+    "origin": "model",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-21"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the contact number for the assistant's office?",
+    "origin": "model",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-22"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the name of the company that provides the assistant's services?",
+    "origin": "model",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-23"
+  },
+  {
+    "type": "out_of_scope",
+    "question": "What is the name of the company that provides the assistant's services?",
+    "origin": "model",
+    "expected_docs": [],
+    "key_facts": [],
+    "should_refuse": true,
+    "id": "case-24"
+  }
+]
