@@ -1,0 +1,95 @@
+{
+  "brief": "I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.",
+  "documents": [
+    "boarding_rules.md",
+    "clinic_hours_and_booking.md",
+    "vaccinations_and_invoices.pdf"
+  ],
+  "interview": [
+    {
+      "q": "Who will use this assistant (role, seniority)?",
+      "a": "front-desk staff at Harbour Vet Clinic",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "What tone should it use (formal, friendly, terse)?",
+      "a": "friendly and brief",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "Anything it must refuse or hand off to a human (legal, medical, personal data)?",
+      "a": "legal advice; questions about individual people; anything not in the documents",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "Which topics must it answer well?",
+      "a": "",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Who should users contact when it cannot answer?",
+      "a": "the relevant department",
+      "source": "assumed default (unattended)"
+    }
+  ],
+  "scope": "Answer questions grounded in: boarding_rules.md, clinic_hours_and_booking.md, vaccinations_and_invoices.pdf.",
+  "audience": "front-desk staff at Harbour Vet Clinic",
+  "tone": "friendly and brief",
+  "escalation": "the relevant department",
+  "must_answer_topics": [
+    "Boarding eligibility",
+    "Boarding fees",
+    "Booking appointments",
+    "Check-in and check-out",
+    "Emergencies",
+    "Opening hours"
+  ],
+  "must_refuse_topics": [
+    "legal advice",
+    "questions about individual people",
+    "anything not in the documents",
+    "introduction"
+  ],
+  "groundability": {
+    "supported": [
+      {
+        "topic": "Boarding eligibility",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Boarding fees",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Booking appointments",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Check-in and check-out",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Emergencies",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Opening hours",
+        "coverage": 1.0
+      }
+    ],
+    "unsupported": [
+      {
+        "topic": "introduction",
+        "coverage": 0.0
+      }
+    ]
+  },
+  "model_summary": "The assistant's audience is front-desk staff at Harbour Vet Clinic, with a professional tone suitable for a detailed and informative response.",
+  "provenance": {
+    "requirements": "model",
+    "topics": "model"
+  },
+  "warnings": [
+    "Brief asks for 'introduction' but the documents do not support it; the agent will refuse it."
+  ]
+}
