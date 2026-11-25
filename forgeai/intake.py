@@ -48,6 +48,21 @@ def groundability(brief, chunks, min_cov=0.5, topics=None):
     return {"supported": ok, "unsupported": flagged}
 
 
+def merge_topics(brief, model_topics):
+    """v4: the groundability guard must test what the BRIEF asks for. Deterministic brief topics always count; model topics count only
+    if they share a content word with the brief (a 0.5B model sometimes returns document headings instead of requested topics, and
+    then misses the real gap)."""
+    det = brief_topics(brief)
+    bw = set(tokens(brief))
+    out, seen = [], set()
+    for t in det + [m for m in (model_topics or []) if set(tokens(m)) & bw]:
+        k = " ".join(sorted(tokens(t)))
+        if k and k not in seen:
+            seen.add(k)
+            out.append(t)
+    return out
+
+
 def _validate_req(o):
     def strs(k, lo, hi):
         v = o[k]
@@ -84,8 +99,8 @@ def interview(brief, docs, chunks, llm, answers=None, interactive=False):
                 a, src = "; ".join(proposal["must_refuse"]) + "; anything not in the documents", "model proposal (unattended)"
         answers[key] = a
         asked.append({"q": q, "a": a, "source": src})
-    g = groundability(brief, chunks, topics=proposal["requested_topics"] if proposal else None)
-    prov["topics"] = "model" if proposal else "regex fallback"
+    g = groundability(brief, chunks, topics=merge_topics(brief, proposal["requested_topics"] if proposal else None))
+    prov["topics"] = "brief regex + model topics anchored to the brief" if proposal else "regex fallback"
     names = ", ".join(d["name"] for d in docs)
     summary = llm.complete(prompt("intake_summary.txt", brief=brief, docs=names), max_tokens=60)
     headings = sorted({c["heading"] for c in chunks if not c["heading"].startswith("row ")})
