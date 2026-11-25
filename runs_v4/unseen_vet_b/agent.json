@@ -1,0 +1,45 @@
+{
+  "name": "forge-agent",
+  "generated_from": "I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.",
+  "system_prompt": "You are an assistant for: I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.\nAudience: front-desk staff at Harbour Vet Clinic. Tone: friendly and brief.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; dosage advice for prescription medicines.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity.\nState only facts that appear verbatim in the context; copy figures exactly and add nothing else.\nAnswer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
+  "prompt_rules": [
+    "1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity.",
+    "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
+    "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part."
+  ],
+  "provenance": {
+    "domain_instructions": "model",
+    "offer_check_advisory": {
+      "dosage advice for prescription medicines": false
+    },
+    "top_k": "model",
+    "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+  },
+  "retrieval": {
+    "chunk_chars": 600,
+    "top_k": 4,
+    "k1": 1.5,
+    "b": 0.75,
+    "min_coverage": 0.3,
+    "min_score": 0.7,
+    "expansions": {}
+  },
+  "tools": [],
+  "tool_rationale": {},
+  "tools_not_attached": [
+    "csv_lookup",
+    "calculator",
+    "http_api",
+    "current_date"
+  ],
+  "refuse_patterns": [
+    "(?=.*\\bdosage\\b)(?=.*\\badvice\\b)(?=.*\\bprescription\\b)(?=.*\\bmedicines\\b)"
+  ],
+  "output_contract": {
+    "format": "short answer with [source-id] citations",
+    "refusal_text": "I can't answer that from the provided documents.",
+    "max_tokens": 180,
+    "max_sentences": 2,
+    "extractive_fallback": true
+  }
+}
