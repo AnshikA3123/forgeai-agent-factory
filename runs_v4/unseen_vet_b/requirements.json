@@ -1,0 +1,95 @@
+{
+  "brief": "I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.",
+  "documents": [
+    "boarding_rules.md",
+    "clinic_hours_and_booking.md",
+    "vaccinations_and_invoices.pdf"
+  ],
+  "interview": [
+    {
+      "q": "Who will use this assistant (role, seniority)?",
+      "a": "front-desk staff at Harbour Vet Clinic",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "What tone should it use (formal, friendly, terse)?",
+      "a": "friendly and brief",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "Anything it must refuse or hand off to a human (legal, medical, personal data)?",
+      "a": "legal advice; questions about individual people; anything not in the documents",
+      "source": "model proposal (unattended)"
+    },
+    {
+      "q": "Which topics must it answer well?",
+      "a": "",
+      "source": "assumed default (unattended)"
+    },
+    {
+      "q": "Who should users contact when it cannot answer?",
+      "a": "the relevant department",
+      "source": "assumed default (unattended)"
+    }
+  ],
+  "scope": "Answer questions grounded in: boarding_rules.md, clinic_hours_and_booking.md, vaccinations_and_invoices.pdf.",
+  "audience": "front-desk staff at Harbour Vet Clinic",
+  "tone": "friendly and brief",
+  "escalation": "the relevant department",
+  "must_answer_topics": [
+    "opening hours",
+    "vaccinations",
+    "boarding rules",
+    "invoices",
+    "Boarding eligibility",
+    "Boarding fees"
+  ],
+  "must_refuse_topics": [
+    "legal advice",
+    "questions about individual people",
+    "anything not in the documents",
+    "dosage advice for prescription medicines"
+  ],
+  "groundability": {
+    "supported": [
+      {
+        "topic": "opening hours",
+        "coverage": 1.0
+      },
+      {
+        "topic": "vaccinations",
+        "coverage": 1.0
+      },
+      {
+        "topic": "boarding rules",
+        "coverage": 0.5
+      },
+      {
+        "topic": "invoices",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Boarding eligibility",
+        "coverage": 1.0
+      },
+      {
+        "topic": "Boarding fees",
+        "coverage": 1.0
+      }
+    ],
+    "unsupported": [
+      {
+        "topic": "dosage advice for prescription medicines",
+        "coverage": 0.0
+      }
+    ]
+  },
+  "model_summary": "The assistant's audience is front-desk staff at Harbour Vet Clinic, with a professional tone suitable for a detailed and informative response.",
+  "provenance": {
+    "requirements": "model",
+    "topics": "brief regex + model topics anchored to the brief"
+  },
+  "warnings": [
+    "Brief asks for 'dosage advice for prescription medicines' but the documents do not support it; the agent will refuse it."
+  ]
+}
