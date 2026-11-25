@@ -1,0 +1,2466 @@
+[
+  {
+    "iteration": 0,
+    "score": 0.583,
+    "passed": 14,
+    "total": 24,
+    "by_type": {
+      "answerable": "6/12",
+      "edge_cross_doc": "1/3",
+      "edge_ambiguous": "2/3",
+      "out_of_scope": "5/6"
+    },
+    "changes": [],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "$40 per night for a dog and $28 per night for a cat.",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "clinic_hours_and_booking.md#2"
+        ],
+        "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "20 minutes",
+        "retrieved": [
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "How long does a standard consultation typically last?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "8 weeks",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#0",
+          "boarding_rules.md#0"
+        ],
+        "question": "When should puppies receive their first core vaccination?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "Monday to Friday from 8:00 to 18:00 and on Saturday from 9:00 to 13:00.",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "When is Harbour Vet Clinic open for appointments?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.73,
+        "llm_support": false,
+        "facts_found": "1/2",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "The passage states that clients can agree a payment plan before treatment if the invoice is for treatments above $500.",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#2",
+          "clinic_hours_and_booking.md#1",
+          "clinic_hours_and_booking.md#2"
+        ],
+        "question": "How does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "8:00 to 10:00",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "boarding_rules.md#0",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#2"
+        ],
+        "question": "Is there a specific time during check-in that is required for boarding?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "What is the emergency number that clients should call when they need urgent medical attention?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "What is the minimum amount required for a deposit upon booking and what happens if the booking is cancelled less than 7 days before check-in?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "$150",
+        "retrieved": [
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#1",
+          "clinic_hours_and_booking.md#1"
+        ],
+        "question": "What is the fee for an out-of-hours emergency call-out in the clinic?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "Can I check in for boarding if my dog has not had a kennel cough vaccination for 10 days?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Monday to Friday from 8:00 to 18:00",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "When is the clinic typically closed on weekdays?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 0.5,
+        "llm_support": false,
+        "facts_found": "1/3",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "The minimum age requirement for boarding pets according to the boarding rules is 12 weeks old.",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "5/5",
+        "pass": true,
+        "failure": null,
+        "answer": "Puppies receive their first core vaccination at 8 weeks and a second at 12 weeks. Harbour Vet Clinic is open from 8:00 to 18:00 on Monday to Friday, and from 9:00 to 13:00 on Saturday.",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#0",
+          "clinic_hours_and_booking.md#0",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "When should puppies receive their first core vaccination, and also: when is Harbour Vet Clinic open for appointments?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": false,
+        "numbers_in_context": false,
+        "overlap": 0.73,
+        "llm_support": false,
+        "facts_found": "1/4",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "$10.00. The payment plan for treatments above $500 is related to the client's agreement to a payment plan before treatment.",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.75,
+        "llm_support": null,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "A second pet receives a 15% discount because it is from the same household.",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "Why is there a 15% discount for a second pet?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "A late cancellation or missed appointment is charged a $25 fee.",
+        "retrieved": [
+          "clinic_hours_and_booking.md#1",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#2",
+          "boarding_rules.md#1"
+        ],
+        "question": "Why is a late cancellation or missed appointment charged a $25 fee?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.39,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "The clinic is closed on public holidays due to the nature of the services provided, which includes vaccinations and boarding rules. These rules are designed to ensure the safety and well-being of pets during the holidays.",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "Why is Harbour Vet Clinic closed on public holidays?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with dosage advice for prescription medicines?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "front-desk staff at Harbour Vet Clinic",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "What is the name of the assistant's role at Harbour Vet Clinic?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the address of the assistant's office?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the contact number for the assistant's office?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the name of the company that provides the assistant's services?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the name of the company that provides the assistant's services?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.",
+      "system_prompt": "You are an assistant for: I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.\nAudience: front-desk staff at Harbour Vet Clinic. Tone: friendly and brief.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; dosage advice for prescription medicines.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity.",
+      "prompt_rules": [
+        "1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity."
+      ],
+      "provenance": {
+        "domain_instructions": "model",
+        "offer_check_advisory": {
+          "dosage advice for prescription medicines": false
+        },
+        "top_k": "model",
+        "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+      },
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 4,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.5,
+        "min_score": 1.0,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "(?=.*\\bdosage\\b)(?=.*\\badvice\\b)(?=.*\\bprescription\\b)(?=.*\\bmedicines\\b)"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 120,
+        "max_sentences": 1
+      }
+    }
+  },
+  {
+    "iteration": 1,
+    "score_before": 0.583,
+    "score": 0.708,
+    "passed": 17,
+    "total": 24,
+    "by_type": {
+      "answerable": "7/12",
+      "edge_cross_doc": "3/3",
+      "edge_ambiguous": "2/3",
+      "out_of_scope": "5/6"
+    },
+    "changes": [
+      {
+        "category": "hallucination",
+        "fix": "stricter refusal gate: min_coverage -> 0.6, min_score -> 1.5",
+        "addresses": [
+          "case-20"
+        ]
+      },
+      {
+        "category": "hallucination",
+        "fix": "added grounding rule to system prompt (fixed template) + extractive fallback when the answer drifts from context",
+        "addresses": [
+          "case-06",
+          "case-13",
+          "case-15",
+          "case-18"
+        ]
+      },
+      {
+        "category": "prompt_defect",
+        "fix": "added answer-focus rule (fixed template); max_sentences/max_tokens raised",
+        "addresses": [
+          "case-12"
+        ]
+      },
+      {
+        "category": "wrong_refusal",
+        "fix": "min_coverage -> 0.45, min_score -> 1.1",
+        "addresses": [
+          "case-04",
+          "case-08",
+          "case-11"
+        ]
+      }
+    ],
+    "attempts": [
+      {
+        "category": "hallucination",
+        "score_before": 0.583,
+        "score_after": 0.625,
+        "kept": true,
+        "changes": [
+          {
+            "category": "hallucination",
+            "fix": "stricter refusal gate: min_coverage -> 0.6, min_score -> 1.5",
+            "addresses": [
+              "case-20"
+            ]
+          },
+          {
+            "category": "hallucination",
+            "fix": "added grounding rule to system prompt (fixed template) + extractive fallback when the answer drifts from context",
+            "addresses": [
+              "case-06",
+              "case-13",
+              "case-15",
+              "case-18"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "prompt_defect",
+        "score_before": 0.625,
+        "score_after": 0.667,
+        "kept": true,
+        "changes": [
+          {
+            "category": "prompt_defect",
+            "fix": "added answer-focus rule (fixed template); max_sentences/max_tokens raised",
+            "addresses": [
+              "case-12"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "wrong_refusal",
+        "score_before": 0.667,
+        "score_after": 0.708,
+        "kept": true,
+        "changes": [
+          {
+            "category": "wrong_refusal",
+            "fix": "min_coverage -> 0.45, min_score -> 1.1",
+            "addresses": [
+              "case-04",
+              "case-08",
+              "case-11"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Dogs and cats may board at the clinic. [boarding_rules.md#0]",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "clinic_hours_and_booking.md#2"
+        ],
+        "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "A standard consultation lasts 20 minutes and costs $55. [clinic_hours_and_booking.md#1]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "How long does a standard consultation typically last?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Puppies receive their first core vaccination at 8 weeks and a second at 12 weeks. [vaccinations_and_invoices.pdf#0]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#0",
+          "boarding_rules.md#0"
+        ],
+        "question": "When should puppies receive their first core vaccination?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "Monday to Friday from 8:00 to 18:00 [source-id:0]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "When is Harbour Vet Clinic open for appointments?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.88,
+        "llm_support": null,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "The payment plan for treatments above $500 is for clients to agree a payment plan before treatment.",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#2",
+          "clinic_hours_and_booking.md#1",
+          "clinic_hours_and_booking.md#2"
+        ],
+        "question": "How does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "8:00 to 10:00 [source-id:1]",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "boarding_rules.md#0",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#2"
+        ],
+        "question": "Is there a specific time during check-in that is required for boarding?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "What is the emergency number that clients should call when they need urgent medical attention?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days before the check-in [source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days before the check-in [source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days before the check-in [source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "What is the minimum amount required for a deposit upon booking and what happens if the booking is cancelled less than 7 days before check-in?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "An out-of-hours emergency call-out fee of $150 applies. [clinic_hours_and_booking.md#2]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#1",
+          "clinic_hours_and_booking.md#1"
+        ],
+        "question": "What is the fee for an out-of-hours emergency call-out in the clinic?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "Can I check in for boarding if my dog has not had a kennel cough vaccination for 10 days?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Monday to Friday from 8:00 to 18:00",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "When is the clinic typically closed on weekdays?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "for treatments above $500 may be paid in 3 monthly instalments if the client agrees a payment plan before treatment. [vaccinations_and_invoices.pdf#1]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "3/5",
+        "pass": true,
+        "failure": null,
+        "answer": "Puppies receive their first core vaccination at 8 weeks and a second at 12 weeks. [source-id:0]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#0",
+          "clinic_hours_and_booking.md#0",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "When should puppies receive their first core vaccination, and also: when is Harbour Vet Clinic open for appointments?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/4",
+        "pass": true,
+        "failure": null,
+        "answer": "for treatments above $500 may be paid in 3 monthly instalments if the client agrees a payment plan before treatment. [vaccinations_and_invoices.pdf#1]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.8,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "A second pet receives a 15% discount. [source-id: boarding_rules.md#1]",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "Why is there a 15% discount for a second pet?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "A late cancellation or missed appointment is charged a $25 fee. [source-id:1]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#1",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#2",
+          "boarding_rules.md#1"
+        ],
+        "question": "Why is a late cancellation or missed appointment charged a $25 fee?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Harbour Vet Clinic is closed on public holidays.",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "Why is Harbour Vet Clinic closed on public holidays?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with dosage advice for prescription medicines?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "front-desk staff at Harbour Vet Clinic",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "What is the name of the assistant's role at Harbour Vet Clinic?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the address of the assistant's office?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the contact number for the assistant's office?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the name of the company that provides the assistant's services?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the name of the company that provides the assistant's services?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.",
+      "system_prompt": "You are an assistant for: I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.\nAudience: front-desk staff at Harbour Vet Clinic. Tone: friendly and brief.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; dosage advice for prescription medicines.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity.\nState only facts that appear verbatim in the context; copy figures exactly and add nothing else.\nAnswer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
+      "prompt_rules": [
+        "1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity.",
+        "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
+        "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part."
+      ],
+      "provenance": {
+        "domain_instructions": "model",
+        "offer_check_advisory": {
+          "dosage advice for prescription medicines": false
+        },
+        "top_k": "model",
+        "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+      },
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 4,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.45,
+        "min_score": 1.1,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "(?=.*\\bdosage\\b)(?=.*\\badvice\\b)(?=.*\\bprescription\\b)(?=.*\\bmedicines\\b)"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 180,
+        "max_sentences": 2,
+        "extractive_fallback": true
+      }
+    },
+    "failures_before": [
+      {
+        "id": "case-04",
+        "category": "wrong_refusal",
+        "rule_category": "wrong_refusal",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-06",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-08",
+        "category": "wrong_refusal",
+        "rule_category": "wrong_refusal",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-09",
+        "category": "wrong_refusal",
+        "rule_category": "wrong_refusal",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-11",
+        "category": "wrong_refusal",
+        "rule_category": "wrong_refusal",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-12",
+        "category": "prompt_defect",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-13",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-15",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-18",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-20",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      }
+    ],
+    "accepted": true
+  },
+  {
+    "iteration": 2,
+    "score_before": 0.708,
+    "score": 0.792,
+    "passed": 19,
+    "total": 24,
+    "by_type": {
+      "answerable": "9/12",
+      "edge_cross_doc": "3/3",
+      "edge_ambiguous": "2/3",
+      "out_of_scope": "5/6"
+    },
+    "changes": [
+      {
+        "category": "wrong_refusal",
+        "fix": "min_coverage -> 0.3, min_score -> 0.7",
+        "addresses": [
+          "case-04",
+          "case-08",
+          "case-11"
+        ]
+      }
+    ],
+    "attempts": [
+      {
+        "category": "hallucination",
+        "score_before": 0.708,
+        "score_after": 0.708,
+        "kept": false,
+        "changes": [
+          {
+            "category": "hallucination",
+            "fix": "stricter refusal gate: min_coverage -> 0.55, min_score -> 1.6",
+            "addresses": [
+              "case-20"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "wrong_refusal",
+        "score_before": 0.708,
+        "score_after": 0.792,
+        "kept": true,
+        "changes": [
+          {
+            "category": "wrong_refusal",
+            "fix": "min_coverage -> 0.3, min_score -> 0.7",
+            "addresses": [
+              "case-04",
+              "case-08",
+              "case-11"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Dogs and cats may board at the clinic. [boarding_rules.md#0]",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "clinic_hours_and_booking.md#2"
+        ],
+        "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "A standard consultation lasts 20 minutes and costs $55. [clinic_hours_and_booking.md#1]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "How long does a standard consultation typically last?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Puppies receive their first core vaccination at 8 weeks and a second at 12 weeks. [vaccinations_and_invoices.pdf#0]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#0",
+          "boarding_rules.md#0"
+        ],
+        "question": "When should puppies receive their first core vaccination?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Every boarding pet must be at least 12 weeks old. [boarding_rules.md#0]",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "Monday to Friday from 8:00 to 18:00 [source-id:0]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "When is Harbour Vet Clinic open for appointments?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.88,
+        "llm_support": null,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "The payment plan for treatments above $500 is for clients to agree a payment plan before treatment.",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#2",
+          "clinic_hours_and_booking.md#1",
+          "clinic_hours_and_booking.md#2"
+        ],
+        "question": "How does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "8:00 to 10:00 [source-id:1]",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "boarding_rules.md#0",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#2"
+        ],
+        "question": "Is there a specific time during check-in that is required for boarding?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Outside opening hours, clients must call the emergency line 555-0142, which is answered by the partner hospital Bayside Animal Emergency. [clinic_hours_and_booking.md#2]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "What is the emergency number that clients should call when they need urgent medical attention?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days before the check-in [source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days before the check-in [source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days before the check-in [source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "What is the minimum amount required for a deposit upon booking and what happens if the booking is cancelled less than 7 days before check-in?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "An out-of-hours emergency call-out fee of $150 applies. [clinic_hours_and_booking.md#2]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#1",
+          "clinic_hours_and_booking.md#1"
+        ],
+        "question": "What is the fee for an out-of-hours emergency call-out in the clinic?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "Can I check in for boarding if my dog has not had a kennel cough vaccination for 10 days?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Monday to Friday from 8:00 to 18:00",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "When is the clinic typically closed on weekdays?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "for treatments above $500 may be paid in 3 monthly instalments if the client agrees a payment plan before treatment. [vaccinations_and_invoices.pdf#1]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "3/5",
+        "pass": true,
+        "failure": null,
+        "answer": "Puppies receive their first core vaccination at 8 weeks and a second at 12 weeks. [source-id:0]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#0",
+          "clinic_hours_and_booking.md#0",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "When should puppies receive their first core vaccination, and also: when is Harbour Vet Clinic open for appointments?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/4",
+        "pass": true,
+        "failure": null,
+        "answer": "for treatments above $500 may be paid in 3 monthly instalments if the client agrees a payment plan before treatment. [vaccinations_and_invoices.pdf#1]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.8,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "A second pet receives a 15% discount. [source-id: boarding_rules.md#1]",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "Why is there a 15% discount for a second pet?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "A late cancellation or missed appointment is charged a $25 fee. [source-id:1]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#1",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#2",
+          "boarding_rules.md#1"
+        ],
+        "question": "Why is a late cancellation or missed appointment charged a $25 fee?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Harbour Vet Clinic is closed on public holidays.",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "Why is Harbour Vet Clinic closed on public holidays?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with dosage advice for prescription medicines?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "front-desk staff at Harbour Vet Clinic",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "What is the name of the assistant's role at Harbour Vet Clinic?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the address of the assistant's office?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the contact number for the assistant's office?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the name of the company that provides the assistant's services?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the name of the company that provides the assistant's services?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.",
+      "system_prompt": "You are an assistant for: I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.\nAudience: front-desk staff at Harbour Vet Clinic. Tone: friendly and brief.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; dosage advice for prescription medicines.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity.\nState only facts that appear verbatim in the context; copy figures exactly and add nothing else.\nAnswer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
+      "prompt_rules": [
+        "1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity.",
+        "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
+        "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part."
+      ],
+      "provenance": {
+        "domain_instructions": "model",
+        "offer_check_advisory": {
+          "dosage advice for prescription medicines": false
+        },
+        "top_k": "model",
+        "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+      },
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 4,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.3,
+        "min_score": 0.7,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "(?=.*\\bdosage\\b)(?=.*\\badvice\\b)(?=.*\\bprescription\\b)(?=.*\\bmedicines\\b)"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 180,
+        "max_sentences": 2,
+        "extractive_fallback": true
+      }
+    },
+    "failures_before": [
+      {
+        "id": "case-01",
+        "category": "prompt_defect",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-04",
+        "category": "wrong_refusal",
+        "rule_category": "wrong_refusal",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-08",
+        "category": "wrong_refusal",
+        "rule_category": "wrong_refusal",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-11",
+        "category": "wrong_refusal",
+        "rule_category": "wrong_refusal",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-12",
+        "category": "prompt_defect",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-16",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-20",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      }
+    ],
+    "accepted": true
+  },
+  {
+    "iteration": 3,
+    "score_before": 0.792,
+    "score": 0.792,
+    "passed": 19,
+    "total": 24,
+    "by_type": {
+      "answerable": "9/12",
+      "edge_cross_doc": "3/3",
+      "edge_ambiguous": "2/3",
+      "out_of_scope": "5/6"
+    },
+    "changes": [],
+    "attempts": [
+      {
+        "category": "hallucination",
+        "score_before": 0.792,
+        "score_after": 0.708,
+        "kept": false,
+        "changes": [
+          {
+            "category": "hallucination",
+            "fix": "stricter refusal gate: min_coverage -> 0.4, min_score -> 1.2",
+            "addresses": [
+              "case-20"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "wrong_refusal",
+        "score_before": 0.792,
+        "score_after": 0.75,
+        "kept": false,
+        "changes": [
+          {
+            "category": "wrong_refusal",
+            "fix": "min_coverage -> 0.2, min_score -> 0.3",
+            "addresses": [
+              "case-11"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "id": "case-01",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Dogs and cats may board at the clinic. [boarding_rules.md#0]",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "clinic_hours_and_booking.md#2"
+        ],
+        "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together?"
+      },
+      {
+        "id": "case-02",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "A standard consultation lasts 20 minutes and costs $55. [clinic_hours_and_booking.md#1]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "How long does a standard consultation typically last?"
+      },
+      {
+        "id": "case-03",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Puppies receive their first core vaccination at 8 weeks and a second at 12 weeks. [vaccinations_and_invoices.pdf#0]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#0",
+          "boarding_rules.md#0"
+        ],
+        "question": "When should puppies receive their first core vaccination?"
+      },
+      {
+        "id": "case-04",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "Every boarding pet must be at least 12 weeks old. [boarding_rules.md#0]",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules?"
+      },
+      {
+        "id": "case-05",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "Monday to Friday from 8:00 to 18:00 [source-id:0]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "When is Harbour Vet Clinic open for appointments?"
+      },
+      {
+        "id": "case-06",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.88,
+        "llm_support": null,
+        "facts_found": "1/2",
+        "pass": true,
+        "failure": null,
+        "answer": "The payment plan for treatments above $500 is for clients to agree a payment plan before treatment.",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#2",
+          "clinic_hours_and_booking.md#1",
+          "clinic_hours_and_booking.md#2"
+        ],
+        "question": "How does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-07",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "3/3",
+        "pass": true,
+        "failure": null,
+        "answer": "8:00 to 10:00 [source-id:1]",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "boarding_rules.md#0",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#2"
+        ],
+        "question": "Is there a specific time during check-in that is required for boarding?"
+      },
+      {
+        "id": "case-08",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "Outside opening hours, clients must call the emergency line 555-0142, which is answered by the partner hospital Bayside Animal Emergency. [clinic_hours_and_booking.md#2]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "What is the emergency number that clients should call when they need urgent medical attention?"
+      },
+      {
+        "id": "case-09",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/2",
+        "pass": true,
+        "failure": null,
+        "answer": "[source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days before the check-in [source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days before the check-in [source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days before the check-in [source-id:1] 30 percent [source-id:2] 24 hours before the appointment [source-id:1] 30 percent [source-id:2] 7 days",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "clinic_hours_and_booking.md#1",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "What is the minimum amount required for a deposit upon booking and what happens if the booking is cancelled less than 7 days before check-in?"
+      },
+      {
+        "id": "case-10",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": null,
+        "facts_found": "1/1",
+        "pass": true,
+        "failure": null,
+        "answer": "An out-of-hours emergency call-out fee of $150 applies. [clinic_hours_and_booking.md#2]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#2",
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#1",
+          "clinic_hours_and_booking.md#1"
+        ],
+        "question": "What is the fee for an out-of-hours emergency call-out in the clinic?"
+      },
+      {
+        "id": "case-11",
+        "type": "answerable",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": false,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "wrong_refusal",
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "Can I check in for boarding if my dog has not had a kennel cough vaccination for 10 days?"
+      },
+      {
+        "id": "case-12",
+        "type": "answerable",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": false,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/2",
+        "pass": false,
+        "failure": "prompt_defect",
+        "answer": "Monday to Friday from 8:00 to 18:00",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "When is the clinic typically closed on weekdays?"
+      },
+      {
+        "id": "case-13",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/3",
+        "pass": true,
+        "failure": null,
+        "answer": "for treatments above $500 may be paid in 3 monthly instalments if the client agrees a payment plan before treatment. [vaccinations_and_invoices.pdf#1]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "Can you provide information on the minimum age requirement for boarding pets according to the boarding rules, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-14",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": true,
+        "facts_found": "3/5",
+        "pass": true,
+        "failure": null,
+        "answer": "Puppies receive their first core vaccination at 8 weeks and a second at 12 weeks. [source-id:0]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#0",
+          "clinic_hours_and_booking.md#0",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "When should puppies receive their first core vaccination, and also: when is Harbour Vet Clinic open for appointments?"
+      },
+      {
+        "id": "case-15",
+        "type": "edge_cross_doc",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "2/4",
+        "pass": true,
+        "failure": null,
+        "answer": "for treatments above $500 may be paid in 3 monthly instalments if the client agrees a payment plan before treatment. [vaccinations_and_invoices.pdf#1]",
+        "retrieved": [
+          "vaccinations_and_invoices.pdf#1",
+          "boarding_rules.md#0",
+          "boarding_rules.md#1",
+          "boarding_rules.md#2"
+        ],
+        "question": "How much will the boarding fee be for a dog and a cat if you choose to stay together, and also: how does the payment plan for treatments above $500 in the passage relate to the client's agreement to a payment plan before treatment?"
+      },
+      {
+        "id": "case-16",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": false,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 0.8,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "A second pet receives a 15% discount. [source-id: boarding_rules.md#1]",
+        "retrieved": [
+          "boarding_rules.md#1",
+          "vaccinations_and_invoices.pdf#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0"
+        ],
+        "question": "Why is there a 15% discount for a second pet?"
+      },
+      {
+        "id": "case-17",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "A late cancellation or missed appointment is charged a $25 fee. [source-id:1]",
+        "retrieved": [
+          "clinic_hours_and_booking.md#1",
+          "clinic_hours_and_booking.md#2",
+          "boarding_rules.md#2",
+          "boarding_rules.md#1"
+        ],
+        "question": "Why is a late cancellation or missed appointment charged a $25 fee?"
+      },
+      {
+        "id": "case-18",
+        "type": "edge_ambiguous",
+        "refused_ok": true,
+        "retrieval_hit": true,
+        "grounded": true,
+        "correct": true,
+        "numbers_in_context": true,
+        "overlap": 1.0,
+        "llm_support": false,
+        "facts_found": "0/0",
+        "pass": true,
+        "failure": null,
+        "answer": "Harbour Vet Clinic is closed on public holidays.",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "Why is Harbour Vet Clinic closed on public holidays?"
+      },
+      {
+        "id": "case-19",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [],
+        "question": "Can you help me with dosage advice for prescription medicines?"
+      },
+      {
+        "id": "case-20",
+        "type": "out_of_scope",
+        "refused_ok": false,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": false,
+        "failure": "hallucination",
+        "answer": "front-desk staff at Harbour Vet Clinic",
+        "retrieved": [
+          "clinic_hours_and_booking.md#0",
+          "boarding_rules.md#2",
+          "boarding_rules.md#0",
+          "vaccinations_and_invoices.pdf#1"
+        ],
+        "question": "What is the name of the assistant's role at Harbour Vet Clinic?"
+      },
+      {
+        "id": "case-21",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the address of the assistant's office?"
+      },
+      {
+        "id": "case-22",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the contact number for the assistant's office?"
+      },
+      {
+        "id": "case-23",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the name of the company that provides the assistant's services?"
+      },
+      {
+        "id": "case-24",
+        "type": "out_of_scope",
+        "refused_ok": true,
+        "grounded": true,
+        "correct": true,
+        "retrieval_hit": true,
+        "pass": true,
+        "failure": null,
+        "answer": "I can't answer that from the provided documents.",
+        "retrieved": [
+          "boarding_rules.md#2"
+        ],
+        "question": "What is the name of the company that provides the assistant's services?"
+      }
+    ],
+    "definition": {
+      "name": "forge-agent",
+      "generated_from": "I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.",
+      "system_prompt": "You are an assistant for: I need an assistant for front-desk staff at Harbour Vet Clinic that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines.\nAudience: front-desk staff at Harbour Vet Clinic. Tone: friendly and brief.\nAnswer ONLY from the provided context and tool results. Never use outside knowledge.\nIf the context does not contain the answer, reply exactly: I can't answer that from the provided documents.\nRefuse and hand off for: legal advice; questions about individual people; anything not in the documents; dosage advice for prescription medicines.\nWhen you cannot help, suggest contacting: the relevant department.\nCite the source id in square brackets after each claim.\n1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity.\nState only facts that appear verbatim in the context; copy figures exactly and add nothing else.\nAnswer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part.",
+      "prompt_rules": [
+        "1. Use \"opening hours\" instead of \"opening times\" for clarity.\n2. Use \"vaccinations\" instead of \"vaccinations\" for brevity.",
+        "State only facts that appear verbatim in the context; copy figures exactly and add nothing else.",
+        "Answer EVERY part of the question in complete sentences, stating the exact figure, limit or condition from the context, with a [source-id] citation after each part."
+      ],
+      "provenance": {
+        "domain_instructions": "model",
+        "offer_check_advisory": {
+          "dosage advice for prescription medicines": false
+        },
+        "top_k": "model",
+        "tools": "rule candidates []; model verdicts {}; attached [] (invalid verdict keeps the tool)"
+      },
+      "retrieval": {
+        "chunk_chars": 600,
+        "top_k": 4,
+        "k1": 1.5,
+        "b": 0.75,
+        "min_coverage": 0.3,
+        "min_score": 0.7,
+        "expansions": {}
+      },
+      "tools": [],
+      "tool_rationale": {},
+      "tools_not_attached": [
+        "csv_lookup",
+        "calculator",
+        "http_api",
+        "current_date"
+      ],
+      "refuse_patterns": [
+        "(?=.*\\bdosage\\b)(?=.*\\badvice\\b)(?=.*\\bprescription\\b)(?=.*\\bmedicines\\b)"
+      ],
+      "output_contract": {
+        "format": "short answer with [source-id] citations",
+        "refusal_text": "I can't answer that from the provided documents.",
+        "max_tokens": 180,
+        "max_sentences": 2,
+        "extractive_fallback": true
+      }
+    },
+    "failures_before": [
+      {
+        "id": "case-01",
+        "category": "prompt_defect",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-11",
+        "category": "wrong_refusal",
+        "rule_category": "wrong_refusal",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-12",
+        "category": "prompt_defect",
+        "rule_category": "prompt_defect",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-16",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      },
+      {
+        "id": "case-20",
+        "category": "hallucination",
+        "rule_category": "hallucination",
+        "diagnosis_source": "rule-fallback (model diagnosis invalid)",
+        "model_rule": null
+      }
+    ],
+    "accepted": false
+  }
+        ]
