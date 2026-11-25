@@ -24,8 +24,12 @@
 
 
 ## Demo video and run variance
-The current video (`forgeai-demo-v3.mp4`, silent, delivered separately, not in the repo) is a screen capture of real commands; the rebuild step uses cached model outputs and says so on screen. Earlier videos show earlier versions. Scores: HR v3 79% -> 92%, procurement v3 71% -> 71% (no gain found), held-out library v2c 75% -> 75% (v2c only, not re-run under v3). See `runs_v3/README.md` for the review defects (domain label flagged as unsupported, prefix refusal pattern, eval-specific optimizer rules), their fixes and tests, and the disclosure that earlier v2 runs had them.
+The current video (`forgeai-demo-v3-extended.mp4`, silent, delivered separately, not in the repo) is a screen capture of real commands; the rebuild step uses cached model outputs and says so on screen. Earlier videos show earlier versions. Scores: HR v3 79% -> 92%, procurement v3 71% -> 71% (no gain found), held-out library v2c 75% -> 75% (v2c only, not re-run under v3). See `runs_v3/README.md` for the review defects (domain label flagged as unsupported, prefix refusal pattern, eval-specific optimizer rules), their fixes and tests, and the disclosure that earlier v2 runs had them.
 
 
 ## v2 (model-driven) summary for the review
 The first version used the model only for question wording and answers; the generator and optimizer were rule-based. v2 lets the 0.5B model write requirements, style instructions, tool verdicts, eval questions and failure diagnoses, with validation and visible fallbacks. Honest results: HR 79% -> 92%, procurement 71% -> 71%, a fresh held-out library brief 75% -> 75%. Be ready to say: the small model writes weak instructions, says YES too often, and the lexical groundability check missed "book recommendations" on the held-out brief. The video shows v1 build runs; a v2 recording is pending.
+
+
+## v4: the unseen-brief test (what to say if asked "did you test an unseen brief?")
+Yes, once, honestly. A vet-clinic brief with one unsupported request (dosage advice) was run through v3. The groundability guard failed: the small model listed document headings as topics, the guard flagged a junk topic and missed the real gap. Fix: always check topics taken directly from the brief; keep model topics only if they share a word with the brief. The same run also showed the optimizer keeping a narrated failure as a prompt rule, so the rule filter was tightened. Final unseen run: 58% -> 79% (19/24), dosage questions refused. The video covers HR and procurement v3 only; it does not show this run. See `runs_v4/README.md`.
