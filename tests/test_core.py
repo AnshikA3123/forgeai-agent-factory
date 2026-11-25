@@ -56,3 +56,23 @@ def test_optimizer_rule_must_be_generic():  # v3 regression: HR prompt_rules hel
 def test_failure_description_rejected():
     from forgeai.optimizer import generic_rule_problem
     assert generic_rule_problem("The assistant failed to retrieve the correct documents and answer correctly.", {"question": "q", "key_facts": []})
+
+
+
+def test_guard_uses_brief_topics_not_model_headings():  # v4 regression: unseen vet brief; model returned headings, real gap missed
+    from forgeai.intake import merge_topics
+    b = "I need an assistant for front-desk staff that answers client questions about opening hours, vaccinations, boarding rules and invoices, and also gives dosage advice for prescription medicines."
+    topics = merge_topics(b, ["introduction", "Boarding fees"])
+    assert not any(t == "introduction" for t in topics)
+    assert any("dosage" in t for t in topics)
+    chunks = chunk_docs(load_docs("unseen_v4/docs"))
+    g = groundability(b, chunks, topics=topics)
+    assert any("dosage" in x["topic"] for x in g["unsupported"])
+    assert not any("vaccination" in x["topic"] for x in g["unsupported"])
+
+
+def test_narrative_rule_rejected():  # v4 regression: unseen vet run kept "The assistant retrieved documents that were not relevant..." as a prompt rule
+    from forgeai.optimizer import generic_rule_problem
+    c = {"question": "q", "key_facts": []}
+    assert generic_rule_problem("The assistant retrieved documents that were not relevant to the test question, such as the boarding rules.", c)
+    assert generic_rule_problem("State the exact figure and condition from the context.", c) is None
