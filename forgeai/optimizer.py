@@ -27,6 +27,8 @@ def generic_rule_problem(rule, case):
         return "contains a quoted phrase"
     if re.search(r"\bshould have\b|\bthe assistant should\b|\bretrieval hit\b|\bthe answer should\b|\bfailed to\b|\bthe assistant (?:failed|did not)\b", rule, re.I):
         return "describes a failure instead of instructing"
+    if re.match(r"\s*(?:the|this)\s+(?:assistant|answer|model|agent|response|system|retrieved|documents?)\b", rule, re.I) or re.search(r"\b(?:test question|scenario|was not|were not|did not|not relevant)\b", rule, re.I):
+        return "narrates what happened in an eval case instead of instructing (v4)"
     facts = {t for f in case.get("key_facts", []) for t in tokens(f) if len(t) >= 4}
     q = {t for t in tokens(case.get("question", "")) if len(t) >= 5}
     leak = [t for t in tokens(rule) if t in facts or t in q]
